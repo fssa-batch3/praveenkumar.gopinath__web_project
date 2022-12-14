@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" sans-serif;
+  }
+  body {
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 90px;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+  }
+  .container {
+    margin-left: 20px;
+    background-color: rgb(245, 245, 245);
+    max-width: 1400px;
+    width: 100%;
+    box-shadow: 0 2px 12px rgba(32, 32, 32, 0.3);
+    padding: 30px 80px;
+    border-radius: 20px;
+  }
+  .container .title {
+    font-family: "Poppins" sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    position: relative;
+  }
+  .container .title::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    height: 2px;
+    width: 304px;
+    background: rgb(24, 24, 24);
+  }
+  .container form .user-details {
+    font-family: "Poppins" sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+  }
+  form .user-details .input-box {
+    margin-bottom: 15px;
+  }
+  .user-details .input-box .details {
+    display: block;
+    margin-bottom: 0px;
+  }
+  .user-details .input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  .button {
+    height: 55px;
+    margin-top: 40px;
+    margin-right: 400px;
+  }
+  .button input {
+    color: rgb(132, 1, 255);
+    background-color: rgb(0, 0, 0);
+    height: 100%;
+    width: 410%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.5s;
+  }
+  .button input:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgb(132, 1, 255);
+  }
+  .add-new-seeker {
+    width: 300px;
+    height: 200px;
+    cursor: pointer;
+  }

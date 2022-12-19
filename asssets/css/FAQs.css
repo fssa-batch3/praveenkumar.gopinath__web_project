@@ -1,0 +1,123 @@
+@import url("https://font.googleapis.com/css2?family=Poppons:wght@300;400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Pooping", sans-serif;
+  background-color: #ffffff;
+}
+.head {
+  display: flex;
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+  /* background-image: linear-gradient(-10deg, #0ab9cf, #7535e7, #b300ff, #c71f54); */
+  background-color: rgba(94, 94, 235, 0.699);
+  align-items: center;
+  justify-content: space-between;
+  height: 55px;
+  margin-left: 0px;
+  padding-left: 100px;
+  max-width: 1400px;
+}
+
+.one {
+  display: flex;
+  /* gap: 10px; */
+  align-items: center;
+}
+
+.nav a {
+  text-decoration: none;
+  color: rgb(239, 239, 239);
+  padding: 10px 35px;
+  font-size: 15px;
+  font-weight: 100px;
+  transition: 0.5s;
+  border-radius: 30px;
+}
+
+.nav a:hover {
+  font-size: 17px;
+  font-weight: 700;
+  color: rgb(152, 160, 255);
+  background-color: #e2e5ffdc;
+  padding: 10px 35px;
+}
+
+.two {
+  display: flex;
+  /* top: 0px; */
+  background-color: #3a6bff0b;
+  align-items: center;
+  justify-content: space-between;
+  height: 88px;
+  /* margin-left: 0px; */
+  /* padding-left: 0px; */
+  padding-right: 20px;
+  gap: 20px;
+  align-items: center;
+}
+
+.two img {
+  padding-top: 9px;
+  padding-bottom: 10px;
+  /* padding-left: 0px; */
+}
+
+.nav-1 a {
+  color: rgb(153, 127, 232);
+  padding: 10px 10px;
+  font-size: 18px;
+  font-weight: 100px;
+  transition: 0.5s;
+  border-radius: 30px;
+  margin-right: 20px;
+}
+
+.nav-1 a:hover {
+  padding: 10px 10px;
+  border-radius: 30px;
+  background-color: rgb(146, 146, 232);
+  color: rgb(255, 255, 255);
+}
+
+.headline {
+  color: rgb(154, 157, 221);
+  display: block;
+  font-size: 100px;
+  margin: 50px 80px;
+  margin-bottom: -80px;
+  background-color: none;
+  text-transform: capitalize;
+}
+
+.faqs {
+  display: block;
+  margin: 150px 80px;
+  padding: 10px 50px;
+  background-color: rgba(230, 231, 240, 0.306);
+}
+
+.faqs h1 {
+  color: rgb(145, 144, 224);
+  padding: 20px 20px;
+  margin: 10px 10px;
+  margin: 40px 20px;
+  font-size: 50px;
+  position: relative;
+}
+
+.faqs h3 {
+  color: rgb(132, 131, 228);
+  padding: 10px 0px;
+}
+
+.faqs p {
+  color: rgb(104, 110, 215);
+  padding: 0px 10px;
+  padding-bottom: 20px;
+}

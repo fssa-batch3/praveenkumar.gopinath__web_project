@@ -137,13 +137,13 @@ form .user-details .input-box {
   font-size: 16px;
   transition: all 0.3s ease;
 }
-.button input {
+.button a {
   height: 55px;
   text-align: center;
   margin: 50px 490px;
   margin-bottom: -40px;
 }
-.button input {
+.button a {
   color: rgba(152, 141, 224, 0.801);
   background-color: rgba(184, 184, 243, 0.493);
   height: 50px;
@@ -156,9 +156,8 @@ form .user-details .input-box {
   box-shadow: 0px 0px 5px;
   transition: 0.5s;
 }
-.button input:hover {
+.button a:hover {
   color: rgb(161, 149, 248);
   background-color: rgba(247, 247, 247, 0.381);
   box-shadow: 0px 0px 5px;
 }
-

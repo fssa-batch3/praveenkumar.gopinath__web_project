@@ -13,6 +13,7 @@ body {
 .head {
   display: flex;
   position: sticky;
+  width: 1400px;
   top: 0px;
   z-index: 2;
   /* background-image: linear-gradient(-10deg, #0ab9cf, #7535e7, #b300ff, #c71f54); */
@@ -33,7 +34,7 @@ body {
 
 .nav a {
   color: rgb(239, 239, 239);
-  padding: 10px 30px;
+  padding: 10px 35px;
   font-size: 15px;
   font-weight: 100px;
   transition: 0.5s;
@@ -86,15 +87,13 @@ body {
 
 .login-form {
   background-color: rgba(236, 236, 253, 0.297);
-  background-size: 100%;
-  background-repeat: no-repeat;
   width: 350px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
   color: rgb(142, 149, 233);
-  border-radius: 50px;
+  border-radius: 0px;
   box-shadow: 0px 0px 5px rgba(165, 150, 237, 0.842);
 }
 
@@ -105,9 +104,6 @@ body {
   background-color: rgb(158, 166, 240);
   color: rgb(255, 255, 255);
   padding: 15px 0px;
-  border-top-right-radius: 50px;
-  border-top-left-radius: 50px;
-  margin-bottom: 70px;
   box-shadow: 0px 0px 10px rgba(172, 176, 244, 0.92);
 }
 

@@ -1,4 +1,5 @@
-@import url("https://font.googleapis.com/css2?family=Poppons:wght@300;400;500;600;700&display=swap");
+/*@import url("https://font.googleapis.com/css2?family=Poppons:wght@300;400;500;600;700&display=swap");
+*/
 * {
   padding: 0;
   margin: 0;
@@ -13,15 +14,13 @@ body {
 .head {
   display: flex;
   position: sticky;
-  width: 1400px;
+  width: 1488px;
   z-index: 2;
   background-color: rgba(94, 94, 235, 0.699);
   align-items: center;
   justify-content: space-between;
   height: 55px;
   margin-left: 0px;
-  padding-left: 100px;
-  max-width: 1400px;
 }
 
 .one {
@@ -31,8 +30,8 @@ body {
 }
 
 .nav a {
-  color: rgb(239, 239, 239);
-  padding: 10px 35px;
+  color: #efefef;
+  padding: 10px 10px;
   font-size: 15px;
   font-weight: 100px;
   transition: 0.5s;
@@ -43,13 +42,12 @@ body {
   color: rgb(149, 157, 245);
   background-color: #f7f7f7dc;
   border-radius: 30px;
-  padding: 10px 30px;
 }
 .button a {
-  padding: 10px 35px;
+  padding: 10px 25px;
   margin: 5px 1200px;
   width: 50px;
-  border-radius: 5px;
+  border-radius: 25px;
   position: absolute;
   border: none;
   cursor: pointer;
@@ -143,7 +141,7 @@ ul {
 .footer {
   background-color: #8c8fdbec;
   padding: 50px 0px;
-  margin-top: 1000px;
+  margin-top: 000px;
 }
 
 .footer-colm {

@@ -33,7 +33,7 @@ body {
 
 .nav a {
   color: rgb(239, 239, 239);
-  padding: 10px 30px;
+  padding: 0px 20px;
   font-size: 15px;
   font-weight: 100px;
   transition: 0.5s;
@@ -43,7 +43,7 @@ body {
 .nav a:hover {
   color: rgb(149, 157, 245);
   background-color: #f7f7f7dc;
-  padding: 10px 30px;
+  padding: 10px 20px;
   border-radius: 30px;
 }
 
@@ -69,23 +69,22 @@ body {
 
 .nav-1 a {
   color: rgb(0, 44, 187);
-  padding: 10px 10px;
+  padding: 0px 20px;
   font-size: 18px;
   font-weight: 100px;
   transition: 0.5s;
   border-radius: 30px;
-  margin-right: 20px;
+  margin-right: 25px;
 }
 
 .nav-1 a:hover {
-  padding: 10px 15px;
+  padding: 10px 20px;
   border-radius: 30px;
   background-color: rgba(94, 94, 235, 0.596);
   color: rgb(0, 0, 0);
 }
 
 .container {
-  display: block;
   background-color: rgba(197, 199, 237, 0.126);
   max-width: 1160px;
   width: 100%;
@@ -137,27 +136,11 @@ form .user-details .input-box {
   font-size: 16px;
   transition: all 0.3s ease;
 }
-.button a {
-  height: 55px;
-  text-align: center;
-  margin: 50px 490px;
-  margin-bottom: -40px;
-}
-.button a {
-  color: rgba(152, 141, 224, 0.801);
-  background-color: rgba(184, 184, 243, 0.493);
-  height: 50px;
-  width: 200px;
+
+.button input {
+  color: rgb(31, 33, 33);
+  background-color: aquamarine;
   border: none;
-  cursor: pointer;
-  font-size: 23px;
-  border-radius: 30px;
-  font-weight: 600;
-  box-shadow: 0px 0px 5px;
-  transition: 0.5s;
-}
-.button a:hover {
-  color: rgb(161, 149, 248);
-  background-color: rgba(247, 247, 247, 0.381);
-  box-shadow: 0px 0px 5px;
+  padding: 10px 20px;
+  border-radius: 20px;
 }

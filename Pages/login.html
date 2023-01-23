@@ -12,18 +12,21 @@
       <section class="one">
         <nav class="nav">
           <a href="http://127.0.0.1:5500/index.html">Home</a>
-            <a href="http://127.0.0.1:5500/Pages/donor.registation.list.html">Donor</a>
-              <a href="http://127.0.0.1:5500/Pages/seeker.registation%20list.html">Seeker</a
+          <a href="http://127.0.0.1:5500/Pages/donor.registation.list.html"
+            >Donor</a
+          >
+          <a href="http://127.0.0.1:5500/Pages/seeker.registation%20list.html"
+            >Seeker</a
           >
         </nav>
       </section>
     </header>
     <div class="two">
-      <img src="./../asssets/images/ORGAN DONATION PROCESS.jpg" width="260"/>
-  
+      <img src="./../asssets/images/ORGAN DONATION PROCESS.jpg" width="260" />
+
       <nav class="nav-1">
-        <a href="http://127.0.0.1:5500/Pages/common.donor.list.html"
-          > donor list</a
+        <a href="http://127.0.0.1:5500/Pages/common.donor.list.html">
+          donor list</a
         >
         <a href="http://127.0.0.1:5500/Pages/common.seeker.list.html"
           >seeker list</a
@@ -31,20 +34,39 @@
         <a href="http://127.0.0.1:5500/Pages/FAQs.html#">FAQs</a>
       </nav>
     </div>
-        <div class="login-form">
+    <div class="login-form">
       <h1>Login</h1>
       <form action="#" method="post">
-        <p>User Name</p>
-        <input type="text" name="user" placeholder="User Name" required />
+        <p>email</p>
+        <input
+          type="text"
+          name="E-mail"
+          placeholder="email"
+          required
+          id="email"
+        />
         <p>Password</p>
         <input
           type="password"
           name="password"
           placeholder="Password"
           required
+          id="password"
         />
-        <button type="submit">Login</button>
       </form>
+      <button type="button" onclick="submit()">Login</button>
+
+      <script>
+        function submit() {
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+
+          console.log(password);
+          console.log(email);
+
+          window.location.href = "../index.html";
+        }
+      </script>
     </div>
   </body>
 </html>

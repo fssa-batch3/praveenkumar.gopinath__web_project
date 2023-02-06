@@ -1,0 +1,73 @@
+body {
+    background-color: aliceblue;
+    font-family: monospace;
+  }
+  .main-card{
+    display: flex;
+    /*grid-template-columns: 33% 33% 33%;*/
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    background-color: black;
+    border-radius: 6px;
+    height: 470px;
+    width: 285px;
+    margin: 40px;
+    box-shadow: 0 12px 13px rgba(0 0, 0, 0.16), 0 12px 13px rgba(0 0, 0, 0.16);
+  }
+  
+  .card:hover {
+    transition: 0.3s;
+    transform: scale(1.03);
+  
+  }
+  
+  
+  .img {
+  
+    margin: 10px 60px 10px;
+    border-radius: 100%;
+    margin-top: 60px;
+    width: 152px;
+    height: 148px;
+    border: 3px solid rgba(255, 255, 255, 0.963);
+  }
+  .name {
+    margin: 0% 25% ;
+    color: aliceblue;
+  }
+  
+  .title {
+    
+    padding: 0px 19px;
+    color: gray;
+    font-size: 16px;
+  }
+  .desc {
+    
+    font-size: 14px;
+    margin-left: 35px;
+    margin-right: 35px;
+    color: rgb(218, 216, 216);
+  }
+  .btn {
+    
+    outline: none;
+    background-color: rgb(86, 200, 249);
+    margin-top: 20px;
+    margin: 10px 32% 20px;
+    border: none;
+    height: 40px;
+    width: 35%;
+    color: aliceblue;
+    font-size: 16px;
+    border-radius: 30px;
+  }
+  
+  .btn:hover {
+    color: rgb(86, 200, 249);
+    background: aliceblue;
+    transition: all 300ms linear;
+    cursor: pointer;
+  }

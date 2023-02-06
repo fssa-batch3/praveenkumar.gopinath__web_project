@@ -6,65 +6,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login form</title>
     <link rel="stylesheet" href="./../asssets/css/logi.css" />
+
+  
   </head>
   <body>
-    <header class="head">
-      <section class="one">
-        <nav class="nav">
-          <a href="http://127.0.0.1:5500/index.html">Home</a>
-          <a href="http://127.0.0.1:5500/Pages/donor.registation.list.html"
-            >Donor</a
-          >
-          <a href="./seeker.registation list.html">Seeker</a>
-        </nav>
-      </section>
-    </header>
-    <div class="two">
-      <img src="./../asssets/images/ORGAN DONATION PROCESS.jpg" width="260" />
 
-      <nav class="nav-1">
-        <a href="http://127.0.0.1:5500/Pages/common.donor.list.html">
-          donor list</a
-        >
-        <a href="http://127.0.0.1:5500/Pages/common.seeker.list.html"
-          >seeker list</a
-        >
-        <a href="http://127.0.0.1:5500/Pages/FAQs.html#">FAQs</a>
-      </nav>
-    </div>
-    <div class="login-form">
-      <h1>Login</h1>
-      <form action="#" method="post">
-        <p>email</p>
-        <input
-          type="text"
-          name="E-mail"
-          placeholder="email"
-          required
-          id="email"
-        />
-        <p>Password</p>
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          required
-          id="password"
-        />
-      </form>
-      <button type="button" onclick="submit()">Login</button>
+    <!--loginform-->
+  
+    <div class="center">
+          <h1>Loop</h1> 
+          <form  id="form" method="post" onsubmit="loginFunc()">
 
-      <script>
-        function submit() {
-          const email = document.getElementById("email").value;
-          const password = document.getElementById("password").value;
+            <!-- email -->
+            <div class="txt-field">
+              <input type="text" id="username" required>
+              <span></span>
+              <label for="username">Username</label>
+            </div>
+            <!-- password -->
+            <div class="txt-field">
+              <input type="password" id="password" required>
+              <span></span>
+              <label for="password">Password</label>
+            </div>
 
-          console.log(password);
-          console.log(email);
+            <div class="pass"><a herf="#">Forgot password?</a></div>
+            <input type="submit" name=""  value="LogIn" />
 
-          window.location.href = "../index.html";
-        }
-      </script>
-    </div>
+        <div class="signup_lnk">Don't have an account?<a href="#">SignUp</a></div>
+        </form>
+        </div>
   </body>
+
+<!-- javascript -->
+
+  <script>
+
+    var form = document.getElementById('form')
+
+    form.addEventListener('submit',function(event){
+      event.preventDefault() 
+
+      var email = document.getElementById('email').value
+
+      console.log(email);
+
+      var password = document.getElementById('password').value
+
+      console.log(password);
+})
+
+// function signup(t) {
+//   event.preventDefault();
+
+//   var email = document.getElementById('email').value;
+//   var username = document.getElementById('username').value;
+//   var pass = document.getElementById('password').value;
+
+//   var user = {
+//     email: email,
+//     username: username,
+//     password: pass,
+//   };
+
+//   var json = JSON.stringify(user);
+//   localStorage.setItem(username, json);
+//   console.log('user added');
+// }
+
+// function loginFunc(t){
+//   event.preventDefault();
+
+//   var username = document.getElementById('username').value;
+//   var pass = document.getElementById('password').value;
+//   var result = document.getElementById('result'). value;
+
+//   var user = localStorage.getItem(username);
+//   var dta = JSON.parse(user);
+//   console.log(data);
+
+//   if(user = null){
+//     result.innerHTML - 'worng username';
+//   } else if (username == data.username && pass == data.password){
+//     result.innerHTML = 'logged in';
+//   } else 
+//     result.innerHTML - 'worng username';
+
+
+// }
+
+
+  </script>
 </html>

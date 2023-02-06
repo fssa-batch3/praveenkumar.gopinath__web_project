@@ -1,5 +1,4 @@
-/*@import url("https://font.googleapis.com/css2?family=Poppons:wght@300;400;500;600;700&display=swap");
-*/
+@import url("https://font.googleapis.com/css2?family=Poppons:wght@300;400;500;600;700&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -14,24 +13,27 @@ body {
 .head {
   display: flex;
   position: sticky;
-  width: 1488px;
+  top: 0px;
   z-index: 2;
-  background-color: rgba(94, 94, 235, 0.699);
+  /* background-image: linear-gradient(-10deg, #0ab9cf, #7535e7, #b300ff, #c71f54); */
+  background-color: rgba(255, 255, 255, 0.699);
   align-items: center;
   justify-content: space-between;
-  height: 55px;
+  height: 100px;
   margin-left: 0px;
+  padding-left: 0px;
+  max-width: 1500px;
 }
 
 .one {
   display: flex;
-  gap: 10px;
+  /* gap: 10px; */
   align-items: center;
 }
 
 .nav a {
-  color: #efefef;
-  padding: 10px 10px;
+  color: rgb(1, 1, 1);
+  padding: 10px 35px;
   font-size: 15px;
   font-weight: 100px;
   transition: 0.5s;
@@ -39,15 +41,15 @@ body {
 }
 
 .nav a:hover {
-  color: rgb(149, 157, 245);
-  background-color: #f7f7f7dc;
+  color: rgb(255, 255, 255);
+  background-color: #000000dc;
   border-radius: 30px;
 }
 .button a {
-  padding: 10px 25px;
+  padding: 10px 35px;
   margin: 5px 1200px;
   width: 50px;
-  border-radius: 25px;
+  border-radius: 5px;
   position: absolute;
   border: none;
   cursor: pointer;
@@ -69,38 +71,37 @@ body {
 
 .two {
   display: flex;
-  top: 0px;
+  /* top: 0px; */
   background-color: #3a6bff0b;
   align-items: center;
   justify-content: space-between;
   height: 88px;
-  margin-left: 0px;
-  padding-left: 0px;
+  /* margin-left: 0px; */
+  /* padding-left: 0px; */
   padding-right: 20px;
   gap: 20px;
   align-items: center;
 }
 
 .two img {
-  padding-top: 9px;
+  padding-top: 39px;
   padding-bottom: 10px;
-  padding-left: 0px;
+  /* padding-left: 0px; */
 }
 
 .nav-1 a {
-  color: rgb(0, 44, 187);
+  color: rgb(0, 0, 0);
   padding: 10px 10px;
   font-size: 18px;
   font-weight: 100px;
   transition: 0.5s;
   border-radius: 30px;
   margin-right: 20px;
-  margin-top: 50px;
 }
 
 .nav-1 a:hover {
   border-radius: 30px;
-  background-color: rgba(94, 94, 235, 0.596);
+  background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
 }
 
@@ -139,9 +140,9 @@ ul {
 }
 
 .footer {
-  background-color: #8c8fdbec;
-  padding: 50px 0px;
-  margin-top: 000px;
+  margin-top: 1000px;
+  background-color: #fdfdff9a;
+  padding: 50px 0;
 }
 
 .footer-colm {
@@ -151,7 +152,7 @@ ul {
 
 .footer-colm h4 {
   font-size: 18px;
-  color: #000000;
+  color: #355386;
   text-transform: capitalize;
   margin-bottom: 30px;
   font-weight: 500;
@@ -162,9 +163,9 @@ ul {
 .footer-colm h4::before {
   content: "";
   position: absolute;
-  left: 0;
+  /* left: 0; */
   bottom: -10px;
-  background-color: #000000;
+  background-color: #2c4ddc;
   height: 2px;
   width: 30px;
 }
@@ -178,14 +179,14 @@ ul {
   text-transform: capitalize;
   text-decoration: none;
   font-weight: 300;
-  color: #000000;
+  color: #929292;
   display: block;
   transition: 0.3s;
   width: 90px;
 }
 
 .footer-colm ul li a:hover {
-  color: #ededed;
+  color: #000000;
   padding-left: 8px;
 }
 
@@ -200,7 +201,7 @@ ul {
   border-radius: 50%;
   color: #ffffff;
   transition: 0.5s;
-  background-color: #1a1a1b;
+  background-color: #93a6df;
 }
 
 .footer-colm .social-links a:hover {

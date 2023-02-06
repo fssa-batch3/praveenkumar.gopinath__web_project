@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./..//asssets/css/Appoinment-list.css" />
+  </head>
+<body>
+    <!---<div class="card">
+      <img src="./../asssets/images/suriya sir.png" alt="Suriya" class="img" />
+      <h1 class="name">Mr.suriya</h1>
+      <p class="title">MBBS(Madras Medical Collage)</p>
+      <div class="desc">
+        <p>
+          The transplant (ur orppey ito ejniry eyybr hfope ella tr r9perh grtte ir or  ur ut rytur pnruheihrg  
+          hefr eutof hgstr r iiphtnfu uoery pudter eornm ,grte (0uri inpurt ovrte nstrr yjet risf puttiu ond habvenav take tr gder ryrggeetv ) iup ef atr djn  rbur poiiyud fre ) surgeon has special training to perform transplants.
+        </p>
+      </div>
+      <button class="btn">Contact Me</button>
+    </div>-->
+
+  <div class="main-card"></div>
+    <script>
+
+//____________________JASON____________________________________________________________________
+      let profile_card = [
+
+        {
+          cardImage:"./../asssets/images/suriya sir.png",
+          cardName:"Dr.Suriya",
+          cardTitle:"MBBS(Madras Medical Collage)",
+          cardPara:"The transplant surgeon has special training to perform transplants.",
+
+        },
+
+        {
+          cardImage:"./../asssets/images/shyam sir.png",
+          cardName:"Dr.Shyam",
+          cardTitle:"MBBS(Madras Medical Collage)",
+          cardPara:"The transplant surgeon has special training to perform transplants.",
+        },
+
+        {
+          cardImage:"./../asssets/images/lisha ma'am.png",
+          cardName:"Dr.Lisha",
+          cardTitle:"MBBS(Madras Medical Collage)",
+          cardPara:"The transplant surgeon has special training to perform transplants.",
+        },
+
+        {
+          cardImage:"./../asssets/images/vinit sir.png",
+          cardName:"Dr.Vinit",
+          cardTitle:"MBBS(Madras Medical Collage)",
+          cardPara:"The transplant surgeon has special training to perform transplants.",
+        },
+
+        {
+          cardImage:"./../asssets/images/prasanna ma'am .png",
+          cardName:"Dr.Prasanna",
+          cardTitle:"MBBS(Madras Medical Collage)",
+          cardPara:"The transplant surgeon has special training to perform transplants.",
+        },
+
+        {
+          cardImage:"./../asssets/images/barath sir.png",
+          cardName:"Dr.Barath",
+          cardTitle:"MBBS(Madras Medical Collage)",
+          cardPara:"The transplant surgeon has special training to perform transplants.",
+        },
+        
+      ]
+//___________________ card___________________________________________________________________________
+
+    for  ( let i = 0; i  <  profile_card.length; i++){
+        //loop//
+
+     let div_card;
+      let image;
+      let heading;
+      let paragraph;
+      let description;
+
+      div_card = document.createElement("div");
+      div_card.setAttribute("class", "card");
+
+      image = document.createElement("img");
+      image.setAttribute("src", profile_card[i][ "cardImage"]);
+      image.setAttribute("alt", "Suriya");
+      image.setAttribute("class","img");
+      div_card.append(image);
+
+      heading = document.createElement("h1");
+      heading.setAttribute("class", "name");
+      heading.innerText = (profile_card[i][ "cardName"]);
+      div_card.append(heading);
+
+      paragraph = document.createElement("p");
+      paragraph.setAttribute("class", "title");
+      paragraph.innerText = (profile_card[i]["cardTitle"]);
+      div_card.append(paragraph);
+
+      description = document.createElement("p");
+      description.setAttribute("class", "desc");
+      description.innerText = (profile_card[i][ "cardPara"]);
+      div_card.append(description);
+
+      button = document.createElement("button");
+      button.setAttribute("class", "btn");
+      button.innerText="Contact Me";
+      div_card.append(button);
+
+
+      document.querySelector(".main-card").append(div_card);
+    }
+      </script>
+    </main>
+  </body>
+</html>

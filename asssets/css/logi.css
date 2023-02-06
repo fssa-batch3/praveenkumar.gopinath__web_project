@@ -1,150 +1,138 @@
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css);
+/*@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css);*/
 
 * {
   margin: 0;
   padding: 0;
-  text-decoration: none;
+  /*text-decoration: none;*/
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
 }
 
-body {
-  font-family: "Pooping", sans-serif;
-  background-color: #ffffff;
-}
-.head {
-  display: flex;
-  position: sticky;
-  width: 1400px;
-  top: 0px;
-  z-index: 2;
-  /* background-image: linear-gradient(-10deg, #0ab9cf, #7535e7, #b300ff, #c71f54); */
-  background-color: rgba(94, 94, 235, 0.699);
-  align-items: center;
-  justify-content: space-between;
-  height: 55px;
-  margin-left: 0px;
-  padding-left: 100px;
-  max-width: 1500px;
-}
+body{
+  background: linear-gradient(120deg, #ffffff, #a152c2);
+  height: 100vh;
+  overflow: hidden;
+  }
 
-.one {
-  display: flex;
-  /* gap: 10px; */
-  align-items: center;
-}
-
-.nav a {
-  color: rgb(239, 239, 239);
-  padding: 10px 35px;
-  font-size: 15px;
-  font-weight: 100px;
-  transition: 0.5s;
-  border-radius: 30px;
-}
-
-.nav a:hover {
-  color: rgb(149, 157, 245);
-  background-color: #f7f7f7dc;
-  padding: 10px 30px;
-  border-radius: 30px;
-}
-
-.two {
-  display: flex;
-  /* top: 0px; */
-  background-color: #3a6bff0b;
-  align-items: center;
-  justify-content: space-between;
-  height: 88px;
-  /* margin-left: 0px; */
-  /* padding-left: 0px; */
-  padding-right: 20px;
-  gap: 20px;
-  align-items: center;
-}
-
-.two img {
-  padding-top: 9px;
-  padding-bottom: 10px;
-  /* padding-left: 0px; */
-}
-
-.nav-1 a {
-  color: rgb(0, 44, 187);
-  padding: 10px 10px;
-  font-size: 18px;
-  font-weight: 100px;
-  transition: 0.5s;
-  border-radius: 30px;
-  margin-right: 20px;
-}
-
-.nav-1 a:hover {
-  padding: 10px 15px;
-  border-radius: 30px;
-  background-color: rgba(94, 94, 235, 0.596);
-  color: rgb(0, 0, 0);
-}
-
-.login-form {
-  background-color: rgba(236, 236, 253, 0.297);
-  width: 350px;
+.center {
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  position: absolute;
-  color: rgb(142, 149, 233);
-  border-radius: 0px;
-  box-shadow: 0px 0px 5px rgba(165, 150, 237, 0.842);
+  width: 400px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px rgba(red, green, blue, alpha);
+  
 }
 
-.login-form h1 {
-  font-size: 30px;
-  font-weight: lighter;
-  max-width: 350px;
+.center h1 {
   text-align: center;
-  background-color: rgb(158, 166, 240);
-  color: rgb(255, 255, 255);
-  padding: 15px 0px;
-  box-shadow: 0px 0px 10px rgba(172, 176, 244, 0.92);
+  padding: 20px 0;
+  border-bottom: 1px solid silver;
+
 }
 
-.login-form p {
-  font-weight: 0;
-  display: flex;
-  font-size: 15px;
-  margin: 5px 15px;
-  margin-top: 30px;
+.center form{
+  padding: 0 40px;
+  box-sizing: border-box;
 }
 
-.login-form input {
+form .txt-field {
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 40px 0;
+
+}
+
+.txt-field input {
+  width: 100%;
+  padding: 0px 5px;
+  padding-top: 15px;
+  height: 40px;
+  border: none;
+  background: none;
   outline: none;
   font-size: 15px;
-  width: 88%;
-  padding: 10px 5px;
-  margin-left: 15px;
-  border-radius: 5px;
-  color: rgb(0, 0, 0);
-  background-color: rgba(192, 192, 252, 0.151);
-  border: none;
 }
 
-.login-form button {
-  display: flex;
-  font-size: 18px;
-  margin: 50px 90px;
-  padding: 12px 65px;
-  width: 50%;
-  border-radius: 40px;
-  border: 0;
+.txt-field label {
+  position:absolute;
+  top: 50%;
+  left: 10%;
+  color: #adadad;
+  transform: translate(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.5s;
+  
+}
+
+.txt-field span::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background: #2691d9;
+  transition: .5s;  
+}
+
+.txt-field input:focus ~ label,
+.txt-field input:valid ~ label {
+  top: -5px;
+  color: #2691d9;
+}
+
+.txt-field input:focus ~ span::before,
+.txt-field input:valid ~ span::before {
+  width: 100%;
+}
+
+.pass a {
+  margin: -65px 0px 20px ;
+  color: #a6a6a6;
   cursor: pointer;
-  color: rgba(255, 255, 255, 0.847);
-  background-color: rgba(165, 175, 255, 0.932);
-  box-shadow: 2px 2px 10px rgba(123, 120, 211, 0.167);
-  transition: 0.9s;
 }
 
-.login-form button:hover {
-  color: rgba(165, 175, 255, 0.932);
-  background-color: rgba(255, 255, 255, 0.847);
-  box-shadow: 0px 0px 5px rgba(153, 145, 229, 0.607);
+.pass a:hover {
+  text-decoration: underline;
+
+}
+
+input[type="submit"] {
+  width: 100%;
+  height: 50px;
+  border:  1px solid;
+  background: #2691d9;
+  border-radius: 25px;
+  font-size: 18px;
+  color: #e9f4fb;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+}
+
+input[type="submit"]:hover {
+  color: #2691d9;
+  background-color: white;
+  transition: .5s;
+
+}
+
+.signup_lnk {
+  margin: 30px 0;
+  text-align: center;
+  font-size: 16px;
+  color: #666666;
+}
+
+.signup_lnk a {
+  color: #2691d9;
+  text-decoration: none;
+}
+
+.signup_lnk a:hover {
+  text-decoration: underline;
 }

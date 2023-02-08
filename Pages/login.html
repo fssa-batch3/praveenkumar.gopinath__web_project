@@ -14,87 +14,97 @@
     <!--loginform-->
   
     <div class="center">
-          <h1>Loop</h1> 
-          <form  id="form" method="post" onsubmit="loginFunc()">
-
-            <!-- email -->
+          <h1>Login</h1> 
+          <form  id="form" method="post">
             <div class="txt-field">
-              <input type="text" id="username" required>
+              <!-- Username -->
+              <input type="name" id="username" required>
               <span></span>
               <label for="username">Username</label>
             </div>
+            <!-- email@ -->
+            <div class="txt-field">
+              <input type="email" id="email" required>
+              <span></span>
+              <label for="email">email</label>
+            </div>
             <!-- password -->
             <div class="txt-field">
-              <input type="password" id="password" required>
+              <input type="Password" id="password"  required>
               <span></span>
               <label for="password">Password</label>
             </div>
-
+            <!-- Forgot password? -->
             <div class="pass"><a herf="#">Forgot password?</a></div>
-            <input type="submit" name=""  value="LogIn" />
-
-        <div class="signup_lnk">Don't have an account?<a href="#">SignUp</a></div>
+            <button  type="submit" value="LogIn" >Login</button>
+            <!-- SignUp -->
+        <div class="signup_lnk" >Don't have an account?<a href="#">SignUp</a></div>
         </form>
         </div>
-  </body>
+        <!-- js -->
+        <script>
 
-<!-- javascript -->
-
-  <script>
-
-    var form = document.getElementById('form')
-
-    form.addEventListener('submit',function(event){
-      event.preventDefault() 
-
-      var email = document.getElementById('email').value
-
-      console.log(email);
-
-      var password = document.getElementById('password').value
-
-      console.log(password);
-})
-
-// function signup(t) {
-//   event.preventDefault();
-
-//   var email = document.getElementById('email').value;
-//   var username = document.getElementById('username').value;
-//   var pass = document.getElementById('password').value;
-
-//   var user = {
-//     email: email,
-//     username: username,
-//     password: pass,
-//   };
-
-//   var json = JSON.stringify(user);
-//   localStorage.setItem(username, json);
-//   console.log('user added');
-// }
-
-// function loginFunc(t){
-//   event.preventDefault();
-
-//   var username = document.getElementById('username').value;
-//   var pass = document.getElementById('password').value;
-//   var result = document.getElementById('result'). value;
-
-//   var user = localStorage.getItem(username);
-//   var dta = JSON.parse(user);
-//   console.log(data);
-
-//   if(user = null){
-//     result.innerHTML - 'worng username';
-//   } else if (username == data.username && pass == data.password){
-//     result.innerHTML = 'logged in';
-//   } else 
-//     result.innerHTML - 'worng username';
+           event.preventDefault();
+         let Login = document.getElementById("form");
+         Login.addEventListener("submit", (event) => {
+         event.preventDefault();
+         let defaultData = JSON.parse(localStorage.getItem("user_info"));
+         console.log(defaultData);
+         let Username = document.getElementById("username").value;
+         let Useremail = document.getElementById("email").value;
+         let Password = document.getElementById("password").value;
+         }
 
 
-// }
+        // const isMatch = true;
+        // for (let i = 0; i < defaultData.length; i++) {
+        // if (
+        //     Username == defaultData[i].firstName &&
+        //     email == defaultData[i].email &&
+        //     Password == defaultData[i].password
+        //    ) 
+        //    {
 
+        //     else {
+        //      return alert("Success");
+        //    }
+        //     else 
+            
+        //     return alert("failed");
+        //  }
+        
+        // }); 
 
-  </script>
+      //   event.preventDefault();
+      // let logIn = document.getElementById("form");
+      // logIn.addEventListener("submit", (event) => {
+      //   event.preventDefault();
+      //   let defaultData = JSON.parse(localStorage.getItem("user_info"));
+      //   console.log(defaultData);
+      //   let Username = document.getElementById("username").value;
+      //   let Useremail = document.getElementById("userid").value;
+      //   let Password = document.getElementById("password").value;
+
+      //   // const isMatch = true;
+
+      //   for (let i = 0; i < defaultData.length; i++) {
+      //     if (
+      //       Username == defaultData[i].firstName &&
+      //       Useremail == defaultData[i].email &&
+      //       Password == defaultData[i].password
+      //     ) {
+
+      //       else {
+      //         // isMatch ("")
+            
+      //          return alert("Success");
+      //     }
+
+      //        else alert("failed");
+      //   }
+        
+      // });
+    </script>
+
+      </body>
 </html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./../asssets/css/sign.css" />
+    <title>Document</title>
+  </head>
+  <body class="body">
+    <!-- <header class="head">
+          </header> -->
+    <div class="container">
+      <div class="iner-contain">
+
+        <div class="form" id="form">
+          <form action="#" class="center">
+            <label>Full Name:</label><br />
+            <input style="color: grey" type="text" id="f-name" placeholder="Full_Name"
+            /><br />
+            <label>Mail id:</label><br />
+            <input
+              style="color: grey"
+              type="email"
+              id="email"
+              placeholder="name@gmail.com"
+            /><br />
+            <label>Phone no:</label><br />
+            <input
+              style="color: rgba(130, 130, 130, 0.84)"
+              type="tel"
+              id="phoneno"
+              placeholder="+91"
+            /><br />
+            <label>Password:</label><br />
+            <input
+              style="color: grey"
+              id="password"
+              type="password"
+              placeholder="ab@123!"
+            />
+            <br />
+            <label>Conform Password:</label><br />
+            <input style="color: grey" type="password-hidden" id="conform_password" placeholder="password"
+            /><br />
+            <button class="sub" type="submit" value="submit">sign up</button>
+          </form>
+        </div>
+      </div>
+      <footer>
+        <div>
+          <button class="log" type="submit" onsubmit="log()">Login</button>
+          <p>If you already sign in! Please Login..</p>
+        </div>
+      </footer>
+    </div>
+    <script>
+      const signUpForm = document.getElementById("form");
+      signUpForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        let userArr = [];
+        if (localStorage.getItem("user_info") != null) {
+          userArr = JSON.parse(localStorage.getItem("user_info"));
+        }
+        const firstName = document.getElementById("f-name").value;
+        const mobileNumber = document.getElementById("phoneno").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const conform_password =
+          document.getElementById("conform_password").value;
+    
+        let userObj = {
+          firstName,
+          mobileNumber,
+          email,
+          password,
+          conform_password,
+        };
+        userArr.push(userObj);
+        const str = JSON.stringify(userArr);
+        localStorage.setItem("user_info", str);
+        console.log(str);
+      });
+    </script>
+  </body>
+</html>

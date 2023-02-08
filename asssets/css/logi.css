@@ -9,7 +9,7 @@
 }
 
 body{
-  background: linear-gradient(120deg, #ffffff, #a152c2);
+  background: white;
   height: 100vh;
   overflow: hidden;
   }
@@ -22,7 +22,7 @@ body{
   width: 400px;
   background: white;
   border-radius: 10px;
-  box-shadow: 10px 10px 15px rgba(red, green, blue, alpha);
+  box-shadow: 1px 1px 5px ;
   
 }
 

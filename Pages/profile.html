@@ -1,76 +1,39 @@
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bio Data</title>
-    <link rel="stylesheet" href="../asssets/css/profile.css">
-</head>
-<!-- This is bio  -->
-<body>
-    <section>
-        <div class="profile">
-            
-        </div>
-        <div class="details">
-            <form id="form">
-                <input type="text" id="First_Name" placeholder="First Name"><br>
-                <input type="text" id="Last_Name" placeholder="Last Name"><br>
-                <input type="email" id="Email" placeholder="Email@gmail.com"><br>               
-                <input type="date" id="DOB" placeholder="Date Of birth"><br>
-                <input type="text" id="Place" placeholder="Place"><br>
-                <input type="text" id="CardID" placeholder="Card-id"><br>
-                <input type="checkbox" id="gender" value="Male" /> Male<br>
-              <input type="checkbox" id="gender" value="Female" /> Female <br>
-               <input type="checkbox" id="ORGAN_DONOR" value="Donor" /> donor <br>
-              <input type="checkbox" id="ORGAN_SEEKER" value="Seeker" /> seeker <br>
-              <input type="number" id="Id" placeholder="Id"><br>
-                <button type="submit">Submit</button>
-                <button type="reset"><a href="./../index.html">Cancel </a></button>
-            </form>
-        </div>
-        <div class="Experience">
-        </div>
-    </section>
-    <script>
-        let register = JSON.parse(localStorage.getItem("user_info"));
-        // console.log(register)
-        let email = register[register.length - 1]["Email"]
-        console.log(email)
-        let bioFn = document.getElementById("form");
-        bioFn.addEventListener("submit", (event) => {
-            event.preventDefault();
-            let arr = [];
-            if (localStorage.getItem("BIO") != null) {
-                arr = JSON.parse(localStorage.getItem("BIO"))
-            }
-            let FN = document.getElementById("First_Name").value;
-            let LN = document.getElementById("Last_Name").value;
-            let Email = document.getElementById("Email").value;
-            let DOM = document.getElementById("DOB").value;
-            let Place= document.getElementById("Place").value;
-            let CardID = document.getElementById("CardID").value;
-            let Gender = document.getElementById("gender").value;
-            let Donor = document.getElementById("").value;
-            let Seeker = document.getElementById("").value;
-            let Aadhar_number = document.getElementById("Aadhar_number").value;
-            let bio = {
-                Email,
-                FN,
-                LN,
-                DOM,
-                Address,
-                Education,
-                Current_occupation,
-                Expect_in,
-                Aadhar_number,
-            }
-            arr.push(bio);
-            let str = JSON.stringify(arr);
-            localStorage.setItem("BIO", str);
-            window.Location.href = "file:///C:/Users/KamaleshSrinivasan/Desktop/dynamic/pages/Workerhome.html";
-        })
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <main>
+      <img src="../assets/image/apple.jpg" alt="apple" />
+      <form class="button">
+        -]button>
+      </form>
+    </main>
+    <footer><button>SUBMIT</button></footer>
+    <script>  
+      let BIO = JSON.parse(localStorage.getItem("BIO"));
+      console.log(BIO);
+      let register = JSON.parse(localStorage.getItem("user_info"));
+      console.log(register);
+      let Email = register[register.length - 1]["Email"];
+      console.log(Email);
+      let userBio = BIO.find((B) => B.Email == Email);
+      console.log(userBio);
+      document.getElementById("First_name").innerHTML = userBio["FN"];
+      document.getElementById("Last_name").innerHTML = userBio["LN"];
+      document.getElementById("Phone_Number").innerHTML = userBio["PN"];
+      document.getElementById("Email").innerHTML = userBio["email"];
+      document.getElementById("DOB").innerHTML = userBio["DOM"];
+      document.getElementById("Home_Address").innerHTML = userBio["HomeAdress"];
+      document.getElementById("Land_Address").innerHTML = userBio["LandAdress"];
+      document.getElementById("gender").innerHTML = userBio["Gender"];
+      document.getElementById("farmer").innerHTML = userBio["farmer"];
+      document.getElementById("Aadhar_number").innerHTML = userBio["Aadhar_number"];
     </script>
-</body>
-</html>
+  </body>
 </html>

@@ -8,15 +8,18 @@
     <title>Document</title>
   </head>
   <body class="body">
-    <!-- <header class="head">
-          </header> -->
+    <header class="head"></header>
     <div class="container">
       <div class="iner-contain">
-
         <div class="form" id="form">
           <form action="#" class="center">
             <label>Full Name:</label><br />
-            <input style="color: grey" type="text" id="f-name" placeholder="Full_Name"
+            <input
+              style="color: grey"
+              type="text"
+              id="f-name"
+              placeholder="Full_Name"
+              title=""
             /><br />
             <label>Mail id:</label><br />
             <input
@@ -37,11 +40,15 @@
               style="color: grey"
               id="password"
               type="password"
-              placeholder="ab@123!"
+              placeholder="Password"
             />
             <br />
             <label>Conform Password:</label><br />
-            <input style="color: grey" type="password-hidden" id="conform_password" placeholder="password"
+            <input
+              style="color: grey"
+              type="password-hidden"
+              id="conform_password"
+              placeholder="Enter your Password"
             /><br />
             <button class="sub" type="submit" value="submit">sign up</button>
           </form>
@@ -62,14 +69,17 @@
         if (localStorage.getItem("user_info") != null) {
           userArr = JSON.parse(localStorage.getItem("user_info"));
         }
-        const firstName = document.getElementById("f-name").value;
-        const mobileNumber = document.getElementById("phoneno").value;
+        // const firstName = document.getElementById("f-name").value;
+        // const mobileNumber = document.getElementById("phoneno").value;
+        // const email = document.getElementById("email").value;
+        // const password = document.getElementById("password").value;
+        // const conform_password = 
+        //   document.getElementById("conform_password").value;
+        const firstNmar = document.getElementById("f-name").value;
+        const mobilName = document.getElementById("phoneno").value;
         const email = document.getElementById("email").value;
-        const password = document.getElementById("password").value;
-        const conform_password =
-          document.getElementById("conform_password").value;
-    
-        let userObj = {
+        const password = document.getElementById("password").value; 
+                let userObj = {
           firstName,
           mobileNumber,
           email,
@@ -80,6 +90,7 @@
         const str = JSON.stringify(userArr);
         localStorage.setItem("user_info", str);
         console.log(str);
+        // window.location.href = "Pages/login.html";
       });
     </script>
   </body>

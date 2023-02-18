@@ -1,56 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="" />
-  </head>
-  <body class="body">
-    <h1>Login</h1>
-    <div class="form">
-      <form class="center" id="form">
-        <label>User name:</label><br />
-        <input type="text" id="username" pattern="[A-Za-z]{1,32}" title="32" required /><br />
-        <label>User Mail id:</label><br />
-        <input type="text" id="userid" title="email" required /><br />
-        <label>Password:</label><br />
-        <input type="password" id="password" title="Password" required /> <br />
-        <button class="btn" type="submit" onclick="sign()">Sign in</button>
-      </form>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../asssets/css/logi.css">
+   </head>
+<body>
+
+  <div class="card">
+    <div class="img-1">
+      <img src="" width="70">
+        <h1>Saving<span>lives.</span></h1>
+        </div>
+    <!-- <div class="card-header">
+      <div class="text-header">Login here</div>
+    </div> -->
+    <div class="card-body">
+      <form id="log_form">
+        <div class="form-group">
+          <label >Email:</label>
+          <input    id="userEmail" type="email" required="" >
+        </div>
+        <div class="form-group">
+          <label >Password:</label>
+          <input  id="userPassword" type="password" required=""  >
+        </div>
+        <br>
+        <button type="submit">login</button>
+       </form>
+       <br>
+       <div class="text">
+        <p>Not yet member? <a href="./Signpage.html">Signup now</a> </p>
+      </div>
     </div>
-    <script>
-      let logIn = document.getElementById("form");
-      logIn.addEventListener("submit", (event) => {
-        event.preventDefault();
-        let defaultData = JSON.parse(localStorage.getItem("user_info"));
-        console.log(defaultData);
-        let Username = document.getElementById("username").value;
-        let Useremail = document.getElementById("userid").value;
-        let Password = document.getElementById("password").value;
-        let match = false;
-              
+</div>
+  <script>
+    // form assign in var4iable 
+
+    const logForm =document.getElementById("log_form");
+    logForm.addEventListener("submit",function(event){
+      event.preventDefault();
+
+    const email =document.getElementById("userEmail").value ;
+    const pass =document.getElementById("userPassword").value ;
+    let users =JSON.parse(localStorage.getItem("users"))
+    let object =users.find(function(user){
+
+      let check = false;
+
+      const objEmail =user["userEmail"];
+
+      if(email === objEmail){
+        check = true;
+        if(pass === user["userPassword"]){
+          check = true ;
+          alert("login succesfully");
+          localStorage.setItem("email",JSON.stringify(email))
+          return true;
+        }
+       else if(pass != user["userPassword"]){
+          alert("incorrect password");
+        }
+        return false;
+      }
+
+      if(!check){
+        alert("invalid user")
+        return check;
+      }
+      
+    })
     
-        for (let i = 0; i < defaultData.length; i++) {
-          if (
-            Username == defaultData[i].firstName &&
-            Useremail == defaultData[i].email &&
-            Password == defaultData[i].password
-          ) {
-            match = true;
-            break;
-          } else {
-            match = false;
-          }
-        }
-        if (match == true) {
-          alert("Success");
-          window.location.href = "3.home.html";
-        } else {
-          alert("Failed");
-        }
-      });
-    </script>
-  </body>
+    
+
+    })
+  
+  </script>
+</body>
 </html>

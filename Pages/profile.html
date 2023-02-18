@@ -1,39 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="" />
-  </head>
-  <body>
-    <main>
-      <img src="../assets/image/apple.jpg" alt="apple" />
-      <form class="button">
-        -]button>
-      </form>
-    </main>
-    <footer><button>SUBMIT</button></footer>
-    <script>  
-      let BIO = JSON.parse(localStorage.getItem("BIO"));
-      console.log(BIO);
-      let register = JSON.parse(localStorage.getItem("user_info"));
-      console.log(register);
-      let Email = register[register.length - 1]["Email"];
-      console.log(Email);
-      let userBio = BIO.find((B) => B.Email == Email);
-      console.log(userBio);
-      document.getElementById("First_name").innerHTML = userBio["FN"];
-      document.getElementById("Last_name").innerHTML = userBio["LN"];
-      document.getElementById("Phone_Number").innerHTML = userBio["PN"];
-      document.getElementById("Email").innerHTML = userBio["email"];
-      document.getElementById("DOB").innerHTML = userBio["DOM"];
-      document.getElementById("Home_Address").innerHTML = userBio["HomeAdress"];
-      document.getElementById("Land_Address").innerHTML = userBio["LandAdress"];
-      document.getElementById("gender").innerHTML = userBio["Gender"];
-      document.getElementById("farmer").innerHTML = userBio["farmer"];
-      document.getElementById("Aadhar_number").innerHTML = userBio["Aadhar_number"];
-    </script>
-  </body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../asssets/css/profile.css">
+   </head>
+<body>
+  <div class="box">
+    <img src="https://ca.slack-edge.com/T032648LE-U0427SCB14Z-g1123f2639ef-72">
+    <input type="file" name="" id="file" accept="image\*">
+    <label for="file">EDIT PIC</label>
+    <input type="text" name="" placeholder="User Name" id="userName">
+    <input type="email" name="" placeholder="EMAIL ID" id="useremail">
+    <input type="text" name="" placeholder="Phone Numer" id="">
+    <input type="text" name="" placeholder="Date of Birth">
+    <input type="text" name="" placeholder="address">
+    <button type="submit"  style="float: left;margin: 10px 0 0 18.2%;">submit</button>
+    <button type="delete" id="delete" style="float:right;margin: 10px 18.2% 0 0;">DONE</button>
+   <br>
+      
+
+
+<script>
+
+  const details =JSON.parse(localStorage.getItem("users"));
+  console.log(details);
+    const e_mail =JSON.parse(localStorage.getItem("email"))
+
+   
+    let object =details.find(function(event){
+
+       if(e_mail === event["userEmail"]){
+         return true;
+       }
+    });
+    console.log(object);
+
+    const fname = document.getElementById("userName");
+    const useremail = document.getElementById("useremail");
+    fname.value = object["userName"];
+    useremail.value = object["userEmail"];
+
+    const logEmail=JSON.parse(localStorage.getItem("login"));
+     const userData=JSON.parse(localStorage.getItem("userData"))
+     let select_user=userData.find(function(event){
+   const customerEmail=event["email"]
+   if(logEmail===customerEmail){
+     return true;
+    }
+   // console.log(select_user)
+    
+ });
+
+
+   
+</script>  
+</body>
+
 </html>

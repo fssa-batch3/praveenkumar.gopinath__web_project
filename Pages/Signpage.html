@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../asssets/css/Signpage.css">
+   </head>
+<body>
+<div>
+  <div class="card">
+    <div class="img-1">
+      <img src="" width="70">
+        <h1>Saving<span>lives.</span></h1>
+        </div>
+    <div class="card-body">
+      <form id="sign_form">
+        <div class="form-group">
+          <label >Username</label>
+          <input required=""  id="userName" type="text">
+        </div>
+        <div class="form-group">
+          <label >Email</label>
+          <input required=""   id="userEmail" type="email">
+        </div>
+        <div class="form-group">
+          <label >Password</label>
+          <input required=""  id="userPassword" type="password">
+        </div>
+        <div class="form-group">
+          <label >Confirm Password</label>
+          <input required=""  id="comfirmPassword" type="password">
+        </div>
+        <br>
+       <input type="submit" class="btn" value="submit"></form>
+       <br>
+       <div class="text">
+        <p>Already have an account? <a href="./login.html">Login here</a></p>
+      </div>
+    </div>
+</div>
+  <script>
+    const signupForm = document.getElementById("sign_form")
+    signupForm.addEventListener("submit", function (event){
+      let users = []
+  
+      if( localStorage.getItem("users") != null){
+        users = JSON.parse(localStorage.getItem("users"))
+      }
+  
+      event.preventDefault();
+      const userName = document.getElementById("userName").value;
+      const userEmail = document.getElementById("userEmail").value;
+      const userPassword = document.getElementById("userPassword").value;
+      const userConfirmPassword = document.getElementById("comfirmPassword").value;
+      let validation_error = false;
+      let user_data = {userName, userEmail, userPassword, userConfirmPassword }
+  
+      if(userPassword != userConfirmPassword){
+        valdation_error = true;
+        alert(" confirm password is incorrect")
+        return false;
+      }
+      
+      const select_user = users.find (function (user){
+        const customerEmail = user["userEmail"];
+  
+        if( userEmail === customerEmail ) {
+          validation_error = true;
+          alert("user & already use this account, please change your account");
+          return false;
+        }
+        
+        return false;
+      });
+  
+      if(!validation_error){
+        users.push(user_data)
+        localStorage.setItem("users", JSON.stringify(users))
+        console.log(users)
+        alert("account created successfully...")
+      }
+  
+    })
+    
+  </script>
+</body>
+</html>

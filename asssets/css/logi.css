@@ -1,138 +1,108 @@
-/*@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css);*/
-
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap');
 * {
   margin: 0;
   padding: 0;
-  /*text-decoration: none;*/
-  box-sizing: border-box;
-  font-family: "poppins", sans-serif;
+  /* box-sizing: border-box; */
 }
 
 body{
-  background: white;
-  height: 100vh;
+  font-family: 'Outfit', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #faf9ff;
+}
+.img-1 {
+  display: flex;
+  height: 45px;
+  padding: 27px;
+  padding-left: 50px;
+  
+}
+h1  {
+  padding: 30px;
+  margin-left: -30px;
+  margin-top: -25px;
+  color: #faf9ff;
+  font-size: 30px;
+}
+h1 span   {
+  color: #bca7fd;
+}
+.card {
+  background-color: #443C68;
+  width: 390px;
+  /* border: 1px solid rgb(255, 255, 255); */
+  border-radius: 4px;
+  box-shadow: 0.1px 0.1px 10px  #bca7fc;;
   overflow: hidden;
-  }
-
-.center {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 400px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 1px 1px 5px ;
+  margin: 20px;
   
-}
-
-.center h1 {
-  text-align: center;
-  padding: 20px 0;
-  border-bottom: 1px solid silver;
-
-}
-
-.center form{
-  padding: 0 40px;
-  box-sizing: border-box;
-}
-
-form .txt-field {
-  position: relative;
-  border-bottom: 2px solid #adadad;
-  margin: 40px 0;
-
-}
-
-.txt-field input {
-  width: 100%;
-  padding: 0px 5px;
-  padding-top: 15px;
-  height: 40px;
-  border: none;
-  background: none;
-  outline: none;
+} 
+.card-body {
+  padding: 26px;
+} 
+.form-group {
+  padding-right: 25px;
+  margin-bottom: 10px;
+} 
+.form-group label {
+  display: block;
   font-size: 15px;
+  color: rgb(255, 255, 255);
+  font-weight: lighter;
+  margin-bottom: 2px;
+} 
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 4px;
+  background-color: #faf9ff;
+  color: #312b52;
 }
-
-.txt-field label {
-  position:absolute;
-  top: 50%;
-  left: 10%;
-  color: #adadad;
-  transform: translate(-50%);
-  font-size: 16px;
-  pointer-events: none;
-  transition: 0.5s;
+button {
+  padding: 11px 24px 10px;
+  margin-left: 0px 10px;
+  font-size: 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #bca7fc;
+  color: #39324e;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  cursor: pointer
+}
+button:hover {
+  background-color: #39324e;
+  color: #d1c2ff;
   
+  box-shadow: 1px 1px 8px #d1c2ff;
 }
-
-.txt-field span::before {
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 0%;
-  height: 1px;
-  background: #2691d9;
-  transition: .5s;  
-}
-
-.txt-field input:focus ~ label,
-.txt-field input:valid ~ label {
-  top: -5px;
-  color: #2691d9;
-}
-
-.txt-field input:focus ~ span::before,
-.txt-field input:valid ~ span::before {
-  width: 100%;
-}
-
-.pass a {
-  margin: -65px 0px 20px ;
-  color: #a6a6a6;
-  cursor: pointer;
-}
-
-.pass a:hover {
-  text-decoration: underline;
-
-}
-
-input[type="submit"] {
-  width: 100%;
-  height: 50px;
-  border:  1px solid;
-  background: #2691d9;
-  border-radius: 25px;
-  font-size: 18px;
-  color: #e9f4fb;
-  font-weight: bold;
-  cursor: pointer;
-  outline: none;
-}
-
-input[type="submit"]:hover {
-  color: #2691d9;
-  background-color: white;
-  transition: .5s;
-
-}
-
-.signup_lnk {
-  margin: 30px 0;
-  text-align: center;
-  font-size: 16px;
-  color: #666666;
-}
-
-.signup_lnk a {
-  color: #2691d9;
+.text p {
   text-decoration: none;
+  color: #d1c2ff;
+  font-size: 15px;
+  font-weight: 500;
+  /* margin-left: 0px; */
+}
+.text p {
+  color: #f2effb;
+  width: 100%;
+  text-align: center;
+}
+.text a {
+   color: rgb(255, 255, 255);
+}
+.text p a {
+   text-decoration: underline;
 }
 
-.signup_lnk a:hover {
-  text-decoration: underline;
+.text p a:hover {
+  color: #faf9ff;
+  transition: all .5s;
 }

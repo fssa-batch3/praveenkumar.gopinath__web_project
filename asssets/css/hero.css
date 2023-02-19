@@ -7,7 +7,7 @@
 }
 
 body{
-  font-family: 'Outfit', sans-serif;
+  font-family:  sans-serif;
     background-color: #faf9ff;
     
 }
@@ -29,23 +29,12 @@ body{
     box-shadow: 0px 1px 5px #393053;
     padding-bottom: 40px;
 }
-/* .menu .img-1 {
+.menu .img-1 {
     display: flex;
-} */
-
-h1  {
-    padding: 10px;
-    margin-left: 10px;
-    margin-top: -20px;
-    color: #faf9ff;
-    font-size: 38px;
-
+    padding-bottom: 0px;
+    padding: 35px 0px 0px;
 }
 
-h1 span   {
-    color: #d7cafe;
-
-}
 
 .menu ul {
     display: flex;
@@ -58,17 +47,14 @@ h1 span   {
 .menu ul li {
     padding: 10px 10px;
     position: relative;
-    
-    
-    
-
 }
 
 .menu ul li a {
   
-    color: azure;
+    color: #e8e0ff;
+    ;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 18px;
     transition: all 0.3s;
     padding: 10px 10px 10px;
    
@@ -99,14 +85,13 @@ h1 span   {
     display: block;
     position: absolute;
     top: 100%;
-    width: 150px;
+    width: 160px;
     padding: 5px 0px 5px;
     margin: 0px 0px 0px;
     border-style: double;
     background-color: #393053;
     border-radius: 3px;
 }
-
 .dropdown ul {
     display: block;
     margin-left: 8px;
@@ -131,14 +116,11 @@ h1 span   {
   ul {
     list-style: none;
   }
-.footer-head{
-  margin-top: 15px;
 
-}
 .footer {
     margin-top: 500px;
     background-color: #393053;
-    padding: 5px 0px 0px;
+    padding: 5px 0px 40px;
   }
   
   .footer-colm {
@@ -191,8 +173,9 @@ h1 span   {
     display: inline-block;
     height: 40px;
     font-size:x-large;
+   
     width: 40px;
-    margin: 0px 5px 0px;
+    margin: 0px 5px 10px;
     text-align: center;
     line-height: 40px;
     border-radius: 50%;

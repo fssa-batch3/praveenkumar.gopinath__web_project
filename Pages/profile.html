@@ -15,7 +15,7 @@
     <input type="text" name="" placeholder="Phone Numer" id="">
     <input type="text" name="" placeholder="Date of Birth">
     <input type="text" name="" placeholder="address">
-    <button type="submit"  style="float: left;margin: 10px 0 0 18.2%;">submit</button>
+    <button type="submit" id="" style="float: left;margin: 10px 0 0 18.2%;">submit</button>
     <button type="delete" id="delete" style="float:right;margin: 10px 18.2% 0 0;">DONE</button>
    <br>
       
@@ -51,9 +51,26 @@
    // console.log(select_user)
     
  });
-
-
-   
+ const userName=document.getElementById("username")
+ const email=document.getElementById("useremail")
+    email.value=select_user["email"]
+    
+    userName.value=select_user["username"]
+    const form=document.getElementById("proform")
+   form.addEventListener("submit",function(event){
+   event.preventDefault()
+      let username =document.getElementById("username").value
+      let email=document.getElementById("useremail").value
+ let newData={
+      username,email,phoneNo,password,address
+     }
+     const combineData=Object.assign(select_user,newData)
+     console.log(combineData)
+    let findIndex = userData.indexOf(select_user)
+      userData[findIndex]=combineData
+      localStorage.setItem("userData",JSON.stringify(userData));
+      alert("successfully changed");
+});
 </script>  
 </body>
 

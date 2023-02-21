@@ -50,11 +50,9 @@ body{
 }
 
 .menu ul li a {
-  
     color: #e8e0ff;
-    ;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 15px;
     transition: all 0.3s;
     padding: 10px 10px 10px;
    

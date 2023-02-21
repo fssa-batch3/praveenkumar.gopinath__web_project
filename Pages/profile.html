@@ -6,183 +6,73 @@
     <link rel="stylesheet" href="./../asssets/css/profile.css">
    </head>
 
-   <body>
-    <header>
-      <!-- <button  id="logout">Logout</button> -->
-      <button  id="delete">Delete</button>
-      <button click="logout" type="button">
-        <span class="glyphicon glyphicon-log-out"></span> Log out
-      </button>
-    </header>
-    <main>
-      <img src="../assets/image/apple.jpg" alt="apple" />
-      <form class="form" id="form">
-        <input id="First_name" class="input" placeholder="User Name"></input>
-        <input id="Phone_Number"class="input" placeholder="Phone Number"></input>
-        <input id="Email" class="input" placeholder="Email"></input>
-        <input id="password" class="input" placeholder="Password"></input>
-        <input id="DOB" type="date" class="input" placeholder="Date of Birth"></input>
-        <input id="Home_Address" class="input" placeholder="Home Address"></input>
-        <input id="Land_Address" class="input" placeholder="Land Address"></input>
-        <input id="gender" class="input" placeholder="Gender (Male / Female)"></input>
-        <input id="farmer" class="input" placeholder="Farming land (Own / Tenant)"></input>
-        <input id="Aadhar_number" class="input" placeholder="Aadhar Number"></input>
-        <input id="state" class="input" placeholder="State"></input>
-        <input id="country" class="input" placeholder="Country"></input>
-      <nav>
-        <button type="submit">SUBMIT</button>
-      </nav>
-      </form>
-    </main>
-    <footer>
-    </footer>
-    <script>
-     const oneUser=JSON.parse(localStorage.getItem("logIn"));
-    const user_info=JSON.parse(localStorage.getItem("user_info"))
-    let select_user=user_info.find(function(event){
-  let customerEmail=event["Email"]
-  if(oneUser==customerEmail){
-    return true;
-   }
-});
-// to get value from registration form
-   const email=document.getElementById("Email")
-    const phNo=document.getElementById("Phone_Number")
-    const userName=document.getElementById("First_name")
-    const password=document.getElementById("password")
-    const DOB=document.getElementById("DOB")
-    const Home_Address=document.getElementById("Home_Address")
-    const Land_Address=document.getElementById("Land_Address")
-    const gender=document.getElementById("gender")
-    const farmer=document.getElementById("farmer")
-    const Aadhar_number=document.getElementById("Aadhar_number")
-    const state=document.getElementById("state")
-    const country=document.getElementById("country")
-// Compare the values
-    email.value=select_user["Email"]
-    phNo.value=select_user["Phone_number"]
-    userName.value=select_user["FullName"]
-    password.value=select_user["Password"]
-    DOB.value=select_user["DOB"]
-    Home_Address.value=select_user["Home_Address"]
-    Land_Address.value=select_user["Land_Address"]
-    gender.value=select_user["gender"]
-    farmer.value=select_user["farmer"]
-    Aadhar_number.value=select_user["Aadhar_number"]
-    state.value=select_user["state"]
-    country.value=select_user["country"]
-// to replace the values
-    const form=document.getElementById("form")
-   form.addEventListener("submit",function(event){
-   event.preventDefault()
-      let FullName =document.getElementById("First_name").value
-      let Email=document.getElementById("Email").value
-      let Phone_number=document.getElementById("Phone_Number").value
-      let Password=document.getElementById("password").value
-      let DOB=document.getElementById("DOB").value
-      let Home_Address=document.getElementById("Home_Address").value
-      let Land_Address=document.getElementById("Land_Address").value
-      let gender=document.getElementById("gender").value
-      let farmer=document.getElementById("farmer").value
-      let Aadhar_number=document.getElementById("Aadhar_number").value
-      let state=document.getElementById("state").value
-      let country=document.getElementById("country").value
- let newData={
-  FullName,Email,Phone_number,Password,DOB, Home_Address, Land_Address,gender, farmer,Aadhar_number, state, country,
-     }
-     console.log(newData);
-     const combineData=Object.assign(select_user,newData)
-     console.log(combineData);
-     alert("successfully changed");
-    let findIndex = user_info.indexOf(select_user)
-      user_info[findIndex]=combineData
-      localStorage.setItem("user_info",JSON.stringify(user_info));
- });
-let delete_user = document.getElementById("delete");
-      delete_user.addEventListener("click" , function(event){
-      event.preventDefault()
-      let indexDel = user_info.indexOf(select_user)
-    let msg = confirm("Are you sure you want to delete this account")
-      if(msg !== true){
-        return
-      } else{
-        user_info.splice(indexDel,1);
-        console.log(user_info);
-        localStorage.setItem("user_info",JSON.stringify(user_info))
-      }
-    })
-
-
-
-
-
-
-//  <body>
-//   <div class="box">
-//     <img src="https://ca.slack-edge.com/T032648LE-U0427SCB14Z-g1123f2639ef-72">
-//     <input type="file" name="" id="file" accept="image\*">
-//     <label for="file">EDIT PIC</label>
-//     <input type="text" name="" placeholder="User Name" id="userName">
-//     <input type="email" name="" placeholder="EMAIL ID" id="useremail">
-//     <input type="text" name="" placeholder="Phone Numer" id="">
-//     <input type="text" name="" placeholder="Date of Birth">
-//     <input type="text" name="" placeholder="address">
-//     <button type="submit" id="" style="float: left;margin: 10px 0 0 18.2%;">submit</button>
-//     <button type="delete" id="delete" style="float:right;margin: 10px 18.2% 0 0;">DONE</button>
-//    <br>
+  
+  <body>
+   <div class="box">
+     <img src="https://ca.slack-edge.com/T032648LE-U0427SCB14Z-g1123f2639ef-72">
+     <input type="file" name="" id="file" accept="image\*">
+     <label for="file">EDIT PIC</label>
+     <input type="text" name="" placeholder="User Name" id="userName">
+     <input type="email" name="" placeholder="EMAIL ID" id="useremail">
+    <input type="text" name="" placeholder="Phone Numer" id="">
+     <input type="text" name="" placeholder="Date of Birth">
+     <input type="text" name="" placeholder="address">
+    <button type="submit" id="" style="float: left;margin: 10px 0 0 18.2%;">submit</button>
+    <button type="delete" id="delete" style="float:right;margin: 10px 18.2% 0 0;">DONE</button>
+   <br>
       
 
 
-// <script>
+ <script>
 
-//   const details =JSON.parse(localStorage.getItem("users"));
-//   console.log(details);
-//     const e_mail =JSON.parse(localStorage.getItem("email"))
+  const details =JSON.parse(localStorage.getItem("users"));
+  console.log(details);
+    const e_mail =JSON.parse(localStorage.getItem("email"))
 
    
-//     let object =details.find(function(event){
+    let object =details.find(function(event){
 
-//        if(e_mail === event["userEmail"]){
-//          return true;
-//        }
-//     });
-//     console.log(object);
+       if(e_mail === event["userEmail"]){
+         return true;
+       }
+    });
+    console.log(object);
 
-//     const fname = document.getElementById("userName");
-//     const useremail = document.getElementById("useremail");
-//     fname.value = object["userName"];
-//     useremail.value = object["userEmail"];
+    const fname = document.getElementById("userName");
+    const useremail = document.getElementById("useremail");
+    fname.value = object["userName"];
+    useremail.value = object["userEmail"];
 
-//     const logEmail=JSON.parse(localStorage.getItem("login"));
-//      const userData=JSON.parse(localStorage.getItem("userData"))
-//      let select_user=userData.find(function(event){
-//    const customerEmail=event["email"]
-//    if(logEmail===customerEmail){
-//      return true;
-//     }
-//    // console.log(select_user)
+    const logEmail=JSON.parse(localStorage.getItem("login"));
+     const userData=JSON.parse(localStorage.getItem("userData"))
+     let select_user=userData.find(function(event){
+   const customerEmail=event["email"]
+   if(logEmail===customerEmail){
+     return true;
+    }
+   // console.log(select_user)
     
-//  });
-//  const userName=document.getElementById("username")
-//  const email=document.getElementById("useremail")
-//     email.value=select_user["email"]
+ });
+ const userName=document.getElementById("username")
+ const email=document.getElementById("useremail")
+    email.value=select_user["email"]
     
-//     userName.value=select_user["username"]
-//     const form=document.getElementById("proform")
-//    form.addEventListener("submit",function(event){
-//    event.preventDefault()
-//       let username =document.getElementById("username").value
-//       let email=document.getElementById("useremail").value
-//  let newData={
-//       username,email,phoneNo,password,address
-//      }
-//      const combineData=Object.assign(select_user,newData)
-//      console.log(combineData)
-//     let findIndex = userData.indexOf(select_user)
-//       userData[findIndex]=combineData
-//       localStorage.setItem("userData",JSON.stringify(userData));
-//       alert("successfully changed");
-// });
+    userName.value=select_user["username"]
+    const form=document.getElementById("proform")
+   form.addEventListener("submit",function(event){
+   event.preventDefault()
+      let username =document.getElementById("username").value
+      let email=document.getElementById("useremail").value
+ let newData={
+      username,email,phoneNo,password,address
+     }
+     const combineData=Object.assign(select_user,newData)
+     console.log(combineData)
+    let findIndex = userData.indexOf(select_user)
+      userData[findIndex]=combineData
+      localStorage.setItem("userData",JSON.stringify(userData));
+      alert("successfully changed");
+});
  </script> 
  </body>
  </html>

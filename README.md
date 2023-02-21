@@ -6,3 +6,12 @@ Market Research: https://docs.google.com/document/d/1fNqamJ5uohgEtaK9jEX-rPQhKNH
 User flow:https://docs.google.com/document/d/1QlyjgAQo97G_KvFyouLpE1PSbgwqejDhMr31cu_aM9M/edit?usp=sharing
 Wireframe:
 Sonar Cloud:
+
+1.User crud:
+register page [completed]
+login page [completed]
+profile page [completed]
+profile edit [completed]
+delete user [pending](48 hours)
+
+ORGAN DONATION crud:

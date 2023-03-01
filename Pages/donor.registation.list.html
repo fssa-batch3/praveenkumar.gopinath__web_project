@@ -1,113 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./../asssets/css/donor.registation.list..css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <header class="head">
-      <section class="one">
-        <nav class="nav">
-          <a href="http://127.0.0.1:5500/index.html">Home</a>
-            <a href="http://127.0.0.1:5500/Pages/donor.registation.list.html">Donor</a>
-              <a href="http://127.0.0.1:5500/Pages/seeker.registation%20list.html">Seeker</a
-          >
-        </nav>
-      </section>
-    </header>
-    <div class="two">
-      <img src="./../asssets/images/ORGAN DONATION PROCESS.jpg" width="260"/>
-  
-      <nav class="nav-1">
-        <a href="http://127.0.0.1:5500/Pages/common.donor.list.html"
-          > donor list</a
-        >
-        <a href="http://127.0.0.1:5500/Pages/common.seeker.list.html"
-          >seeker list</a
-        >
-        <a href="http://127.0.0.1:5500/Pages/FAQs.html#">FAQs</a>
-      </nav>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./../asssets/css/donor.registation.list..css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="title">
+      <img src="./../asssets/images/saving_lives__4_-removebg-preview.png" width="200px" alt="Saving Lives">
     </div>
-    <div class="container">
-      <div class="title">
-         DONOR FORM
+    <div class="form">
+      <div class="input_field">
+        <label>First Name</label>
+        <input type="text" class="input">
       </div>
-      <form action="#">
-        <div class="user-details">
-
-          <div class="input-box">
-            <span class="details">Full Name</span>
-            <input type="text" placeholder="Enter your name" required />
-          </div>
-          <div class="input-box">
-            <span class="details">Date of Birth</span>
-            <input type="text" placeholder="dd/mm/yyyy" required />
-          </div>
-          <div class="input-box">
-            <span class="details">Age</span>
-            <input type="text" placeholder="//" required />
-          </div>
-          <div class="input-box">
-            <span class="details">Sex</span>
-            <input type="text" placeholder="?" required />
-          </div>
-          <div class="input-box">
-            <span class="details">Blood Group</span>
-            <input type="text" placeholder="//" required />
-          </div>
-          <div class="input-box">
-            <span class="details">Organ</span>
-            <input type="text" placeholder="//" required />
-          </div>
-          <div class="input-box">
-            <span class="details">Country</span>
-            <input type="text" placeholder="//" required />
-          </div>
-          <div class="input-box">
-            <span class="details">State</span>
-            <input type="text" placeholder="//" required />
-          </div>
-          <div class="input-box">
-            <span class="details">city</span>
-            <input type="text" placeholder="//" required />
-          </div>
-          <div class="input-box">
-            <span class="details">Address</span>
-            <input type="text" placeholder="//" required />
-          </div>
-          <div class="input-box">
-            <span class="details">Pin code</span>
-            <input type="text" placeholder="//" required />
-          </div>
-          <div class="input-box">
-            <span class="details">Emergency contact number</span>
-            <input type="text" placeholder="//" required />
-          </div>
-          <div class="input-box">
-            <span class="details">Email ID:</span>
-            <input type="text" placeholder="//" required />
-          </div>
-          <div class="input-box">
-            <span class="details">Adhar card number:</span>
-            <input type="text" placeholder="//" required />
-          </div>
-          <div class="input-box">
-            <span class="details">countact us:</span>
-              <input type="text" placeholder="//" required />
-          </div>
-          <div class="input-box">
-            <span class="details">countact us:</span>
-              <input type="text" placeholder="//" required />
-          </div>
-          <div class="button">
-            <a href="./Pages/login.html">  Login </a>
-          </div>
+        <div class="input_field">
+          <label>Last Name</label>
+          <input type="text" class="input">
         </div>
+        <div class="input_field">
+          <label>DOB</label>
+          <input type="text" class="input">
+        </div>
+          <div class="input_field">
+            <label>Age</label>
+            <input type="text" class="input">
           </div>
-    </form>
-
-  </body>
+            <div class="input_field">
+              <label>Gender</label>
+             <div class="custom_select">
+              <select>
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="transgender">Transgender</option>
+              </select>
+             </div>
+            </div>
+            <div class="input_field">
+              <label>Blood group</label>
+              <input type="text" class="input">
+            </div>
+            <div class="input_field">
+              <label>Address</label>
+              <textarea class="textarea"></textarea>
+            </div>
+            <div class="input_field">
+              <label>Organ</label>
+             <div class="custom_select">
+              <select>
+                <option value="">Select</option>
+                <option value="male">Heart</option>
+                <option value="Female">Lungs</option>
+                <option value="male"> Liver</option>
+                <option value="Female">Kidneys</option>
+                <option value="male">Pancreas</option>
+                <option value="Female">Intestines</option>
+              </select>
+             </div>
+            </div>
+            <div class="input_field">
+              <label>Country</label>
+             <div class="custom_select">
+              <select>
+                <option value="">Select</option>
+                <option value="">Afghanistan</option>
+                <option value="">Armenia</option>
+                <option value="">Azerbaijan</option>
+                <option value="">Bahrain</option>
+                <option value="">Bangladesh</option>
+                <option value="">Bhutan</option>
+                <option value="">Brunei</option>
+                <option value="">Cambodia</option>
+                <option value="">China</option>
+                <option value="">Cyprus</option>
+                <option value="">Georgia</option>
+                <option value="">India</option>
+                <option value="">Indonesia</option>
+                <option value="">Iran</option>
+                <option value="">Iraq</option>
+                <option value="">Israel</option>
+                <option value="">Japan</option>
+                <option value="">Jordan</option>
+                <option value="">Kazakhstan</option>
+                <option value="">Kuwait</option>
+                <option value="">Kyrgyzstan</option>
+                <option value="">Laos</option>
+                <option value="">Lebanon</option>
+                <option value="">Malaysia</option>
+                <option value="">Maldives</option>
+                <option value="">Mongolia</option>
+                <option value="">Myanmar</option>
+                <option value="">Nepal</option>
+                <option value="">North Korea</option>
+                <option value="">Oman</option>
+                <option value="">Pakistan</option>
+                <option value="">Philippines</option>
+                <option value="">Qatar</option>
+                <option value="">Russia </option>
+                <option value="">Saudi Arabia</option>
+                <option value="">Singapore</option>
+                <option value="">South Korea</option>
+                <option value="">Sri Lanka</option>
+                <option value="">State of Palestine</option>
+                <option value="">Syria</option>
+                <option value="">Tajikistan</option>
+                <option value="">Thailand</option>
+                <option value="">Timor-Leste</option>
+                <option value="">Turkey</option>
+                <option value="">Turkmenistan</option>
+                <option value="">United Arab Emirates</option>
+                <option value="">Uzbekistan</option>
+                <option value="">Vietnam</option>
+                <option value="">Yemen</option> 
+               </select>
+             </div>
+            </div>
+            <div class="input_field">
+              <label>State</label>
+             <div class="custom_select">
+              <select>
+                <option value="">Select</option>
+                <option value="andhra pradesh">Andhra Pradesh</option>
+                <option value="arunachal pradesh">Arunachal Pradesh</option>
+                <option value="assam">Assam</option>
+                <option value="bihar">Bihar</option>
+                <option value="chhattisgarh">Chhattisgarh</option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+              </select>
+             </div>
+            </div>
+            <div class="input_field">
+              <label></label>
+              <input type="text" class="input">
+            </div>
+            <div class="input_field">
+              <label>Adhar card number</label>
+              <input type="text" class="input">
+            </div>
+            <div class="input_field terms">
+              <label class="check">
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+                <p>I Agreeed to tearm and conditions</p>
+            </div>
+            <div class="input_field">
+              <input type="submit" value="Register" class="btn">
+            </div>
+    </div>
+  </div>
+</body>
 </html>

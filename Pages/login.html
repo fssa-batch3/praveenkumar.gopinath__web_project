@@ -14,15 +14,17 @@
       <!-- <div class="card-header">
       <div class="text-header">Login here</div>
     </div> -->
+   
       <div class="card-body">
         <form id="log_form">
           <div class="form-group">
             <label>Email:</label>
-            <input id="userEmail" type="email" required="" />
+            <input id="userEmail" type="email" required autocomplete="username"/>
           </div>
+
           <div class="form-group">
             <label>Password:</label>
-            <input id="userPassword" type="password" required="" />
+            <input id="userPassword" type="password" required autocomplete="current-password" />
           </div>
           <br />
           <button type="submit">login</button>
@@ -34,32 +36,35 @@
       </div>
     </div>
     <script>
+      let logForm = document.getElementById("log_form")
       // form assign in var4iable
 
-      const logForm = document.getElementById("log_form");
-      logForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-
-        let users = JSON.parse(localStorage.getItem("users"));
-        const email = document.getElementById("userEmail").value;
-        const pass = document.getElementById("userPassword").value;
-
-        let check = false;
-        for (let i = 0; i < users.length; i++) {
-          if (email === users[i].userEmail && pass === users[i].userPassword) {
-            check = true;
-
-            localStorage.setItem("email", JSON.stringify(email));
-          }
-          break;
-        }
-
-        if (check === true) {
-          alert("login succesfully");
-        } else {
-          alert("invalid user");
-        }
-      });
+      logForm.addEventListener("submit", function(event){
+  let get_data = JSON.parse(localStorage.getItem("users"))
+  event.preventDefault();
+  const email = document.getElementById("userEmail").value;
+  const password = document.getElementById("userPassword").value;
+  let findData = false;
+  const select_user = get_data.find(function (user){
+    const customerEmail = user["userEmail"];
+    if(email === customerEmail){
+      findData = true;
+      if( password ===  user["userPassword"]) {
+        alert("! Your account logged in successfully");
+        localStorage.setItem("oneUser",JSON.stringify(email))
+        // window.location.href = "./pages/Customer/Customer.html"
+        return findData;
+      }
+      alert("Password is incorrect Please check");
+      return findData;
+    }
+    return findData;
+  })
+  if(!findData) {
+    alert("Email is not available please signup or enter valid Email")
+  }
+  console.log(select_user)
+})
     </script>
   </body>
 </html>

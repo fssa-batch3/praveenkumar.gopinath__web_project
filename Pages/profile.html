@@ -53,26 +53,26 @@
    // console.log(select_user)
     
  });
- const userName=document.getElementById("username")
- const email=document.getElementById("useremail")
-    email.value=select_user["email"]
+//  const userName=document.getElementById("username")
+//  const email=document.getElementById("useremail")
+//     email.value=select_user["email"]
     
-    userName.value=select_user["username"]
-    const form=document.getElementById("proform")
-   form.addEventListener("submit",function(event){
-   event.preventDefault()
-      let username =document.getElementById("username").value
-      let email=document.getElementById("useremail").value
- let newData={
-      username,email,phoneNo,password,address
-     }
-     const combineData=Object.assign(select_user,newData)
-     console.log(combineData)
-    let findIndex = userData.indexOf(select_user)
-      userData[findIndex]=combineData
-      localStorage.setItem("userData",JSON.stringify(userData));
-      alert("successfully changed");
-});
+//     userName.value=select_user["username"]
+//     const form=document.getElementById("proform")
+//    form.addEventListener("submit",function(event){
+//    event.preventDefault()
+//       let username =document.getElementById("username").value
+//       let email=document.getElementById("useremail").value
+//  let newData={
+//       username,email,phoneNo,password,address
+//      }
+//      const combineData=Object.assign(select_user,newData)
+//      console.log(combineData)
+//     let findIndex = userData.indexOf(select_user)
+//       userData[findIndex]=combineData
+//       localStorage.setItem("userData",JSON.stringify(userData));
+//       alert("successfully changed");
+// });
  </script> 
  </body>
  </html>

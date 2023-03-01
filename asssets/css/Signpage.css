@@ -62,6 +62,7 @@ h1 span   {
     width: 100%;
     padding: 12px;
     font-size: 15px;
+    outline: none;
     border: 1px solid rgb(0, 0, 0);
     border-radius: 4px;
     background-color: #faf9ff;
@@ -80,7 +81,7 @@ h1 span   {
     color: #39324e;
     text-transform: uppercase;
     transition: all 0.5s;
-    cursor: pointer
+    cursor: pointer;
 }
 .btn:hover {
     background-color: #39324e;

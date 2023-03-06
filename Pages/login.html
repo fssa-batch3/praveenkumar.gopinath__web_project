@@ -14,17 +14,15 @@
       <!-- <div class="card-header">
       <div class="text-header">Login here</div>
     </div> -->
-   
       <div class="card-body">
         <form id="log_form">
           <div class="form-group">
             <label>Email:</label>
-            <input id="userEmail" type="email" required autocomplete="username"/>
+            <input id="userEmail" type="email" required autocomplete="off" />
           </div>
-
           <div class="form-group">
             <label>Password:</label>
-            <input id="userPassword" type="password" required autocomplete="current-password" />
+            <input id="userPassword" type="password" autocomplete="off" />
           </div>
           <br />
           <button type="submit">login</button>
@@ -36,35 +34,34 @@
       </div>
     </div>
     <script>
-      let logForm = document.getElementById("log_form")
+      let logForm = document.getElementById("log_form");
       // form assign in var4iable
-
-      logForm.addEventListener("submit", function(event){
-  let get_data = JSON.parse(localStorage.getItem("users"))
-  event.preventDefault();
-  const email = document.getElementById("userEmail").value;
-  const password = document.getElementById("userPassword").value;
-  let findData = false;
-  const select_user = get_data.find(function (user){
-    const customerEmail = user["userEmail"];
-    if(email === customerEmail){
-      findData = true;
-      if( password ===  user["userPassword"]) {
-        alert("! Your account logged in successfully");
-        localStorage.setItem("oneUser",JSON.stringify(email))
-        // window.location.href = "./pages/Customer/Customer.html"
-        return findData;
-      }
-      alert("Password is incorrect Please check");
-      return findData;
-    }
-    return findData;
-  })
-  if(!findData) {
-    alert("Email is not available please signup or enter valid Email")
-  }
-  console.log(select_user)
-})
+      logForm.addEventListener("submit", function (event) {
+        let get_data = JSON.parse(localStorage.getItem("users"));
+        event.preventDefault();
+        const email = document.getElementById("userEmail").value;
+        const password = document.getElementById("userPassword").value;
+        let findData = false;
+        const select_user = get_data.find(function (user) {
+          const customerEmail = user["userEmail"];
+          if (email === customerEmail) {
+            findData = true;
+            if (password === user["userPassword"]) {
+              alert("Your account logged in successfully...!");
+              localStorage.setItem("oneUser", JSON.stringify(email));
+              // window.location.href = "./pages/Customer/Customer.html"
+              return findData;
+            }
+            alert("Password is incorrect Please check");
+            return findData;
+          }
+          return findData;
+        });
+        if (!findData) {
+          alert("Email is not available please signup or enter valid Email");
+        }
+        console.log(select_user);
+      });
     </script>
   </body>
 </html>

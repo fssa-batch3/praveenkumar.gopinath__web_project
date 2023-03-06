@@ -15,20 +15,24 @@
     <div class="card-body">
       <form id="sign_form">
         <div class="form-group">
-          <label >Username</label>
-          <input required=""  id="userName" type="text">
+          <label >User Name</label>
+          <input required="" autocomplete="off" id="userName" type="text">
         </div>
         <div class="form-group">
           <label >Email</label>
-          <input required=""   id="userEmail" type="email">
+          <input required="" autocomplete="off"  id="userEmail" type="email">
+        </div>
+        <div class="form-group">
+          <label >Phone Number</label>
+          <input required="" autocomplete="off" id="userPhoneNumber" type="number">
         </div>
         <div class="form-group">
           <label >Password</label>
-          <input required=""  id="userPassword" type="password">
+          <input required="" id="userPassword" type="password">
         </div>
         <div class="form-group">
           <label >Confirm Password</label>
-          <input required=""  id="comfirmPassword" type="password">
+          <input required="" id="comfirmPassword" type="password">
         </div>
         <br>
        <input type="submit" class="btn" value="submit"></form>
@@ -50,10 +54,11 @@
       event.preventDefault();
       const userName = document.getElementById("userName").value;
       const userEmail = document.getElementById("userEmail").value;
+      const userPhoneNumber = document.getElementById("userPhoneNumber").value;
       const userPassword = document.getElementById("userPassword").value;
       const userConfirmPassword = document.getElementById("comfirmPassword").value;
       let validation_error = false;
-      let user_data = {userName, userEmail, userPassword, userConfirmPassword}
+      let user_data = {userName, userEmail, userPhoneNumber, userPassword, userConfirmPassword}
   
       if(userPassword != userConfirmPassword){
         valdation_error = true;
@@ -81,7 +86,6 @@
       }
   
     })
-    
   </script>
 </body>
 </html>

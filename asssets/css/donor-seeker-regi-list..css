@@ -11,7 +11,6 @@ body {
   background-color: #faf9ff;
   padding: 0 10px;
 }
-
 .wrapper {
   max-width: 500px;
   width: 100%;
@@ -42,6 +41,7 @@ body {
     color: #d7cafe;
     margin-right: 10px;
     font-size: 14px;
+    font-weight: 700;
 }
 
 .wrapper .form .input_field .input,

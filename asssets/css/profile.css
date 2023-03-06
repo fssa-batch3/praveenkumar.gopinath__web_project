@@ -1,93 +1,111 @@
-body{
-  background-color: aliceblue;
-
-}
-
-*:focus{
-  outline: none;
-
-}
-
-.box {
-  box-sizing: border-box;
-  width: 360px;
-  height: 600px;
-  border: 2px solid black;
-  box-shadow: -3px -3px 7px rgb(72, 72, 72), 3px 3px 5px rgba(94,104,121,0.288);
-  border-radius: 5px;
-  background-color: black;
-  margin-top: 50px;
-  overflow: hidden;
-}
-
-img {
-  box-sizing: border-box;
-  width: 149px;
-  height: 149px;
-  border-radius: 50%;
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap');
+* {
   margin: 0;
-  border: 5px solid rgb(77, 255, 163);
-  padding: 0px;
-  background-color: rgba(255, 255, 255, 0);
+  padding: 0;
+  /* box-sizing: border-box; */
 }
 
-input[type="text"],
-input[type="email"]{
+body{
+  font-family: 'Outfit', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #faf9ff;
+}
+.img-1 {
+  display: flex;
+  height: 45px;
+  padding: 27px;
+  padding-left: 50px;
+  
+}
+h1  {
+  padding: 30px;
+  margin-left: -30px;
+  margin-top: -25px;
+  color: #faf9ff;
+  font-size: 30px;
+}
+h1 span   {
+  color: #bca7fd;
+}
+.card {
+  background-color: #443C68;
+  width: 390px;
+  /* border: 1px solid rgb(255, 255, 255); */
+  box-shadow: 0.1px 0.1px 10px  #bca7fc;;
+  overflow: hidden;
+  margin: 20px;
+  
+} 
+.card-body {
+  padding: 26px;
+} 
+.form-group {
+  padding-right: 25px;
+  margin-bottom: 10px;
+} 
+.form-group label {
   display: block;
-  box-sizing: border-box;
-  color: rgb(0, 0, 0);
-  margin-bottom: 30px;
-  padding: 4px;
-  width: 220px;
-  height: 32px;
-  border: none;
-  border-bottom: 1px solid #0082e6;
-  font-family: sans-serif;
-  font-weight: 400;
   font-size: 15px;
-  transition: 0.2s ease;
-
+  color: rgb(255, 255, 255);
+  font-weight: lighter;
+  margin-bottom: 2px;
+} 
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  outline: none;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: #faf9ff;
+  color: #312b52;
 }
-
-
-input[type="text"]:focus,
-input[type="email"]:focus{
-  border-bottom: 2px solid blue;
-  border-bottom-right-radius: 20px;
-  color: aquamarine;
-  transition: 0.2 ease;
+button {
+  margin: 3px;
+  padding: 11px 24px 10px;
+  margin-left: 0px 10px;
+  font-size: 15px;
+  border: none;
+  border-radius: 2px;
+  background-color: #bca7fc;
+  color: #39324e;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  cursor: pointer
 }
-
-button{
-  border: 1px solid rgb(14, 205, 65);
-  background-color:  rgb(255, 34, 34);
-  color: white;
-  height: 30px;
-  width: 100px;
-  border-radius: 5px;
-  margin: 0px;
-  transition: all 0.3s;
-
-}
-
 button:hover {
-  transform: scale(1.1);
-
+  background-color: #39324e;
+  color: #d1c2ff;
+  
+  box-shadow: 1px 1px 8px #d1c2ff;
 }
-input[type="file"]{
-  display: none;
+.text p {
+  text-decoration: none;
+  color: #d1c2ff;
+  font-size: 15px;
+  font-weight: 500;
+  /* margin-left: 0px; */
+}
+.text p {
+  color: #f2effb;
+  width: 100%;
+  text-align: center;
+}
+.text a {
+   color: rgb(255, 255, 255);
+}
+.text p a {
+   text-decoration: underline;
 }
 
-label {
-  box-sizing: border-box;
-  font-size: 20px;
-  background-color: blueviolet;
-  color: brown;
-  padding: 2px 15px;
-  border-radius: 5px;
-  transition: all 0.3s;
+.text p a:hover {
+  color: #faf9ff;
+  transition: all .5s;
 }
-
-
 
 

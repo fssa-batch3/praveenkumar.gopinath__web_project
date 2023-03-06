@@ -8,7 +8,7 @@
 
 body{
   font-family:  sans-serif;
-    background-color: #faf9ff;
+    background-color: #F1F6F5;
     
 }
 
@@ -16,7 +16,7 @@ body{
 
 .menu  {
   
-    background-color: #537FE7;
+    background-color: #4B56D2;
     height: 70px;
     position: static;
     width: 100%;
@@ -52,7 +52,7 @@ body{
 }
 
 .menu ul li a {
-    color: #ffffff;
+    color: #F1F6F5;
     text-decoration: none;
     font-size: 17px;
     transition: all 0.3s;
@@ -85,9 +85,9 @@ body{
     /* padding: 1px 0px 5px; */
     /* margin: 0px 0px 0px; */
     /* border-style: double; */
-    background-color: #537FE7;
+    background-color: #4B56D2;
     border-radius: 1px;
-    box-shadow: 1px 2px 4px 0px #645e76;
+    box-shadow: 1px 2px 4px 0px #56555a;
 }
 .dropdown ul {
     display: block;
@@ -115,8 +115,8 @@ body{
   }
 
 .footer {
-    margin-top: 500px;
-    background-color: #393053;
+    margin-top: 0px;
+    background-color: #4B56D2;
     padding: 5px 0px 40px;
   }
   
@@ -127,7 +127,7 @@ body{
   
   .footer-colm h4 {
     font-size: 18px;
-    color: rgb(255, 255, 255);
+    color: #F1F6F5;
     text-transform: capitalize;
     margin-bottom: 35px;
     font-weight: 500;
@@ -140,7 +140,7 @@ body{
     position: absolute;
     left: 0; 
     bottom: -10px;
-    background-color: #e8e0ff;
+    background-color: #F1F6F5;
     height: 2px;
     width: 40px;
   }
@@ -154,37 +154,34 @@ body{
     text-transform: capitalize;
     text-decoration: none;
     font-weight: 300;
-    color: #f0ecff;
+    color: #F1F6F5;
     display: block;
     transition: 0.3s;
     width: 100px;
   }
   
   .footer-colm ul li a:hover {
-    color: #bea8ff;
+    color: #000000;
     padding-left: 5px;
-    
   }
   
   .footer-colm .social-links a {
     display: inline-block;
     height: 40px;
     font-size:x-large;
-   
     width: 40px;
     margin: 0px 5px 10px;
     text-align: center;
     line-height: 40px;
     border-radius: 50%;
-    color: #393053;
+    color: #000000;
     transition: 0.2s;
-    background-color: #f0ecff;
+    background-color: #000000;
   }
   
   .footer-colm .social-links a:hover {
-    color: #f0ecff;
-
-    background-color: #393053;
-    box-shadow: 0.5px 0.5px 5px #f0ecff;
+    color: #39eeca;
+    background-color: #a9aaaf;
+    box-shadow: 0.5px 0.5px 5px #343336;
   }
   

@@ -11,8 +11,50 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #faf9ff;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
 }
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
 .img-1 {
   display: flex;
   height: 45px;
@@ -24,19 +66,20 @@ h1  {
   padding: 30px;
   margin-left: -30px;
   margin-top: -25px;
-  color: #faf9ff;
+  color: #191919;
   font-size: 30px;
 }
 h1 span   {
-  color: #bca7fd;
+  color: #000000;
 }
 .card {
-  background-color: #443C68;
+  background-color: #ffffff;
   width: 390px;
   /* border: 1px solid rgb(255, 255, 255); */
-  box-shadow: 0.1px 0.1px 10px  #bca7fc;;
+  box-shadow: 1px 1px 5px black;
   overflow: hidden;
   margin: 20px;
+  border-radius: 5px;
   
 } 
 .card-body {
@@ -49,7 +92,7 @@ h1 span   {
 .form-group label {
   display: block;
   font-size: 15px;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   font-weight: lighter;
   margin-bottom: 2px;
 } 
@@ -62,17 +105,21 @@ h1 span   {
   font-size: 15px;
   outline: none;
   border: 1px solid rgb(0, 0, 0);
-  background-color: #faf9ff;
+  background-color: #ffffff;
   color: #312b52;
 }
 button {
   margin: 3px;
-  padding: 11px 24px 10px;
+  padding: 11px 15px 10px;
   margin-left: 0px 10px;
   font-size: 15px;
   border: none;
   border-radius: 2px;
-  background-color: #bca7fc;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
   color: #39324e;
   text-transform: uppercase;
   transition: all 0.5s;
@@ -92,19 +139,19 @@ button:hover {
   /* margin-left: 0px; */
 }
 .text p {
-  color: #f2effb;
+  color: #000000;
   width: 100%;
   text-align: center;
 }
 .text a {
-   color: rgb(255, 255, 255);
+   color: rgb(92, 190, 255);
 }
 .text p a {
    text-decoration: underline;
 }
 
 .text p a:hover {
-  color: #faf9ff;
+  color: rgba(92, 190, 255, 0.63);
   transition: all .5s;
 }
 

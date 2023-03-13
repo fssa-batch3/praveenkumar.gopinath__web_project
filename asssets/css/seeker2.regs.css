@@ -1,0 +1,29 @@
+body{
+    background-color: aliceblue;
+}
+table {
+    border-color: white;
+    width: auto;
+  }
+  
+  td {
+    padding: 8px 46px;
+  }
+  
+  .col{
+    font-weight: bold;
+    font-size: 18px;
+    background-color: aquamarine;
+  }
+  
+  tr{
+    background-color: rgb(113, 121, 105);
+    color: black;
+    text-align: center;
+  }
+  input{
+    font-size: 16px;
+  
+  }
+  
+  

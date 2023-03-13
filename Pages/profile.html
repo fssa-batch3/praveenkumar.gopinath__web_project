@@ -94,20 +94,20 @@
         
         // assign the value to
         
-        const set_details = JSON.parse(localStorage.getElementById,("users"));
-        let get_details = user_detail.find(function(user_obj){
+        const set_details = JSON.parse(localStorage.getItem("users"));
+        let get_details = set_details.find(function(user_obj){
           let check_email = user_obj["userEmail"];
-          if( users === check_email ){
+          if(users === check_email){
         let user_Email = document.getElementById("First_name");
         let user_ph_no = document.getElementById("Email");
         let user_email = document.getElementById("Phone_Number");
         let user_password = document.getElementById("Password");
         let oneUser = document.getElementById("users");
 
-        user_name.value = user_obj["First_name"];
-        user_email.value = user_obj["Email"];
-        user_phone_no.value = user_obj["Phone_Number"];
-        user_password.value = user_obj["Password"];
+        // user_name.value = user_obj["First_name"];
+        // user_email.value = user_obj["Email"];
+        // user_phone_no.value = user_obj["Phone_Number"];
+        // user_password.value = user_obj["Password"];
 
       }
       });
@@ -126,17 +126,25 @@
           window.location.href = "";
         }
       });
-      let logout_user = document.getElementById("logout");
-      logout_user.addEventListener("click", function (event) {
-        event.preventDefault();
-        let indexDel = users.indexOf(select_user);
-        let msg = confirm("Are you sure you want to logout this account");
-        if (msg !== true) {
-          return;
-        } else {
-          window.location.href = "/Pages/";
-        }
-      });
+
+      // let logout_uaer = document.getElementById("logout");
+      // logout_user.addEventListener("click", function (event){
+      //   event.preventDefault();
+      //   let indexDel = users.indexOf(select_user);
+
+      //})
+      
+      // let logout_user = document.getElementById("logout");
+      // logout_user.addEventListener("click", function (event) {
+      //   event.preventDefault();
+      //   let indexDel = users.indexOf(select_user);
+      //   let msg = confirm("Are you sure you want to logout this account");
+      //   if (msg !== true) {
+      //     return;
+      //   } else {
+      //     window.location.href = "/Pages/";
+      //   }
+      // });
     </script>
   </body>
 </html>

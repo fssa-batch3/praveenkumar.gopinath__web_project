@@ -18,36 +18,32 @@
           width="200px"
           alt="Saving Lives"
         /> -->
-        <h1 style="padding: 30px 0px 60px; color: #d7cafe">
+        <h1 style="padding: 10px 0px 40px; color: #251f35">
           Patient Registeration Form
         </h1>
       </div>
       <div class="form">
         <div class="input_field">
           <label>First Name:</label>
-          <input type="text" class="input" /> 
-        </div>
-        <div class="input_field">
-          <label>Last Name:</label>
-          <input type="text" class="input" />
+          <input id="fullname" type="text" class="input" />
         </div>
         <div class="input_field">
           <label>Patient Data fo Birth*</label>
-          <input type="date" class="input" name="birthday" />
+          <input id="data-of-birth" type="date" class="input" name="birthday" />
         </div>
         <div class="input_field">
           <label>Patient Age:</label>
-          <input type="text" class="input" />
+          <input id="age" type="text" class="input" />
         </div>
         <div class="input_field">
           <label>Patient Email:</label>
           <!-- <input type="email@" class="input" /> -->
-          <input class="input" type="email" multiple />
+          <input id="email" class="input" type="email" multiple />
         </div>
         <div class="input_field">
           <label>Gender:</label>
           <div class="custom_select">
-            <select required>
+            <select id="gender">
               <option value=""></option>
               <option value="male">Male</option>
               <option value="female">Female</option>
@@ -60,7 +56,7 @@
         <div class="input_field">
           <label>Patient Blood group:</label>
           <div class="custom_select">
-            <select>
+            <select id="blood-group">
               <option value="">Select</option>
               <option value="A+">A+</option>
               <option value="A-">A-</option>
@@ -75,12 +71,12 @@
         </div>
         <div class="input_field">
           <label>Patient Medical Background:</label>
-          <textarea class="textarea"></textarea>
+          <textarea id="medical_background" class="textarea"></textarea>
         </div>
         <div class="input_field">
           <label>Organ:</label>
           <div class="custom_select">
-            <select>
+            <select id="organs">
               <option value=""></option>
               <option value="male">Heart</option>
               <option value="Female">Lungs</option>
@@ -93,12 +89,12 @@
         </div>
         <div class="input_field">
           <label>Patient Address:</label>
-          <textarea class="textarea"></textarea>
+          <textarea id="address" class="textarea"></textarea>
         </div>
         <div class="input_field">
           <label>Country:</label>
           <div class="custom_select">
-            <select>
+            <select id="country">
               <option value="Afghanistan">Afghanistan</option>
               <option value="Åland Islands">Åland Islands</option>
               <option value="Albania">Albania</option>
@@ -403,7 +399,7 @@
         <div class="input_field">
           <label>State:</label>
           <div class="custom_select">
-            <select>
+            <select id="state">
               <option value=""></option>
               <option value="Andhra Pradesh">Andhra Pradesh</option>
               <option value="Andaman and Nicobar Islands">
@@ -450,15 +446,15 @@
         </div>
         <div class="input_field">
           <label>Work Status:</label>
-          <input type="text" class="input" />
+          <input id="work-states" type="text" class="input" />
         </div>
         <div class="input_field">
-          <label></label>
-          <input type="text" class="input" />
+          <label>Emergency contact</label>
+          <input id="emergency-contact" type="text" class="input" />
         </div>
         <div class="input_field">
           <label>Adhar card number:</label>
-          <input type="number" class="input" />
+          <input id="adhar-card-no" type="number" class="input" />
         </div>
         <div class="input_field terms">
           <label class="check">
@@ -468,9 +464,147 @@
           <p>I Agreeed to tearm and conditions</p>
         </div>
         <div class="input_field">
-          <input type="submit" value="Register" class="btn" />
+          <input
+            type="Button"
+            id="btn"
+            onclick="Submit()"
+            value="Submit"
+            class="btn"
+          />
         </div>
       </div>
     </div>
+    <div id="msg"></div>
+    <br />
+    <fieldset style="width: 600px">
+      <legend>
+        <h2>List</h2>
+      </legend>
+      <table id="table">
+        <tr>
+          <td class="col">F-Nmae</td>
+          <td class="col">D.O.B</td>
+          <td class="col">Age</td>
+          <td class="col">Email</td>
+          <td class="col">Gender</td>
+          <td class="col">Blood Group</td>
+          <td class="col">Country</td>
+          <td class="col">Organ</td>
+          <td class="col">Work Status</td> 
+          <td class="col">Action</td> 
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </fieldset>
+    <script>
+      var row = null;
+      function Submit() {
+        var dataEntered = retrieveData();
+        var readData = readDataFromLocalStorage(dataEntered);
+        if (dataEntered == false) {
+          msg.innerHTML = '<h3 style="color:red;">please Enter Data!</h3>';
+        } else {
+          if (row == null) {
+            insert(readData);
+            var ans = confirm("Data inserted!");
+          } else {
+            update();
+            var ans = confirm("Data update");
+          }
+          //   insert(readData);
+          //   update();
+        }
+
+        document.getElementById("form").reset();
+      }
+      // CREATE (Retrieving data from)
+      function retrieveData() {
+        var name1 = document.getElementById("fullname").value;
+        var dob1 = document.getElementById("data-of-birth").value;
+        var age1 = document.getElementById("age").value;
+        var email1 = document.getElementById("email").value;
+        var gender1 = document.getElementById("gender").value;
+        var gloodGroup1 = document.getElementById("blood-group").value;
+        var medicalBackground1 =
+          document.getElementById("medical_background").value;
+        var organs1 = document.getElementById("organs").value;
+        var address1 = document.getElementById("address").value;
+        var country1 = document.getElementById("country").value;
+        var state1 = document.getElementById("state").value;
+        var workStates1 = document.getElementById("work-states").value;
+        var emergencyContact1 =
+          document.getElementById("emergency-contact").value;
+        var adharCardNo1 = document.getElementById("adhar-card-no").value;
+
+        var arr = [
+          fullname,
+          data - of - birth,
+          age,
+          email,
+          gender,
+          blood - group,
+          medical_background,
+          organs,
+          address,
+          country,
+          state,
+          work - states,
+          emergency - contact,
+          adhar - card - no,
+        ];
+        if (arr.includes("")) {
+          return false;
+        } else {
+          return arr;
+        }
+      }
+      //Read (Data in localstorage)
+      function readingDataFromlocalStorage(dataEntered) {
+        //storing data in local storage
+        var fn = localStorage.setItem("FullName", dataEntered[0]);
+        var dob = localStorage.setItem("DateOfBirth", dataEntered[1]);
+        var ag = localStorage.setItem("Age", dataEntered[2]);
+         var em = localStorage.setItem("Email", dataEntered[3]);
+          var g = localStorage.setItem("Gender", dataEntered[4]);
+           var bg = localStorage.setItem("BloodGroup", dataEntered[5]);
+            var mb = localStorage.setItem("MedicalBackground", dataEntered[6]);
+             var org = localStorage.setItem("Organs", dataEntered[7]);
+              var ads = localStorage.setItem("Address", dataEntered[8]);
+               var cty = localStorage.setItem("Country", dataEntered[9]);
+                var ste = localStorage.setItem("State", dataEntered[10]);
+                 var ws = localStorage.setItem("WorkStates", dataEntered[11]);
+                  var ec = localStorage.setItem("EmergencyContact", dataEntered[12]);
+                   var acn = localStorage.setItem("AdharCardNo", dataEntered[13]);
+
+        //getting values from local to tabel
+        
+
+        var arr = { fn, dob, ag, em, g, bg, mb, org, ads, cty, ste, ws, ec, acn };
+        return arr;
+      }
+
+      //INSERT
+    function insert(readData) {
+      var row = table.insertRow();
+      row.insertCell(0).innerHTML = readData[0];
+      row.insertCell(1).innerHTML = readData[1];
+      row.insertCell(2).innerHTML = readData[2];
+
+      row.insertCell(3).innerHTML =
+        "<button onclick = edit(this)>Edit</button><button onclick = remove(this)>Delete</button>";
+    }
+    </script>
   </body>
 </html>

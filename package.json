@@ -1,0 +1,24 @@
+{
+  "name": "praveenkumar.gopinath__web_project",
+  "version": "1.0.0",
+  "description": "it's help to some one find the organ to the hospital. what state ment and matching the blood group amd matching organ size and seeker find the organ easely find the organ in this page, so it can use to seekers this is the intation of this webpage.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fssa-batch3/praveenkumar.gopinath__web_project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fssa-batch3/praveenkumar.gopinath__web_project/issues"
+  },
+  "homepage": "https://github.com/fssa-batch3/praveenkumar.gopinath__web_project#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
+    "husky": "^8.0.3"
+  }
+}

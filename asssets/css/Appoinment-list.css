@@ -1,77 +1,369 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
-    background-color: aliceblue;
-    font-family: sans-serif;
+  background-color: #f3f3f3;
+  overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.navbar {
+  position: fixed;
+  /* position: fixed; */
+  height: 80px;
+  width: 100%;
+  top: 0%;
+  padding: 23px 30px;
+  background-image: url(./../images/nave\ bar.png);
+  /* background-color: #1b4cd3; */
+  /* position: relative; */
+  /* margin-top: -7%; */
+  z-index: 9;
+}
+.nav-header {
+  display: inline;
+}
+.nav-logo {
+  display: inline-block;
+  margin-top: -100px;
+  margin-left: -40px;
+}
+.nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav-links {
+  display: inline-block;
+  padding: 10px 30px;
+  margin-left: 20px;
+  font-size: 15px;
+  color: rgb(9, 14, 90);
+}
+.nav-links a {
+  padding: 10px 12px;
+  text-decoration: none;
+  font-weight: 550;
+  color: white;
+}
+
+.nav-links a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* navbar toggle button */
+#nav-check,
+.nav-btn {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .nav-btn {
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
   }
-  .main-card{
-    display: flex;
-    /*grid-template-columns: 33% 33% 33%;*/
-    flex-wrap: wrap;
-  }
-  
-  .card {
-    background-color: black;
-    border-radius: 3px;
-    height: 350px;
-    width: 220px;
-    margin: 40px;
-    box-shadow: 10px 10px 9px rgba(0 0, 0, 0.16), 0 12px 13px rgba(0 0, 0, 0.16);
-  }
-  
-  .card:hover {
-    transition: 0.3s;
-    transform: scale(1.03);
-  
-  }
-  
-  .img {
-    margin-top: 3%;
-    margin-bottom: 3%;
-    margin-left: 30%;
-    margin-right: 30%;
-    border-radius: 100%;
+  .nav-btn label {
+    display: inline-block;
     width: 80px;
-    height: 80px;
-    border: 3px solid rgba(255, 255, 255, 0.963);
+    height: 70px;
+    padding: 25px;
   }
-  .name {
-    padding-left: 15%;
-    padding-right: 17%;
-    color: aliceblue;
+  .nav-btn label span {
+    display: block;
+    height: 10px;
+    width: 25px;
+    border-top: 3px solid #eee;
+  }
+  .navbar .nav-btn label:hover,
+  .navbar #nav-check:checked ~ .nav-btn label {
+    background-color: rgb(25, 35, 167);
+    transition: all 0.5s ease;
+  }
+  .navbar .nav-links {
+    position: absolute;
+    display: block;
+    text-align: start;
+    width: 50%;
+    background-color: rgb(25, 35, 167);
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 60px;
+    right: 0px;
+  }
+  .navbar .nav-links a {
+    display: block;
+  }
+
+  /* nav toggle button */
+  .navbar #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+
+  .navbar #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+  }
+  .navbar .nav-links .loginBtn {
+    padding: 10px 40px;
+    margin: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(9, 14, 90);
+  }
+  /* dropdown code */
+  .navbar .nav-links .dropdown,
+  .navbar .nav-links .dropdown2 {
+    float: none;
+    width: 100%;
+  }
+  .navbar .nav-links .drop-content,
+  .navbar .nav-links .drop-content2 {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    top: 0px;
+    left: 0px;
+  }
+
+  .navbar .nav-links .drop-content a {
+    color: rgb(9, 14, 90);
+  }
+}
+
+/* Dropdown menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.drop-content,
+.drop-content2 {
+  display: none;
+  position: absolute;
+  background-color: #1b4cd3;
+  min-width: 300px;
+  font-size: 16px;
+  top: 26px;
+  z-index: 1;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+}
+/* hover show dropdown */
+.dropdown:hover .drop-content,
+.dropdown2:hover .drop-content2 {
+  display: block;
+}
+/* drondown links */
+.drop-content a {
+  padding: 10px 10px;
+  border-bottom: 1px solid rgb(197, 197, 250);
+  display: block;
+  transition: all 0.5s ease;
+}
+.dropBtn .drop-content a:hover {
+  background-color: rgb(230, 230, 230);
+}
+.dropdown:hover .dropBtn,
+.dropdown2:hover .dropBtn2 {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.dropdown2 .drop-content2 {
+  position: absolute;
+  left: 120px;
+  top: 78px;
+}
+.dropBtn2 i {
+  margin-left: 15px;
+}
+
+/* ----------- */
+
+.container {
+  position: relative;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-top: -10%;
+  margin-bottom: -30%;
+
+}
+
+.intro-area {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding-left: 5%;
+  color: #0a3881;
+}
+.intro-area h2 {
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 50px;
+  margin-bottom: 5px;
+  margin-top: 10%;
+}
+.intro-area p {
+  font-size: 18px;
+}
+@media screen and (max-width: 767px) {
+  .container {
+    margin-top: 50px;
+    max-width: 720px;
+    font-size: 30px;
+  }
+  .intro-area h2 {
+    text-align: center;
+    align-items: center;
+    margin-top: 15%;
+    font-size: 46px;
+    margin-bottom: 5px;
+  }
+
+  .intro-area p {
+    text-align: center;
+    align-items: center;
+  }
+  .main-card {
+    margin-top: 30%;
+  }
+  .card {
+ margin-top: 10%;
+}
+}
+
+/*------------- card -------*/
+.main-card {
+  display: flex;
+  /*grid-template-columns: 33% 33% 33%;*/
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: black;
+  border-radius: 3px;
+  height: 350px;
+  width: 220px;
+  /* margin: 10px; */
+  margin-left: 25px;
+  margin-top: 20%;
+  box-shadow: 10px 10px 9px rgba(0 0, 0, 0.16), 0 12px 13px rgba(0 0, 0, 0.16);
+  z-index: 5;
+}
+
+.card:hover {
+  transition: 0.3s;
+  transform: scale(1.03);
+}
+
+.img {
+  margin-top: 3%;
+  margin-bottom: 3%;
+  margin-left: 30%;
+  margin-right: 30%;
+  border-radius: 100%;
+  width: 80px;
+  height: 80px;
+  border: 3px solid rgba(255, 255, 255, 0.963);
+}
+.name {
+  padding-left: 15%;
+  padding-right: 17%;
+  color: aliceblue;
+}
+
+.title {
+  margin-left: 3%;
+  margin-right: 4%;
+  color: gray;
+  font-size: 14px;
+}
+.desc {
+  margin: 4%;
+  padding: 3%;
+  padding-left: 2%;
+  padding-right: 2%;
+  font-size: 14px;
+  color: rgb(218, 216, 216);
+}
+.btn {
+  outline: none;
+  background-color: rgb(12, 152, 80);
+  margin: 5% 27% 0%;
+  margin-bottom: 5%;
+  border: none;
+  height: 35px;
+  width: 45%;
+  color: aliceblue;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 3px;
+}
+
+.btn:hover {
+  color: rgb(12, 152, 80);
+  background: aliceblue;
+  transition: all 300ms linear;
+  cursor: pointer;
+}
+
+/* footer */
+.footer{
+  margin-top: 50%;
+  background:#000;
+  padding:30px 0px;
+  font-family: 'Play', sans-serif;
+  text-align:center;
   }
   
-  .title {
-    margin-left: 3%;
-    margin-right: 4%;
-    color: gray;
-    font-size: 14px;
-  }
-  .desc {
-    margin: 4%;
-    padding: 3%;
-    padding-left: 2%;
-    padding-right: 2%;
-    font-size: 14px;
-    color: rgb(218, 216, 216);
-  }
-  .btn {
-    outline: none;
-    background-color: rgb(12, 152, 80);
-    margin: 5% 27% 0%;
-    margin-bottom: 5%;
-    border: none;
-    height: 35px;
-    width: 45%;
-    color: aliceblue;
-    font-size: 14px;
-    font-weight: 700;
-    border-radius: 3px;
+  .footer .row{
+  width:100%;
+  margin:1% 0%;
+  padding:0.6% 0%;
+  color:gray;
+  font-size:0.8em;
   }
   
-  .btn:hover {
-    color: rgb(12, 152, 80);
-    background: aliceblue;
-    transition: all 300ms linear;
-    cursor: pointer;
+  .footer .row a{
+  text-decoration:none;
+  color:gray;
+  transition:0.5s;
+  }
+  
+  .footer .row a:hover{
+  color:#fff;
+  }
+  
+  .footer .row ul{
+  width:100%;
+  }
+  
+  .footer .row ul li{
+  display:inline-block;
+  margin:0px 30px;
+  }
+  
+  .footer .row a i{
+  font-size:2em;
+  margin:0% 1%;
+  }
+  
+  @media (max-width:720px){
+  .footer{
+  text-align:left;
+  padding:5%;
+  }
+  .footer .row ul li{
+  display:block;
+  margin:10px 0px;
+  text-align:left;
+  }
+  .footer .row a i{
+  margin:0% 3%;
+  }
   }

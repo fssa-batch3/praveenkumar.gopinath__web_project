@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Document</title>
+    <link rel="stylesheet" href="./../asssets/css/crud1.css" />
+  </head>
+  <body>
+    <header>
+      <div class="head">
+        <!-- <a href="../pages/3.home.html">
+          <img
+            src="../assets/image/arrowback.png"
+            alt="arrow-back"
+            width="50px"
+        /></a> -->
+      </div>
+      <!-- <div class="title"><h2>Donor Form.</h2></div> -->
+      <!-- <button onclick="history()">History</button> -->
+    </header>
+    <section class="output_section"></section>
+    <a href="../assets/image/apple.jpg"></a>
+    <section class="sec"></section>
+    <form action="/action_page.php" method="get" class="full-card" id="form">
+      <h3>Register Here..</h3>
+      <input required="required" type="text" id="name" placeholder="Enter your name" />
+      <input
+        required="required"
+        type="number"
+        id="age"
+        placeholder="Enter Your age"
+      />
+      <input
+        required="required"
+        list="type"
+        name="Organ"
+        id="organ"
+        placeholder="Organ"
+      />
+      <datalist id="type">
+        <option value="Heart"></option>
+        <option value="Lungs"></option>
+        <option value="Liver"></option>
+        <option value="Kidneys"></option>
+      </datalist>
+      <input
+        required="required"
+        type="number"
+        id="phonenumber"
+        placeholder="Enter Your phone numbare"
+      />
+      <input
+        required="required"
+        type="email"
+        id="email"
+        placeholder="Enter Your Email"
+      />
+      <input
+        required="required"
+        type="text"
+        id="state"
+        placeholder="Enter your place"
+      />
+      <input
+        required="required"
+        type="text"
+        id="address"
+        class="description"
+        placeholder="address"
+      />
+      <br />
+      <input
+        type="date"
+        required="required"
+        id="Pickup_date"
+        placeholder="Pickup date"
+      />
+      <div class="btn-card">
+        <button class="btn" id="add-btn">Add</button>
+        <button class="btn" type="reset" id="cancel">Cancel</button>
+      </div>
+    </form>
+    <footer id="form" class="footer">
+      <!-- <button id="add">Add</button> -->
+      <button type="button" onclick="submit()">Submit</button>
+    </footer>
+    <script>
+      function submit() {
+        window.location.href = "";
+      }
+      function history() {
+        window.location.href = "";
+      }
+      uploadForm = document.getElementById("form");
+      let id = JSON.parse(localStorage.getItem("users"));
+      console.log(id);
+      let login_id = JSON.parse(localStorage.getItem("oneUser"));
+      console.log(login_id);
+      const get_obj = id.find((e) => e.userEmail === login_id);
+      console.log(get_obj);
+      document.createElement("newly_added");
+      uploadForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        let array = [];
+        if (localStorage.getItem("newly_added") != null) {
+          array = JSON.parse(localStorage.getItem("newly_added"));
+        }
+        let match = false;
+        const name1 = document.getElementById("name").value;
+        const age1 = document.getElementById("age").value;
+        const organ1 = document.getElementById("organ").value;
+        const number1 = document.getElementById("phonenumber").value;
+        const email1 = document.getElementById("email").value;
+        const state1 = document.getElementById("state").value;
+        // const place1 = document.getElementById("place").value;
+        // const country1 = document.getElementById("country").value;
+        const address1 = document.getElementById("address").value;
+        const Pickup_date1 = document.getElementById("Pickup_date").value;
+        let ProductId = Date.now();
+        let userId = get_obj["id"];
+        // let date = get_obj["transport_DOB"];
+        let inputDetails = {
+          name1,
+          age1,
+          organ1,
+          number1,
+          email1,
+          state1,
+        //   place1,
+        //   country1,
+          address1,
+          Pickup_date1,
+          // date,
+        };
+        // console.log(Product_id);
+        array.push(inputDetails);
+        const str = JSON.stringify(array);
+        localStorage.setItem("newly_added", str);
+        console.log(str);
+        document.getElementById("form").reset();
+      });
+      // const start = Date.now();
+    </script>
+  </body>
+</html>

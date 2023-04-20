@@ -1,13 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./..//asssets/css/Appoinment-list.css" />
-  </head>
+  <title>Document</title>
+</head>
 <body>
+  <div class="navbar">
+    <!-- Nav logo -->
+    <div class="nav-header">
+      <div class="nav-logo">
+        <a href="/index.html">
+          <img
+            src="./../asssets/images/liceRia__1_-removebg-preview.png"
+            width="250px"
+            alt="logo"
+          />
+        </a>
+      </div>
+    </div>
+    <!-- nav-toggle-button -->
+    <input type="checkbox" id="nav-check" />
+    <div class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+    <!-- Nav-->
+    <div class="nav-links">
+      <a href="#"><i class="fa fa-home" style="font-size: 16px"></i> Home</a>
+      <!-- first Dropdown menu -->
+      <div class="dropdown">
+        <a class="dropBtn" href="#"
+          ><i class="fas fa-ribbon" style="font-size: 13px"></i> Register your
+          decision
+          <i class="fas fa-angle-down"></i>
+        </a>
+        <div class="drop-content">
+          <a href="./donor_reg_list.html"
+            >Donar Register Form <i class="fa fa-paper-plane" style="font-size: 16px"></i
+          ></a>
+          <a href="./seeker.registation list.html"
+            >Seeker Register Form <i class="fa fa-paper-plane" style="font-size: 15px"></i
+          ></a>
+          <!-- Second  Dropdown  menu -->
+          <div class="dropdown2">
+            <a class="dropBtn2" href="#"
+              >More<i class="fas fa-angle-right"></i>
+            </a>
+            <div class="drop-content2">
+              <a href="#">About</a>
+              <a href="#">FAQs</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="./Appoinment-list.html"
+        ><i class="fas fa-calendar-check" style="font-size: 16px"></i>
+        Appoinment</a
+      >
+      <div class="dropdown">
+        <a class="dropBtn" href="./profile.html"
+          ><i class="far fa-address-book" style="font-size: 17px"></i> Profile
+          <i class="#"></i>
+        </a>
+      </div>
+      <div class="dropdown">
+        <a class="dropBtn" href="#"
+          ><i class="fas fa-user-shield" style="font-size: 16px"></i> Admin
+          <i class="fas fa-angle-down"></i>
+        </a>
+        <div class="drop-content">
+          <a href="#"
+            ><i class="far fa-address-book" style="font-size: 16px"></i>
+            Admin Profile</a
+          >
+          <a href="#">More <i class="fas fa-angle-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+  <div class="intro-area">
+    <div class="container">
+      <h2>Doctor's guide for </h2>
+      <p>significance of organ donation</p>
+    </div>
+  </div>
+  
+    <!-- <div class="col-lg "> 
+         <marquee style=" color: rgb(255, 255, 255); box-shadow: 1px 1px 5px black; padding: 5px; background-color: #000000;" behavior="" direction="left"> PLEASE DONATE YOUR ORGAN AND SAVE SOMEONE LIFE</marquee>
+    </div> -->
+
+
     <!-- <div class="card">
       <img src="./../asssets/images/doctor.png" alt="Suriya" class="img" />
       <h1 class="name">Mr.suriya</h1>
@@ -23,8 +113,6 @@
 
   <div class="main-card"></div>
     <script>
-
-//____________________JASON____________//
       let profile_card = [
 
         {
@@ -71,8 +159,6 @@
         },
         
       ]
-//___________________ card ___________________________________________________________________________
-
     for  ( let i = 0; i  <  profile_card.length; i++){
         //loop//
 
@@ -115,5 +201,35 @@
     }
       </script>
     </main>
+
+    <footer>
+      <div class="footer">
+      <div class="row">
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-instagram"></i></a>
+      <a href="#"><i class="fa fa-youtube"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-google"></i></a>
+     
+      </div>
+      
+      <div class="row">
+      <ul>
+      <li><a href="#">Contact us</a></li>
+      <li><a href="#">Our Services</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Terms & Conditions</a></li>
+      <li><a href="#">Career</a></li>
+      </ul>
+      </div>
+      
+      <div class="row">
+      Copyright © 2023 freshworks - All rights reserved || Designed By: Praveen kumar 
+      </div>
+      </div>
+      </footer>
+    <script>
+ 
+    </script>
   </body>
 </html>

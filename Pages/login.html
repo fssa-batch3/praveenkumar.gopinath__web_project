@@ -19,17 +19,19 @@
           <div class="form-group">
             <label>Email:</label>
             <input id="userEmail" type="email" required autocomplete="off" />
+            <span class="error-message"></span>
           </div>
           <div class="form-group">
             <label>Password:</label>
             <input id="userPassword" type="password" autocomplete="off" />
+            <span class="error-message"></span>
           </div>
           <br />
-          <button type="submit">login</button>
+          <button class="button" type="submit">login</button>
         </form>
         <br />
         <div class="text">
-          <p>Not yet member? <a href="./Signpage.html">Signup now</a></p>
+          <p>Not yet member? <a href="./signup_page.html">Signup now</a></p>
         </div>
       </div>
     </div>
@@ -37,16 +39,16 @@
       let logForm = document.getElementById("log_form");
       // form assign in var4iable
       logForm.addEventListener("submit", function (event) {
-        let get_data = JSON.parse(localStorage.getItem("users"));
+       get_data = JSON.parse(localStorage.getItem("users"));
         event.preventDefault();
         const email = document.getElementById("userEmail").value;
         const password = document.getElementById("userPassword").value;
         let findData = false;
-        const select_user = get_data.find(function (user) {
-          const customerEmail = user["userEmail"];
+       const select_user = get_data.find (function (users) {
+          const customerEmail = users["userEmail"];
           if (email === customerEmail) {
             findData = true;
-            if (password === user["userPassword"]) {
+            if (password === users["userPassword"]) {
               alert("Your account logged in successfully...!");
               localStorage.setItem("oneUser", JSON.stringify(email));
               // window.location.href = "./pages/Customer/Customer.html"
@@ -59,9 +61,21 @@
         });
         if (!findData) {
           alert("Email is not available please signup or enter valid Email");
+          console.log(select_user);
+          return findData;
+        }else{
+        window.location.href = "/Pages/profile.html";
         }
-        console.log(select_user);
       });
+
+      // class Login {
+      //   constructor(form, fields){
+
+      //   }
+      // }
+
+      // const form = document.querySelector(".log_form");
+      // if(log_form)
     </script>
   </body>
 </html>

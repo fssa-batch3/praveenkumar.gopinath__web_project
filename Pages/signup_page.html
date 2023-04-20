@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../asssets/css/Signpage.css">
+   </head>
+<body>
+<div>
+  <div class="card">
+    <div class="img-1">
+      <img src="" width="70">
+        <h1>Saving<span>lives.</span></h1>
+        </div>
+    <div class="card-body">
+      <form id="signform">
+        <div class="form-group">
+          <label >User Name</label>
+          <input required="" autocomplete="off" id="userName" type="text" pattern="[A-Za-z]{3,22}">
+        </div>
+        <div class="form-group">
+          <label >Email</label>
+          <input required="" autocomplete="off"  id="userEmail" type="email">
+        </div>
+        <div class="form-group">
+          <label >Phone Number</label>
+          <input required="" autocomplete="off" id="userPhoneNumber" type="number" pattern="[0-9]{10}">
+        </div>
+        <div class="form-group">
+          <label >Password</label>
+          <input required="" id="userPassword" type="password" pattern="[0-9]{12}">
+        </div>
+        <div class="form-group">
+          <label>Confirm Password</label>
+          <input required="" id="userconfirmPassword" type="password" pattern="[0-9]{12}">
+        </div>
+        <br>
+       <input type="submit" class="btn" value="submit"></form>
+       <br>
+       <div class="text">
+        <p>Already have an account? <a href="./login.html">Login here</a></p>
+      </div>
+    </div>
+</div>
+  <script>
+
+//     let signform = document.getElementById("signform")
+//     document.createElement("user_info");
+//     signform.addEventListener("submit", function (event) {
+//       event.preventDefault();
+//       let array = [];
+//       if (localStorage.getItem("user_info") != null ){
+//         array = JSON.parse(localStorage.getItem("user_info"));
+//       }
+// const id = Date.now();
+// console.log(id);
+// const UserName = document.getElementById("userName").value;
+// const UserEmail = document.getElementById("userEmail").value;
+// const UserPhoneNumber = document.getElementById("userPhoneNumber").value;
+// const UserPassword = document.getElementById("userPassword").value;
+// const UserConfirmPassword = document.getElementById("confirmPassword").value;
+// if (UserPassword != UserConfirmPassword) {
+//   alert("Password and confirmpassword are not match please set New password");
+//   return false;
+// } else {
+//   for (let i = 0; i < array.length; i++ ) {
+//     if (UserEmail == array[i]["UserEmail"]) {
+//       match = true;
+//     }
+//   }
+// }
+//  if (match == true){
+//   alert("email is already Exist");
+//   return false;
+//  } else {
+//   let userObj = {
+//     Name,
+//     Email,
+//     PhoneNumber,
+//     NewPassword,
+//     CofirmPassword
+//   };
+//   console.log(userObj);
+
+//   array.push(userObj);
+//   const str = JSON.stringify(array);
+//   localStorage.setItem("user_info", str);
+//   console.log(str);
+//   window.localStorage.herf = "/pages/index.html"
+//  }
+ 
+//     });
+
+  //   const start = Date.now();
+
+  //   const signupForm = document.getElementById("signform");
+  //   signupForm.addEventListener("submit", function (event){
+  //     let users = [];
+  
+  //     if( localStorage.getItem("users") != null){
+  //       users = JSON.parse(localStorage.getItem("users"));
+  //     }
+  
+  //     event.preventDefault();
+  //     const userName = document.getElementById("userName").value;
+  //     const userEmail = document.getElementById("userEmail").value;
+  //     const userPhoneNumber = document.getElementById("userPhoneNumber").value;
+  //     const userPassword = document.getElementById("userPassword").value;
+  //     const userConfirmPassword = document.getElementById("userconfirmPassword").value;
+  //     let validation_error = false;
+  //     let user_data = {userName, userEmail, userPhoneNumber, userPassword, userConfirmPassword};
+  
+  //     if(userPassword != userConfirmPassword){
+  //       valdation_error = true;
+  //       alert(" confirm password is incorrect");
+  //       return false;
+  //     }
+      
+  //     const select_user = users.find(function(user){
+  //       const customerEmail = user["userEmail"]
+  //       if( userEmail === customerEmail ) {
+  //         validation_error = true;
+  //         alert("user & already use this account, please change your account");
+  //         return ;
+  //       }
+  //       // console.log(select_user)
+        
+  //       return false;
+  //     });
+  // if(!validation_error){
+  //       users.push(user_data);
+  //       localStorage.setItem("users", JSON.stringify(users))
+  //       console.log(users)
+  //       alert("account created successfully...")
+        
+  //       location.reload(signupForm)
+  //       window.location.href = "./login.html"
+  //     }
+  //     return true;
+  //   });
+
+  let signForm = document.getElementById("signform");
+  document.createElement("users");
+  signForm.addEventListener("submit",function(event){
+    event.preventDefault();
+    let array = [];
+    // if(localStorage.getItem("users") != null){
+    //   array = JSON.parse(localStorage.getItem("users"));
+    // }
+    let match = false;
+    const id = Date.now();
+    console.log(id);
+    const userName = document.getElementById("userName").value;
+      const userEmail = document.getElementById("userEmail").value;
+      const userPhoneNumber = document.getElementById("userPhoneNumber").value;
+      const userPassword = document.getElementById("userPassword").value;
+      const userConfirmPassword = document.getElementById("userconfirmPassword").value;
+      if(userPassword != userConfirmPassword){
+        alert("Password and Confirm password are not match");
+        return false;
+      } else {
+          for (let i = 0; i < array.length; i++) {
+            if (userEmail == array[i]["userEmail"]) {
+              match = true;
+            }
+          }
+        }
+        if(match == true){
+          alert("emali already exist");
+          return false;
+        } else{
+          let userObj = {
+            userName,
+            userEmail,
+            userPhoneNumber,
+            userPassword,
+            userConfirmPassword,
+          }
+        
+          array.push(userObj);
+          console.log(userObj);
+          const str = JSON.stringify(array);
+          localStorage.setItem("users", str);
+          console.log(str);
+          alert("You created your account successfully");
+          window.location.href = "/Pages/login.html";
+        }
+  });
+  // function log() {
+  //       window.location.href = "";
+  //     }
+  //     // for create  user id
+  //     const start = Date.now();
+  </script>
+</body>
+</html> 
+
+ 
+

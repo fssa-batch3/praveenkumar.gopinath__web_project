@@ -19,39 +19,58 @@
           alt="Saving Lives"
         /> -->
         <h1 style="padding: 10px 0px 40px; color: #251f35">
-          Seeker Registeration Form
+          Donor Registeration Form
         </h1>
       </div>
       <div class="form">
-        <form id="seekerRegisterationForm">
+        <form id="donorRegisterationForm">
           <div class="input_field">
-            <label>First Name:</label>
-            <input id="fullname" type="text" class="input" required="" />
-          </div>
-          <div class="input_field">
-            <label>Patient Data fo Birth*</label>
+            <label>Full Name*</label>
             <input
-              type="date"
-              required=""
-              id="dataofbirth"
+              id="fullname"
+              type="text"
               class="input"
-              name="birthday"
+              required=""
+              placeholder="Name"
             />
           </div>
           <div class="input_field">
-            <label>Patient Age:</label>
-            <input id="age" type="text" class="input" required="" />
+            <label>Data-fo-Birth*</label>
+            <input
+              id="dataofbirth"
+              type="date"
+              class="input"
+              name="birthday"
+              required=""
+            />
           </div>
           <div class="input_field">
-            <label>Patient Email:</label>
+            <label>Age*</label>
+            <input
+              id="age"
+              type="text"
+              class="input"
+              required=""
+              placeholder="Age"
+            />
+          </div>
+          <div class="input_field">
+            <label>Email*</label>
             <!-- <input type="email@" class="input" /> -->
-            <input id="email" class="input" type="email" required="" multiple />
+            <input
+              id="email"
+              class="input"
+              type="email"
+              required=""
+              placeholder="@gmail.com"
+              multiple
+            />
           </div>
           <div class="input_field">
-            <label>Gender:</label>
+            <label>Gender*</label>
             <div class="custom_select">
               <select id="gender" required="">
-                <option value=""></option>
+                <option value="select">--Select--</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
                 <option value="transgender">Transgender</option>
@@ -61,10 +80,10 @@
             </div>
           </div>
           <div class="input_field">
-            <label>Patient Blood group:</label>
+            <label>Blood group*</label>
             <div class="custom_select">
               <select id="bloodgroup" required="">
-                <option value="">Select</option>
+                <option value="select">--Select--</option>
                 <option value="A+">A+</option>
                 <option value="A-">A-</option>
                 <option value="B+">B+</option>
@@ -73,22 +92,25 @@
                 <option value="AB-">AB-</option>
                 <option value="O+">O+</option>
                 <option value="O-">O-</option>
+                <option value="other blood group">Other-Blood-Group</option>
               </select>
             </div>
           </div>
           <div class="input_field">
-            <label>Patient Medical Background:</label>
+            <label>Medical Background*</label>
             <textarea
               id="medicalbackground"
               class="textarea"
               required=""
+              placeholder=""
             ></textarea>
           </div>
           <div class="input_field">
-            <label>Required Organ:</label>
+            <label>Organs that I wish to donate*</label>
             <div class="custom_select">
-              <select id="organs" required="">
-                <option value=""></option>
+              <select id="organs" required="" placeholder="Select">
+                <option value="select">--Select--</option>
+                <option value="">Any Part of My Body</option>
                 <option value="male">Heart</option>
                 <option value="Female">Lungs</option>
                 <option value="male">Liver</option>
@@ -99,72 +121,91 @@
             </div>
           </div>
           <div class="input_field">
-            <label>Patient Address:</label>
-            <textarea id="address" class="textarea" required=""></textarea>
+            <label>Address*</label>
+            <textarea
+              id="address"
+              class="textarea"
+              required=""
+              placeholder="Address"
+            ></textarea>
           </div>
           <div class="input_field">
-            <label>Country:</label>
+            <label>Country*</label>
             <div class="custom_select">
               <select id="country" required="">
                 <option value="India">India</option>
-                <option value="Zambia">Zambia</option>
+                <option value="Indonesia">Indonesia</option>
+                <option value="Iran, Islamic Republic of">
+                  Iran, Islamic Republic of
+                </option>
                 <option value="Zimbabwe">Zimbabwe</option>
               </select>
             </div>
           </div>
           <div class="input_field">
-            <label>State:</label>
+            <label>State*</label>
             <div class="custom_select">
               <select id="state" required="">
-                <option value=""></option>
                 <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Andaman and Nicobar Islands">
+                  Andaman and Nicobar Islands
+                </option>
+                <option value="Telangana">Telangana</option>
+                <option value="Tripura">Tripura</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
                 <option value="Uttarakhand">Uttarakhand</option>
                 <option value="West Bengal">West Bengal</option>
               </select>
             </div>
           </div>
           <div class="input_field">
-            <label>Work Status:</label>
+            <label>Work Status*</label>
             <input id="workstates" type="text" class="input" required="" />
           </div>
           <div class="input_field">
-            <label>Emergency contact</label>
+            <label style="text-decoration: underline; padding-top: 10px; color: brown;">Emergency Contact Person Details :-</label>
+          </div>
+          
+          <div class="input_field">
+            <label>Emergency contact*</label>
             <input
               id="emergencycontact"
-              type="text"
+              type="number"
               class="input"
               required=""
             />
           </div>
           <div class="input_field">
-            <label>Adhar card number:</label>
+            <label>Adhar card number*</label>
             <input id="adharcardno" type="number" class="input" required="" />
           </div>
-          <div class="input_field terms">
+          <!-- <div class="input_field terms">
             <label class="check">
               <input type="checkbox" />
               <span class="checkmark"></span>
             </label>
             <p>I Agreeed to tearm and conditions</p>
-          </div>
+          </div> -->
           <div class="input_field">
-            <input type="submit" id="btn" value="Submit" class="btn" />
+            <input type="submit" id="btn" value="submit" class="btn" />
           </div>
         </form>
       </div>
     </div>
     <script>
       const start = Date.now();
-      const seekerRegisterationForm = document.getElementById(
-        "seekerRegisterationForm"
+      const registerationForm = document.getElementById(
+        "donorRegisterationForm"
       );
-      seekerRegisterationForm.addEventListener("submit", function (event) {
-        let seekers = [];
+      registerationForm.addEventListener("submit", function (event) {
+        let donors = [];
 
-        if (localStorage.getItem("seekers") != null) {
-          seekers = JSON.parse(localStorage.getItem("seekers"));
+        if (localStorage.getItem("donors") != null) {
+          donors = JSON.parse(localStorage.getItem("donors"));
         }
 
+        // CREATE (Retrieving data from)
         event.preventDefault();
         const fullname = document.getElementById("fullname").value;
         const dataofbirth = document.getElementById("dataofbirth").value;
@@ -203,16 +244,14 @@
           adharcardno,
         };
         if (!validation_error) {
-          seekers.push(user_data);
-          localStorage.setItem("seekers", JSON.stringify(seekers));
-          console.log(seekers);
+          donors.push(user_data);
+          localStorage.setItem("donors", JSON.stringify(donors));
+          console.log(donors);
           alert(" Your detail as registered successfull...");
-          window.location.href = "/Pages/Appoinment-list.html";
-          document.getElementById("seekerRegisterationForm").reset();
-
-          // location.reload(seekerRegisterationForm)
+          window.location.href = "./Appoinment-list.html";
+          location.reload(donorRegisterationForm);
         }
-        // return true;
+        return true;
       });
     </script>
   </body>

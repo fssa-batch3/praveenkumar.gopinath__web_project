@@ -1,12 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+
 * {
   margin: 0;
   padding: 0;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
 }
-
 body {
-  font-family: "Outfit", sans-serif;
+  font-family: "Roboto", sans-serif;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -17,7 +17,6 @@ body {
   -moz-animation: Gradient 15s ease infinite;
   animation: Gradient 15s ease infinite;
 }
-
 @-webkit-keyframes Gradient {
   0% {
     background-position: 0% 50%;
@@ -53,30 +52,27 @@ body {
     background-position: 0% 50%;
   }
 }
-.img-1 {
+.logo {
   display: flex;
-  height: 45px;
-  padding: 27px;
-  padding-left: 50px;
+  padding: 40px 10px;
+  padding-left:45px;
+
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
 }
-h1 {
-  padding: 30px;
-  margin-left: -30px;
-  margin-top: -25px;
-  color: #000000;
-  font-size: 30px;
-}
-h1 span {
-  color: #000000;
-}
+
 .card {
-  background-color: #ffffff;
   width: 390px;
-  /* border: 1px solid rgb(255, 255, 255); */
-  box-shadow: 1px 1px 5px #000000;
+  background-color: white;
+  border-radius: 4px;
   overflow: hidden;
   margin: 20px;
-  border-radius: 5px;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+  7px 7px 20px 0px rgba(0,0,0,.1),
+  4px 4px 5px 0px rgba(0,0,0,.1);
 }
 .card-body {
   padding: 26px;
@@ -92,44 +88,79 @@ h1 span {
   font-weight: lighter;
   margin-bottom: 2px;
 }
+
 .form-group input[type="text"],
 .form-group input[type="email"],
-.form-group input[type="password"] {
+.form-group input[type="number"],
+.form-group input[type="Password"],
+.form-group input[type="confirmPassword"] {
   width: 100%;
   padding: 12px;
   font-size: 15px;
   outline: none;
   border: 1px solid rgb(0, 0, 0);
+  border-radius: 0px;
   background-color: #ffffff;
   color: #000000;
 }
-button {
+.form-group input:before {
+  border: 5px solid rgb(135, 250, 223);
+}
+.button {
   padding: 11px 24px 10px;
   margin-left: 0px 10px;
   font-size: 15px;
   border: none;
-  border-radius: 2px;
+  border-radius: 4px;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   -webkit-animation: Gradient 15s ease infinite;
   -moz-animation: Gradient 15s ease infinite;
   animation: Gradient 15s ease infinite;
-  color: #39324e;
+  color: #000000;
   text-transform: uppercase;
-  transition: all 0.5s;
+  transition: all 0.1s;
   cursor: pointer;
-  box-shadow: 1px 1px 5px #000000;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+  7px 7px 20px 0px rgba(0,0,0,.1),
+  4px 4px 5px 0px rgba(0,0,0,.1);
 }
-button:hover {
-  background-color: #767676;
-  color: #3e3e3e;
- box-shadow: none;
+.button:hover {
+  background-color: #00000070;
+  color: #000000;
+  box-shadow: none;
 }
+.text p {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+.text p {
+  color: #000000;
+  width: 100%;
+  text-align: center;
+}
+.text a {
+  color: rgb(96, 207, 255);
+}
+.text p a {
+  text-decoration: underline;
+}
+.text p a :hover {
+  color: #000000;
+}
+.text p a:hover {
+  color: rgba(92, 190, 255, 0.63);
+  transition: all 0.5s;
+} 
+
+
 .text p {
   text-decoration: none;
   color: #d1c2ff;
   font-size: 15px;
   font-weight: 500;
+  padding-top: 30px;
   /* margin-left: 0px; */
 }
 .text p {
@@ -138,13 +169,13 @@ button:hover {
   text-align: center;
 }
 .text a {
-  color: rgb(80, 162, 255);
+  color: rgb(255, 255, 255);
 }
 .text p a {
   text-decoration: underline;
 }
 
 .text p a:hover {
-  color: #56b8fe6a;
+  color: #cccccc;
   transition: all 0.5s;
 }

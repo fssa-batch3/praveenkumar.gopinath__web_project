@@ -35,7 +35,7 @@
              <!-- <input type="submit" class="btn" value="submit"></form> -->
              <button id="submit" type="submit">Edit</button>
         <button id="delete">Delete</button>
-      <!-- <button id="logout" click="logout" type="button">Log out</button> -->
+      <button id="logout" click="logout" type="button">Log out</button>
              <br>
              <br>
              <div class="text">
@@ -123,17 +123,18 @@
         }
       });      
     
-      // let logout_user = document.getElementById("logout");
-      // logout_user.addEventListener("click", function (event) {
-      //   event.preventDefault();
-      //   let indexDel = users.indexOf(select_user);
-      //   let msg = confirm("Are you sure you want to logout this account");
-      //   if (msg !== true) {
-      //     return;
-      //   } else {
-      //     window.location.href = "/Pages/login.html";
-      //   }
-      // });
+      let logout_user = document.getElementById("logout");
+      logout_user.addEventListener("click", function (event) {
+        event.preventDefault();
+        let indexDel = users.indexOf(select_user);
+        let msg = confirm("Are you sure you want to logout this account");
+        if (msg !== true) {
+          return;
+        } else {
+          window.location.href = "./signup_page.html";
+        }
+      });
     </script>
+   
   </body>
 </html>

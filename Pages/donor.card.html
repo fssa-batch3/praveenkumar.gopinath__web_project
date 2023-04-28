@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./../asssets/css/donorcar.css" />
+  </head>
+  <body>
+    <div class="donor_card"></div>
+    <script>
+      let card_details = JSON.parse(window.localStorage.getItem("donors"));
+      let donor_email = JSON.parse(window.localStorage.getItem("donor_email"));
+      console.log(donor_email)
+      let select_user = card_details.find(function (event) {
+        let customerEmail = event["email"];
+        console.log(customerEmail);
+        if (donor_email.email == customerEmail["email"]) {
+          return true;
+        }
+      });
+      let single_card = document.querySelector("div.donor_card");
+      let userid = document.createElement("span");
+      userid.innerHTML = "Userid : " + select_user["userid"];
+      single_card.append(userid);
+
+      let name = document.createElement("span");
+      name.innerHTML = "Name : " + select_user["fullname"];
+      single_card.append(name);
+
+      let date_of_birth = document.createElement("span");
+      date_of_birth.innerHTML = " Date of birth : " + select_user["dataofbirth"];
+      single_card.append(date_of_birth);
+
+      let age = document.createElement("span");
+      age.innerHTML = "Age : " + select_user["age"];
+      single_card.append(age);
+
+      let gender = document.createElement("span");
+      gender.innerHTML = "Gender: " + select_user["gender"];
+      single_card.append(gender);
+
+      let emergency_contact_number = document.createElement("span");
+      emergency_contact_number.innerHTML = "Emergency Contact number: " + select_user["emergencycontact"];
+      single_card.append(emergency_contact_number);
+
+      let donorcard=[];
+    </script>
+      </body>
+</html>

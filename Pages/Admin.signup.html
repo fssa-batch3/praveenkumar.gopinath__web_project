@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./../asssets/css/Admin.sig.css">
+    <title>Admin_signup_page</title>
+</head>
+<body>
+    <div>
+        <div class="card">
+          <div class="img-1">
+            <img src="" width="70">
+              <h1>Saving<span>lives.</span></h1>
+              </div>
+          <div class="card-body">
+            <form id="signform">
+              <div class="form-group">
+                <label >User Name</label>
+                <input required="" autocomplete="off" id="adminName" type="text" pattern="[A-Za-z]{3,22}">
+              </div>
+              <div class="form-group">
+                <label >Email</label>
+                <input required="" autocomplete="off"  id="adminEmail" type="email" >
+              </div>
+              <div class="form-group">
+                <label >Phone Number</label>
+                <input required="" autocomplete="off" id="adminPhoneNumber" type="number" pattern="[0-9]">
+              </div>
+              <div class="form-group">
+                <label >Password</label>
+                <input required="" id="adminPassword" type="password" pattern="[0-9]{12}">
+              </div>
+              <div class="form-group">
+                <label>Confirm Password</label>
+                <input required="" id="adminconfirmPassword" type="password" pattern="[0-9]{12}">
+              </div>
+              <br>
+             <input type="submit" class="btn" value="submit"></form>
+             <br>
+             <div class="text">
+              <p>Already have an account? <a href="./login.html">Login here</a></p>
+            </div>
+          </div>
+      </div>
+      <script>
+        let signForm = document.getElementById("signform");
+  document.createElement("admin");
+  signForm.addEventListener("submit",function(event){
+    event.preventDefault();
+    let array = [];
+    let match = false;
+    let id = Date.now();
+    console.log(id);
+    let adminName = document.getElementById("adminName").value;
+      let adminEmail = document.getElementById("adminEmail").value;
+      let adminPhoneNumber = document.getElementById("adminPhoneNumber").value;
+      let adminPassword = document.getElementById("adminPassword").value;
+      let adminConfirmPassword = document.getElementById("adminconfirmPassword").value;
+      if(adminPassword != adminConfirmPassword){
+        alert("Password and Confirm password are not match");
+        return false;
+      } else {
+          for (let i = 0; i < array.length; i++) {
+            if (adminEmail == array[i]["adminEmail"]) {
+              match = true;
+            }
+          }
+        }
+        if(match == true){
+          alert("Admin!! your emali already exist");
+          return false;
+        } else{
+          let userObj = {
+            adminName,
+            adminEmail,
+            adminPhoneNumber,
+            adminPassword,
+            adminConfirmPassword,
+          }
+        
+          array.push(userObj);
+          console.log(userObj);
+          let str = JSON.stringify(array);
+          localStorage.setItem("admin", str);
+          console.log(str);
+          alert("You created your account successfully");
+          window.location.href = "./Admin.login.html";
+        }
+  });
+      </script> 
+    
+</body>
+</html>
+

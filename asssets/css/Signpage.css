@@ -52,29 +52,27 @@ body {
     background-position: 0% 50%;
   }
 }
-.img-1 {
+.logo {
   display: flex;
-  height: 45px;
-  padding: 27px;
-  padding-left: 50px;
+  padding: 40px 10px;
+  padding-left:45px;
+
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
 }
-h1 {
-  padding: 30px;
-  margin-left: -30px;
-  margin-top: -25px;
-  color: #171717;
-  font-size: 30px;
-}
-h1 span {
-  color: #000000;
-}
+
 .card {
   width: 390px;
   background-color: white;
   border-radius: 4px;
   overflow: hidden;
   margin: 20px;
-  box-shadow: 1px 1px 5px black;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+  7px 7px 20px 0px rgba(0,0,0,.1),
+  4px 4px 5px 0px rgba(0,0,0,.1);
 }
 .card-body {
   padding: 26px;
@@ -123,7 +121,9 @@ h1 span {
   text-transform: uppercase;
   transition: all 0.1s;
   cursor: pointer;
-  box-shadow: 0.3px 0.3px 5px #000000;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+  7px 7px 20px 0px rgba(0,0,0,.1),
+  4px 4px 5px 0px rgba(0,0,0,.1);
 }
 .btn:hover {
   background-color: #00000070;

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./../asssets/css/Admin.login.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!-- <div class="back-btn">
+      <div class="goback">
+        <a href="#" class="btn">
+          <i class="fas fa-chevron-left"></i>
+          Learn More
+        </a>
+      </div>
+    </div> -->
+    <div class="card">
+      <div class="logo">
+        <img src="./../asssets/images/liceRia1.png" width="280px" alt="logo" />
+      </div>
+      <!-- <div class="card-header">
+      <div class="text-header">Login here</div>
+    </div> -->
+      <div class="card-body">
+        <form id="log_form">
+          <div class="form-group">
+            <label>Email:</label>
+            <input id="adminEmail" type="email" required autocomplete="off" />
+          </div>
+          <div class="form-group">
+            <label>Password:</label>
+            <input id="adminPassword" type="password" autocomplete="off" />
+          </div>
+          <br />
+          <button class="button" type="submit">login</button>
+        </form>
+        <br />
+        <div class="text">
+          <p>Not yet member? <a href="./Admin.signup.html">Signup Now</a></p>
+        </div>
+      </div>
+    </div>
+    <script>
+      let logForm = document.getElementById("log_form");
+      logForm.addEventListener("submit", function (event) {
+        get_data = JSON.parse(localStorage.getItem("admin"));
+        event.preventDefault();
+        let adminemail = document.getElementById("adminEmail").value;
+        let adminpassword = document.getElementById("adminPassword").value;
+        let findData = false;
+        let select_user = get_data.find(function (admin) {
+          let signupAdminEmail = admin["adminEmail"];
+          if (adminemail === signupAdminEmail) {
+            findData = true;
+            if (adminpassword === admin["adminPassword"]) {
+              alert("Admin!!! Your account logged in successfully...!");
+              localStorage.setItem("oneAdmin", JSON.stringify(adminemail));
+              return findData;
+            }
+            alert("Admin!!! Password is incorrect Please check");
+            return findData;
+          }
+          return findData;
+        });
+        if (!findData) {
+          alert("Email is not available please signup or enter valid Email");
+          console.log(select_user);
+          return findData;
+        } else {
+          window.location.href = "./Adminpage.html";
+        }
+      });
+    </script>
+  
+  </body>
+</html>

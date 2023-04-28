@@ -4,12 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./../asssets/css/logi.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
     <div class="card">
-      <div class="img-1">
-        <img src="" width="70" />
-        <h1>Saving<span>lives.</span></h1>
+      <div class="logo">
+        <img src="./../asssets/images/liceRia1.png" width="280px" alt="logo" />
       </div>
       <!-- <div class="card-header">
       <div class="text-header">Login here</div>
@@ -19,12 +28,10 @@
           <div class="form-group">
             <label>Email:</label>
             <input id="userEmail" type="email" required autocomplete="off" />
-            <span class="error-message"></span>
           </div>
           <div class="form-group">
             <label>Password:</label>
             <input id="userPassword" type="password" autocomplete="off" />
-            <span class="error-message"></span>
           </div>
           <br />
           <button class="button" type="submit">login</button>
@@ -39,12 +46,12 @@
       let logForm = document.getElementById("log_form");
       // form assign in var4iable
       logForm.addEventListener("submit", function (event) {
-       get_data = JSON.parse(localStorage.getItem("users"));
+        get_data = JSON.parse(localStorage.getItem("users"));
         event.preventDefault();
         const email = document.getElementById("userEmail").value;
         const password = document.getElementById("userPassword").value;
         let findData = false;
-       const select_user = get_data.find (function (users) {
+        const select_user = get_data.find(function (users) {
           const customerEmail = users["userEmail"];
           if (email === customerEmail) {
             findData = true;
@@ -63,8 +70,8 @@
           alert("Email is not available please signup or enter valid Email");
           console.log(select_user);
           return findData;
-        }else{
-        window.location.href = "/Pages/profile.html";
+        } else {
+          window.location.href = "./home1.html";
         }
       });
 
@@ -77,5 +84,6 @@
       // const form = document.querySelector(".log_form");
       // if(log_form)
     </script>
+    <a href="./home1.html"></a>
   </body>
 </html>

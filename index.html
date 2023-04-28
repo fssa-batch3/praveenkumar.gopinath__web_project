@@ -1,262 +1,259 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link
-      rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-      crossorigin="anonymous"
-    /> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./../asssets/css/style.css" />
-    <title>Document</title>
-</head>
-<body>
-    <div class="top">
-        <i class="fas fa-map-marker-alt"></i>
-        <a>66 Nicholson St Buffalo New York Us</a>
-    </div>
-    <div class="navbar">
-      <!-- Nav logo -->
-      <div class="nav-header">
-        <div class="nav-logo">
-          <a href="./Pages/profile.html">
-            <img 
-              src="./asssets/images/liceRia1.png"
-              width="200px"
-              alt="logo"
-              style="margin-left: -55px;"
-            />
-          </a>
-        </div>
-      </div>
-      <!-- nav-toggle-button -->
-      <input type="checkbox" id="nav-check" />
-      <div class="nav-btn">
-        <label for="nav-check">
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
-      </div>
-      <!-- Nav-->
-      <div class="nav-links">
-        <a href="#"><i class="fa fa-home" style="font-size: 16px"></i> Home</a>
-        <!-- first Dropdown menu -->
-        <div class="dropdown">
-          <a class="dropBtn" href="#"
-            ><i class="" style="font-size: 13px"></i><i class='fas fa-ribbon' style='font-size:24px'></i> Register your
-            decision
-            <i class="droupdown"></i>
-          </a>
-          <div class="drop-content">
-            <a href="./donor_reg_list.html"
-              >Donar Register Form <i class="fa fa-paper-plane" style="font-size: 16px"></i
-            ></a>
-            <a href="./seeker.registation list.html"
-              >Seeker Register Form <i class="fa fa-paper-plane" style="font-size: 15px"></i
-            ></a>
-            <!-- Second  Dropdown  menu -->
-            <div class="dropdown2">
-              <a class="dropBtn2" href="#"
-                >More<i class="fas fa-angle-right"></i>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+          rel="stylesheet"
+          href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+          crossorigin="anonymous"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <link rel="stylesheet" href="./../asssets/css/style.css" />
+        <title>Saving lives</title>
+      </head>
+      <body>
+        <div class="nav-main">
+          <div id="header">
+            <div class="logo">
+              <a href="./Pages/profile.html">
+                <img
+                  src="./../asssets/images/liceRia1.png"
+                  width="190px"
+                  alt="logo"
+                />
               </a>
-              <div class="drop-content2">
-                <a href="#">About</a>
-                <a href="#">FAQs</a>
+            </div>
+            <nav>
+              <form class="search" action="search.php">
+                <input name="q" placeholder="Search..." type="search" />
+              </form>
+              <ul>
+                <li>
+                  <a href="/index.html"> Home</a>
+                </li>
+                <li>
+                  <a href="#"> Registration</a>
+                  <ul class="mega-dropdown">
+                    <li class="row">
+                      <ul class="mega-col">
+                        <li>
+                          <a href="./Pages/donor_reg_list.html">Donor Registration</a>
+                        </li>
+                        <li>
+                          <a href="./Pages/seeker.registation list.html"
+                            >Seeker Registration</a
+                          >
+                        </li>
+                        <li><a href="#">About-us</a></li>
+                        <li><a href="#">Contact</a></li>
+                      </ul>
+                      <ul class="mega-col">
+                        <li><a href="./Pages/donor.card.html">Donor card</a></li>
+                        <li><a href="#">Seeker card</a></li>
+                        <li><a href="#">Awareness</a></li>
+                        <li><a href="#">Services</a></li>
+                      </ul>
+                      <ul class="mega-col">
+                        <li><a href="./Pages/Appoinment-list.html">Appoinment</a></li>
+                        <li>
+                          <a href="./Pages/common.donor.list.html"
+                            >common donor list</a
+                          >
+                        </li>
+                        <li>
+                          <a href="./Pages/common.seeker.list.html"
+                            >comon seeker list</a
+                          >
+                        </li>
+                        <li><a href="#"></a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="droupdown">
+                  <a href="./Pages/profile.html">Profile</a>
+                </li>
+                <li>
+                  <a href="./Pages/signup_page.html"> Signup</a>
+                </li>
+                <li>
+                  <a href="./Pages/login.html">Login</a>
+                </li>
+                <li class="dropdown">
+                  <a href="#"> Admin</a>
+                  <ul>
+                    <li><a href="./Pages/Admin.signup.html">Signup</a></li>
+                    <li><a href="./Pages/Admin.login.html">Login</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <main>
+          <section id="hero">
+            <div class="grid">
+              <div class="column-60">
+                <h1>Organ Donation <br />It's Important And Process</h1>
+                <p id="description">
+                  when you decide to give an organ to save or transform the life
+                  of someone else. You can donate some organs while you are
+                  alive, and this is called living organ donation.
+                </p>
+                <button class="btn">Registere to donate</button>
+              </div>
+              <div class="column-40">
+                <div class="image-div">
+                  <img
+                    id="hero-img"
+                    src="./../asssets/images/img(0).png"
+                    alt="Img(0).png"
+                  />
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        <a href="./Pages/Appoinment-list.html"
-          ><i class="fas fa-calendar-check" style="font-size: 16px"></i>
-          Appoinment</a
-        >
-        <div class="dropdown">
-          <a class="dropBtn" href="./profile.html"
-            ><i class="far fa-address-book" style="font-size: 17px"></i> Profile
-            <i class="#"></i>
-          </a>
-        </div>
-        <div class="dropdown">
-          <a class="dropBtn" href="#"
-            ><i class="fas fa-user-shield" style="font-size: 16px"></i> Admin
-            <i class="fas fa-angle-down"></i>
-          </a>
-          <div class="drop-content">
-            <a href="#"
-              ><i class="far fa-address-book" style="font-size: 16px"></i>
-              Admin Profile</a
-            >
-            <a href="#">More <i class="fas fa-angle-right"></i></a>
-          </div>
-        </div>
-      </div>
-    </div> 
-    <section class="section-a">
-      <div class="section-a">
-        <div class="section-a-inner">
-          <h3 class="text-1">Organ donation & transplantation</h3>
-          <h2 class="text-2">There is no cost to your family if you donate</h2>
-          <p class="para5">
-            The organs and tissues that can be donated include the heart, kidneys, pancreas, lungs, liver, intestines, hands, face, cornea, skin, heart valves, bone, blood vessels, connective tissue, bone marrow and stem cells, and umbilical cord blood, according to the government.
-          </p>
-        </div>
-      </div>
-    </section>
-    <section class="info">
-      <img src="./../asssets/images/doctor.png" alt="">
-      <div>
-        <h2>'No Rule That Poor People Can't Donate Organs'</h2>
-        <p>Organ donation is defined as “When a person allows an organ of theirs to be removed, legally, either by consent while the donor is alive or after death with the assent of the next of the kin.” Common transplantations after organ donations include kidney, heart, liver, pancreas, intestines, lungs, bones, bone marrow, skin, and cornea. Although some organs such as kidney and tissues like part of the liver, pancreas, lungs, and intestines can be donated while the donor is alive, most of the donations occur only after the donor's death. In India, the legislative foundation for brain death and organ donation was officially established, under Transplantation of Human Organs Act, 1994 amended in 2011. It provided a much-needed legal and transparent system for organ donation. India's organ donation rate (ODR) stands at an abysmal 0.34 per million populations (PMP) when compared with donation rate of 36 PMP in countries like Spain. While in the rest of the country, states like Tamil Nadu, Maharashtra, Andhra Pradesh, and Gujarat have made efforts to ramp up their ODR, by facilitating public and private health sector activities, such vision is still a far cry for the states in the North-Eastern part of India.</p>
-        <a href="#" class="btn">Learn More</a>
-      </div>
-    </section>
-    <!-- Large Text -->
-    <!-- Home cards 1 -->
-     <section class="home-cards">
-      <div>
-        <img src="./../asssets/images/home-card1.jpg" alt="">
-        <h3></h3>
-        <p>
-          See how Katie Sowers, Asst. Coach for the 49ers, uses Surface Pro 7
-						to put her plans into play.
-        </p>
-        <a href="#">Learn More <i class="fas fa-chevron-right"></i></a>
-      </div>
-      <div>
-        <img src="./../asssets/images/poorChildren_img.jpg" alt="" width=""/>
-        <h3></h3>
-        <p>
-          Organ donation is when you decide to give an organ to save or transform the life of someone else. You can donate some organs while you are alive, and this is called living organ donation.
-        </p>
-        <a href="#">Learn More <i class="fas fa-chevron-right"></i></a>
-      </div>
-      <div>
-        <img src="./../asssets/images/9 organ dnation facts.png" alt="" />
-        <h3>One person can save up to 8 lives</h3>
-        <p>
-          A donated liver can be divided to help two patients receive the second chance they've been waiting for. Two kidneys can free two people from dialysis treatments. A donated heart and pancreas can help two more patients regain health and live strong, happy lives.
-        </p>
-        <a href="#">Learn More <i class="fas fa-chevron-right"></i></a>
-      </div>
-      <div>
-        <img src="./../asssets/images/img4.jpg" alt="" />
-        <h3>The new Microsoft Edge</h3>
-        <p>
-          Expect more. World class performance, with more privacy, more
-          productivity, and more value.
-        </p>
-        <a href="#">Learn More <i class="fas fa-chevron-right"></i></a>
-      </div>
-    </section>
-      <!-- Carbon -->
-      <section class="carbon">
-        <div class="content">
-          <h2>Commiting To Carbon Negative</h2>
-          <p>Microsoft will be carbon negative by 2030 and by 2050 we will remove
-            all carbon the company has emitted since it was founded in 1975</p>
-            <a href="#" class="btn">
-              Learn More <i class="fas fa-chevron-right"></i>
-            </a>
-        </div>
-      </section>
-      <!-- Boxes Section -->
-    <section class="boxes">
-      <div class="box">
-        <i class="fas fa-chart-pie fa-4x"></i>
-        <h3>Analytics</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, expedita?</p>
-      </div>
-      <div class="box">
-        <i class="fas fa-globe fa-4x"></i>
-        <h3>Marketing</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, expedita?</p>
-      </div>
-      <div class="box">
-        <i class="fas fa-cog fa-4x"></i>
-        <h3>Development</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, expedita?</p>
-      </div>
-      <div class="box">
-        <i class="fas fa-users fa-4x"></i>
-        <h3>Support</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, expedita?</p>
-      </div>
-    </section>
-    <section class="contact4">
-      <div class="inner4">
-                  <div class="male-doctor4">
-          <img class="wow4 slideInUp" src="./asssets/images/img7.jpg" alt="">
-        </div>
-        <div class="form4">
-           <h3>Contact Us</h3>
-         <form action=""  class="wow4 slideInUp" data-wow-delay=".5s">
-          <p>
-            <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Your Full Name">
-          </p>
-          <p>
-            <label for="company">Company</label>
-            <input type="text" id="company" placeholder="Company Trading Nmae">
-          </p>
-          <p>
-            <label for="email">Email</label>
-            <input type="text" id="email" placeholder="Email Address">
-          </p>
-          <p>
-            <label for="phone">Phone Number</label>
-            <input type="text" id="phone" placeholder="Phone Number">
-          </p>
-          <p class="full">
-            <label for="message">Message</label>
-            <textarea name="" placeholder="please give more details"></textarea>
-          </p>
-          <p class="full4">
-            <button>Submit</button>
-          </p>
-        </form>
-        </div>
-       
-            
-      </div>
-    </section>
-      <!-- Follow -->
-     
-    <footer>
-        <div class="footer">
-        <div class="row">
-        <a href="#"><i class="fa fa-facebook"></i></a>
-        <a href="#"><i class="fa fa-instagram"></i></a>
-        <a href="#"><i class="fa fa-youtube"></i></a>
-        <a href="#"><i class="fa fa-twitter"></i></a>
-        <a href="#"><i class="fa fa-google"></i></a>
-       
-        </div>
-        
-        <div class="row">
-        <ul>
-        <li><a href="#">Contact us</a></li>
-        <li><a href="#">Our Services</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms & Conditions</a></li>
-        <li><a href="#">Career</a></li>
-        </ul>
-        </div>
-        
-        <div class="row">
-        Copyright © 2023 freshworks - All rights reserved || Designed By: Praveen kumar 
-        </div>
-        </div>
-        </footer>
-    </div>  
-   <script>
-            </script>
+          </section>
+          <section id="features">
+            <h2></h2>
+            <div class="grid">
+              <div class="column-40">
+                <div class="image-div">
+                  <img
+                    src="./../asssets/images/img7.jpg"
+                    alt=""
+                    width="370"
+                    height="497"
+                  />
+                </div>
+              </div>
+
+              <div class="column-60">
+                <ol>
+                  <li>
+                    <h3></h3>
+                    <p></p>
+                  </li>
+                  <li>
+                    <h3></h3>
+                    <p></p>
+                  </li>
+                  <li>
+                    <h3></h3>
+                    <p></p>
+                  </li>
+                  <li>
+                    <h3></h3>
+                    <p></p>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </section>
+
+          <section id="why">
+            <h2></h2>
+            <div class="container">
+              <div class="card">
+                <div class="icon">
+                  <img
+                    src="./../asssets/images/icon(4).jpg"
+                    alt="Images/icon(4).jpg"
+                    width="100px"
+                  />
+                </div>
+                <div class="desc">
+                  <h3></h3>
+                  <p>
+                    Manage your medications with our user-friendly app. Get
+                    personalized reminders on time and stay connected to your
+                    caregivers.
+                  </p>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="icon">
+                  <img
+                    src="./../asssets/images/icon(2).jpg"
+                    width="100px"
+                    alt="Images/icon(2).jpg"
+                  />
+                </div>
+                <div class="desc">
+                  <h3>Data Privacy</h3>
+                  <p>
+                    Your health is a private matter. We will never hand over
+                    your personal data to third parties.
+                  </p>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="icon">
+                  <img
+                    src="./../asssets/images/icon(3).jpg"
+                    alt="Images/icon(3).jpg"
+                    width="80px"
+                  />
+                </div>
+                <div class="desc">
+                  <h3></h3>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="info">
+            <div>
+              <h2>
+                Organ Donor Remembered Through Honor Walk | Taylor Lorenz |
+                Mosaic Life Care
+              </h2>
+              <p></p>
+              <p>
+                A World Health Organization report on adherence to long-term
+                therapies suggests that patients adhere to only 50% of drugs
+                prescribed for chronic diseases in developed nations, a figure
+                that is even lower in developing countries.
+              </p>
+            </div>
+
+            <iframe
+              id="video"
+              height="315"
+              src="./../asssets/videos/Organ Donor Remembered Through Honor Walk _ Taylor Lorenz _ Mosaic Life Care.mp4"
+              allowfullscreen
+            ></iframe>
+          </section>
+
+          <footer>
+            <div id="footer-logo">
+              <img
+                class="footer-logo-img"
+                src="./../asssets/images/liceRia1.png"
+                alt="liceRia1.png"
+              />
+            </div>
+            <div id="footer-info">
+              <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Costumer Support</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+              <div id="copyright">Copyright 2023, SAVING LIVE'S</div>
+            </div>
+          </footer>
+        </main>
+
+        <script></script>
+      </body>
+    </html>
   </body>
 </html>
-
-
-

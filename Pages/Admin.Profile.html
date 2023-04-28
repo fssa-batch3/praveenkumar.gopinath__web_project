@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./../asssets/css/profile.css" />
+    <title>Document</title>
+  </head>
+  <body>
+       <div class="card">
+          <div class="img-1">
+            <img src="" width="70">
+              <h1>Saving<span>lives.</span></h1>
+              </div>
+          <div class="card-body">
+            <form id="profile_form">
+              <div class="form-group">
+                <label >Admin Name</label>
+                <input required="" id="First_name" type="text">
+              </div>
+              <div class="form-group">
+                <label >Email</label>
+                <input required=""  id="Email" type="email">
+              </div>
+              <div class="form-group">
+                <label >Phone Number</label>
+                <input required="" id="Phone_Number" type="number"  pattern="[0-9]{10}">
+              </div>
+              <div class="form-group">
+                <label >Password</label>
+                <input required="" id="Password" type="password">
+              </div>
+              <br>
+             <!-- <input type="submit" class="btn" value="submit"></form> -->
+             <button id="submit" type="submit">Edit</button>
+        <button id="delete">Delete</button>
+      <!-- <button id="logout" click="logout" type="button">Log out</button> -->
+             <br>
+             <br>
+             <div class="text">
+              <p>Already have an account? <a href="./Admin.login.html">Login here</a></p>
+              <p>Not yet member?<a href="./Admin.signup.html">Signup now</a></p>
+              <p>Back to the <a href="./home1.html">Home page</a></p>
+            </div>
+          </div>
+      </div>
+      </div>
+    </form>
+    <footer></footer>
+    <script>
+      let userAdmin = JSON.parse(localStorage.getItem("admin"));
+      let admin = JSON.parse(localStorage.getItem("oneUser"));
+      let select_user = userAdmin.find(function (event) {
+        let customerEmail = event["userEmail"];
+        if (admin == customerEmail){
+          return true;
+        } else if (admin == customerEmail){
+          return true;
+        }
+      });
+      console.log(select_user);
+      // to get value from registration form
+      let email = document.getElementById("Email");
+      let phNo = document.getElementById("Phone_Number");
+      let userName = document.getElementById("First_name");
+      let pws = document.getElementById("Password");
+      // Compare the values
+      email.value = select_user["adminEmail"];
+      phNo.value = select_user["adminPhoneNumber"];
+      userName.value = select_user["adminName"];
+      pws.value = select_user["adminPassword"];
+      // to replace the values
+      let form = document.getElementById("profile_form");
+      form.addEventListener("submit", function(event) {
+        event.preventDefault();
+        let adminName = document.getElementById("First_name").value;
+        let adminEmail = document.getElementById("Email").value;
+        let adminPhoneNumber = document.getElementById("Phone_Number").value;
+        let adminPassword = document.getElementById("Password").value;
+        let newData = {
+            adminName,
+            adminEmail,
+            adminPhoneNumber,
+          adminPassword,
+        }
+        console.log(newData);
+        let combineData = Object.assign(select_user, newData);
+        console.log(combineData);
+        let index = userAdmin.indexOf(select_user);
+        userAdmin[index] = combineData;
+        localStorage.setItem("admin" , JSON.stringify(userAdmin));
+        alert("successfully changed");
+        // location.reload();    
+      });
+        
+        // assign the value to
+        
+        let set_details = JSON.parse(localStorage.getItem("admin"));
+        let get_details = set_details.find(function(user_obj){
+          let check_email = user_obj["adminEmail"];
+          if(set_details === check_email){
+        let user_Email = document.getElementById("First_name");
+        let user_ph_no = document.getElementById("Email");
+        let user_email = document.getElementById("Phone_Number");
+        let user_password = document.getElementById("Password");
+        let oneAdmin = document.getElementById("admin");
+      }
+      });
+      // delete option in the page
+
+      let delete_user = document.getElementById("delete");
+      delete_user.addEventListener("click", function (event) {
+        event.preventDefault();
+        let indexDel = set_details.indexOf(select_user);
+        let msg = confirm("Are you sure you want to delete this account.");
+        if (msg !== true) {
+          return;
+        } else {
+          set_details.splice(indexDel, 1);
+          console.log(set_details);
+          localStorage.setItem("admin", JSON.stringify(admin));
+          window.location.href = "./Admin.signup.html";
+        }
+      });      
+    
+    //   let logout_user = document.getElementById("logout");
+    //   logout_user.addEventListener("click", function (event) {
+    //     event.preventDefault();
+    //     let indexDel = admin.indexOf(select_user);
+    //     let msg = confirm("Are you sure you want to logout this account");
+    //     if (msg !== true) {
+    //       return;
+    //     } else {
+    //       window.location.href = "";
+    //     }
+    //   });
+    </script>
+  </body>
+</html>

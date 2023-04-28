@@ -4,10 +4,104 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <title>Donor Registeration Table</title>
     <link rel="stylesheet" href="./../asssets/css/donortabellist.css" />
   </head>
   <body>
+    <div class="wrapper">
+      <div class="top_navbar">
+        <div class="logo">
+          <img
+            src="./../asssets/images/liceRia1.png"
+            width="200px"
+            alt="logo"
+            style="padding: 10px"
+          />
+        </div>
+        <div class="top_menu">
+          <div class="home_link">
+            <a href="./Adminpage.html">
+              <span class="icon"><i class="fas fa-user-md"></i></span>
+              <span>Admin</span>
+            </a>
+          </div>
+          <div class="right_info">
+            <div class="icon_wrap">
+              <div class="icon">
+                <i class="#"></i>
+              </div>
+            </div>
+            <div class="icon_wrap">
+              <div class="icon">
+                <i class="fas fa-user-edit"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main_body">
+        <div class="sidebar_menu">
+          <div class="inner__sidebar_menu">
+            <ul>
+              <li>
+                <a href="./home1.html" class="active">
+                  <span class="icon"> <i class="fas fa-border-all"></i></span>
+                  <span class="list">Home</span>
+                </a>
+              </li>
+              <li>
+                <a href="./donor_reg_table.html">
+                  <span class="icon"><i class="fas fa-chart-pie"></i></span>
+                  <span class="list">Donor list</span>
+                </a>
+              </li>
+              <li>
+                <a href="./seeker_reg_table.html">
+                  <span class="icon"><i class="fas fa-address-book"></i></span>
+                  <span class="list">Seeker list</span>
+                </a>
+              </li>
+              <li>
+                <a href="./common.donor.list.html">
+                  <span class="icon"><i class="fas fa-address-card"></i></span>
+                  <span class="list">C-Donor</span>
+                </a>
+              </li>
+              <li>
+                <a href="./common.donor.list.html">
+                  <span class="icon"><i class="fab fa-blogger"></i></span>
+                  <span class="list">C-Seeker</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="icon"
+                    ><i class="fas fa-map-marked-alt"></i
+                  ></span>
+                  <span class="list">Profile</span>
+                </a>
+              </li>
+            </ul>
+
+            <div class="hamburger">
+              <div class="inner_hamburger">
+                <span class="arrow">
+                  <i class="fas fa-long-arrow-alt-left"></i>
+                  <i class="fas fa-long-arrow-alt-right"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
     <table id="tblCustomers" class="table">
       <tbody></tbody>
     </table>
@@ -33,11 +127,14 @@
       th4_tr.innerText = "Blood Group";
       th_tr1.append(th4_tr);
       let th5_tr = document.createElement("th");
-      th5_tr.innerText = "Organ";
+      th5_tr.innerText = "Gender";
       th_tr1.append(th5_tr);
       let th6_tr = document.createElement("th");
-      th6_tr.innerText = "access";
+      th6_tr.innerText = "Countery";
       th_tr1.append(th6_tr);
+      let th7_tr = document.createElement("th");
+      th7_tr.innerText = "Oppoction";
+      th_tr1.append(th7_tr);
       for (let i = 0; i <= Card.length; i++) {
         let findDetail = Card.find(function (event) {
           let id = event["userid"];
@@ -60,21 +157,18 @@
         td4_tr.innerText = Card[i]["bloodgroup"];
         td_tr2.append(td4_tr);
         let td5_tr = document.createElement("td");
-        td5_tr.innerText = Card[i]["organs"];
+        td5_tr.innerText = Card[i]["gender"];
         td_tr2.append(td5_tr);
-
         let td6_tr = document.createElement("td");
+        td6_tr.innerText = Card[i]["country"];
         td_tr2.append(td6_tr);
-        let update = document.createElement("button");
-        update.innerText = "update"
-        td6_tr.append(update);
+        let td7_tr = document.createElement("td");
+        td_tr2.append(td7_tr);
         let del = document.createElement("button");
         del.setAttribute("id", "btn");
         del.innerText = "delete";
         td7_tr.append(del);
-
         document.querySelector("table").append(table_card);
-
         del.addEventListener("click", function (event) {
           event.preventDefault();
           let addData = JSON.parse(localStorage.getItem("donors"));
@@ -85,10 +179,10 @@
           if (msg !== true) {
             return;
           } else {
-            Card.splice(findIndex, 1);
+            Card.splice(findIndex, 2);
             localStorage.setItem("donors", JSON.stringify(Card));
-            document.getElementById("btn")
-            location.reload(tblCustomers)
+            document.getElementById("btn");
+            location.reload(tblCustomers);
           }
         });
       }

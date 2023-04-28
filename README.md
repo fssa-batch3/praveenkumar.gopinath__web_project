@@ -8,10 +8,21 @@ Wireframe:
 Sonar Cloud:
 
 1.User crud:
-register page [completed]
-login page [completed]
-profile page [completed]
-profile edit [completed]
-delete user [pending](48 hours)
+  register page [completed]
+  login page [completed]
+  profile page [completed]
+  profile edit [completed]
+  delete user [pending](48 hours)
 
-ORGAN DONATION crud:
+donor crud:
+  create list [completed]
+  update list [completed]
+  edit list [completed]
+  delete list [completed]
+
+seeker crud:
+  create list [completed]
+  update list [completed]
+  edit list [completed]
+  delete list [completed]
+

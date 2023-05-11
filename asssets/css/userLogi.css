@@ -169,13 +169,13 @@ body {
   text-align: center;
 }
 .text a {
-  color: rgb(255, 255, 255);
+  color: rgb(102, 190, 245);
 }
 .text p a {
   text-decoration: underline;
 }
 
 .text p a:hover {
-  color: #cccccc;
+  color: #181818;
   transition: all 0.5s;
 }

@@ -1,0 +1,169 @@
+html{
+    scroll-behavior: smooth;
+}
+.clear::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+body{
+    font-family: 'Mulish';
+}
+
+.banner{
+    background: url(img/h1_hero.png) no-repeat center center;
+    padding: 250px 0;
+}
+.line{
+    border: 2px solid #5499F3;
+    width: 75px;
+    float: left;
+    margin: 1.5%;
+}
+.top p{
+    text-transform: uppercase;
+    color: #5499F3;
+    font-weight: 600;
+    font-size: 20px;
+}
+.top .title{
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 65px;
+    color: #102039;
+    display: inline-block;
+    float: left;
+}
+.top span:before{
+    content: "";
+    animation: animate1 infinite 5s;
+    text-transform: uppercase;
+    font-size: 65px;
+    color: #5499F3;
+    font-weight: 900;
+}
+@keyframes animate1{
+    0%{
+        content: "Health";
+    }
+    50%{
+        content: "Sushi";
+    }
+    80%{
+        content: "Steak";
+    }
+    100%{
+        content: "Health";
+    }
+}
+.bottom p {
+    font-size: 18px;
+    width: 556px;
+    color: #102039;
+    padding: 30px 0;
+}
+.bottom button{
+    font-weight: 400;
+    color: #fff;
+    padding: 15px 30px;
+    background-image: linear-gradient(to left, #559af3, #1462f3);
+    border: none;
+    border-radius: 5px;
+    width: 185px;
+}
+.bottom button span{
+    padding-left: 10px;
+}
+.bottom button:hover span{
+    padding-left: 15px;
+}
+.bottom button:hover{
+    color: #fff;
+    background-image: linear-gradient(to right, #559af3, #1462f3);
+}
+/* banner-section-end */
+
+/* about-section-start */
+.about{
+    padding: 10% 0;
+}
+.about-top .line{
+    border: 2px solid #5499F3;
+    width: 75px;
+    float: left;
+    margin: 2%;
+}
+.about-top p{
+    text-transform: uppercase;
+    color: #5499F3;
+    font-weight: 600;
+    font-size: 20px;
+}
+.about-top h1 {
+    font-size: 50px;
+    font-weight: 900;
+    color: #102039;
+}
+.about-bottom p {
+    font-size: 17px;
+    color: #707070;
+    padding-top: 5%;
+}
+.about-bottom .button1{
+    margin: 30px 0;
+}
+.about-bottom .button1 button {
+    width: 230px;
+    text-align: left;
+    font-weight: 400;
+    color: #fff;
+    padding: 15px 30px;
+    background-image: linear-gradient(to left, #559af3, #1462f3);
+    border: none;
+    border-radius: 5px;
+    transition: .5s;
+}
+.about-bottom .button1 button:hover{
+    background-image: linear-gradient(to right, #559af3, #1462f3);
+}
+.about-bottom .button1 button span{
+    padding-left: 20%;
+    transition: .5s;
+}
+.about-bottom .button1 button:hover span{
+    padding-left: 30%;
+}
+.about-bottom .button2{
+    margin: 30px 0;
+}
+.about-bottom .button2 button{
+    width: 230px;
+    text-align: left;
+    font-weight: 400;
+    color: #fff;
+    padding: 15px 30px;
+    background-image: linear-gradient(to left, #9ea0af, #7a7c8a);
+    border: none;
+    border-radius: 5px;
+    transition: .5s;
+}
+.about-bottom .button2 button:hover{
+    background-image: linear-gradient(to right, #9ea0af, #7a7c8a);
+}
+.about-bottom .button2 button span{
+    padding-left: 20%;
+    transition: .5s;
+}
+.about-bottom .button2 button:hover span{
+    padding-left: 30%;
+}
+.about-img{
+    position: relative;
+}
+.about1 img{
+    position: absolute;
+    top: 7%;
+    left: 40%;
+    border: 10px solid rgb(214, 214, 214);
+}
+/* about-section-end */

@@ -21,7 +21,7 @@
               </div>
               <div class="form-group">
                 <label >Email</label>
-                <input required=""  id="Email" type="email">
+                <input required=""  id="email" type="email">
               </div>
               <div class="form-group">
                 <label >Phone Number</label>
@@ -50,18 +50,14 @@
     <footer></footer>
     <script>
       let userAdmin = JSON.parse(localStorage.getItem("admin"));
-      let admin = JSON.parse(localStorage.getItem("oneUser"));
-      let select_user = userAdmin.find(function (event) {
-        let customerEmail = event["userEmail"];
-        if (admin == customerEmail){
-          return true;
-        } else if (admin == customerEmail){
-          return true;
-        }
-      });
+      console.log(userAdmin)
+      let admin = JSON.parse(localStorage.getItem("oneAdmin"));
+      let select_user = userAdmin.find(e => e["adminEmail"] == admin)
+      console.log(select_user)
+      
       console.log(select_user);
       // to get value from registration form
-      let email = document.getElementById("Email");
+      let email = document.getElementById("email");
       let phNo = document.getElementById("Phone_Number");
       let userName = document.getElementById("First_name");
       let pws = document.getElementById("Password");

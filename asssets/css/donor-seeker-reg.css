@@ -8,19 +8,125 @@
 }
 
 body {
-  background-color: rgb(192, 252, 254);
+  background-color: rgb(255, 255, 255);
   padding: 0 0px;
+}
+/* header */
+.header-0 {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  font-size: 13px;
+  padding-left: 10px;
+  z-index: 9;
+}
+
+.header-content {
+  display: inline-block;
+  margin: 5px 10px 5px 0;
+}
+
+.header-content i {
+  margin-right: 10px;
+}
+
+/* ---heading 1 start--- */
+header {
+  top: 28px;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  box-shadow: 1px 1px 15px #aeaeae45;
+}
+.header-1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #6a64f1;
+}
+/* ---heading 1 end--- */
+
+
+
+/* ---heading 2 Start--- */
+.header-2 {
+  display: flex;
+  font-weight: 800;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  box-shadow: 0 3px 10px #a29cf034;
+  background-color: #fff;
+  position: relative;
+}
+/* ---span active--- */
+.active {
+  background-color: #6a64f1;
+  padding: 7px 30px;
+  font-size: 15px;
+  color: #fff;
+  border-radius: 5px;
+}
+.header-2 .navbar a {
+  padding: 7px 30px;
+  font-size: 15px;
+  color: #000000;
+  border-radius: 5px;
+}
+
+.header-2 .navbar a:hover {
+  color: #fff;
+  background-color: #6a64f1;
+}
+/* heading 2 icon */
+.header-2 .icons a {
+  font-size: 2.5rem;
+  color: var(--black);
+  padding-left: 1rem;
+}
+
+.header-2 .icons a:hover {
+  color: #6a64f1;
+}
+/* heading 2 End */
+.head {
+  padding: 4em 10%;
+}
+.head {
+  background-color: #6a64f1;
+  color: white;
+  box-shadow: 0 02px 4px #5b5b5b;
+  width: 100%;
+  height: 300px;
+
+}
+h1 {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 50px;
+  margin-top: 11.5%;
+}
+p {
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
 }
 .wrapper {
   position: inherit;
   max-width: 1100px;
   width: 100%;
   margin: 10% auto;
-  background-color: cadetblue;
+  background-color: #ffffff;
+  box-shadow: 1px 1px 15px #c6c3f9;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 3px 3px 10px rgb(0, 0, 0, 0.125);
-  border: 1px solid rgba(0, 0, 0, 0.226);
+  /* border: 1px solid rgba(0, 0, 0, 0.226); */
 }
 
 .wrapper .title,
@@ -47,7 +153,7 @@ p {
   color: #000000;
   margin-right: 10px;
   font-size: 16px;
-  font-weight: normal;
+  font-weight: 600;
 }
 
 .wrapper .form .input_field .input,
@@ -56,35 +162,34 @@ p {
   outline: none;
   border-radius: 5px;
   font-size: 15px;
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid rgba(114, 114, 114, 0.37);
   background-color: rgb(255, 255, 255);
   padding: 8px 10px;
   transition: all 0.3s ease;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
-    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
-    rgba(255, 255, 255, 0.094) 0px 0px 0px 1px inset;
 }
+
 .wrapper .input_title .label2 {
-  text-decoration: underline rgb(48, 42, 42);
-  color: rgb(27, 35, 32);
+  text-decoration: underline rgb(138, 144, 255);
+  color: rgb(138, 144, 255);
   font-size: 15px;
-  padding-bottom: 30px;
-  font-weight: 600;
+  padding-bottom: 50px;
+  font-weight: 900;
 }
 .wrapper .form .input_field .textarea {
   resize: none;
   height: 60px;
 }
+
 .wrapper .form .input_field .custom_select {
   width: 100%;
   height: 37px;
 }
 
 .wrapper .form .input_field .custom_select select {
-  border: 1px solid rgb(0, 0, 0);
   appearance: none;
   background-color: rgb(255, 255, 255);
   -webkit-appearance: none;
+  border: 1px solid rgba(114, 114, 114, 0.37);
   width: 100%;
   height: 100%;
   padding: 10px 10px;
@@ -92,7 +197,7 @@ p {
   outline: none;
 }
 
-/* .wrapper .form .input_field .custom_select:before {
+.wrapper .form .input_field .custom_select:before {
   content: "";
   position: absolute;
   top: 2px;
@@ -100,26 +205,27 @@ p {
   border: 5px solid black;
   border-color: rgb(0, 0, 0) transparent transparent transparent;
   pointer-events: none;
-} */
+}
 .wrapper .form .input_field p {
   font-size: 14px;
   color: #000000;
 }
 
-/* .wrapper .form .input_field .check {
+.wrapper .form .input_field .check {
   width: 15px;
   height: 15px;
   position: relative;
   display: block;
-} */
+}
 
 .wrapper .form .input_field .btn {
   position: relative;
   width: 20%;
   font-size: 15px;
+  padding: 15px;
   border: 0;
-  border-radius: 3px;
-  background-color: #1e262d;
+  border-radius: 5px;
+  background-color: #6a64f1;
   color: #fff;
   cursor: pointer;
   outline: none;
@@ -138,9 +244,6 @@ p {
   box-shadow: none;
 }
 
-.highlight-error {
-  border-color: red;
-}
 @media (max-width: 420px) {
   .wrapper .form .input_field {
     flex-direction: column;

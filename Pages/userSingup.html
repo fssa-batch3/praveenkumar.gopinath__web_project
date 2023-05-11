@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./../asssets/css/userSignup.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <title>Document</title>
+  </head>
+​
+  <body class="body">
+    <div class="full">
+      <h1></h1>
+      <form class="form" id="form">
+        <div>
+          <img src="./../asssets/images/backgroundimage(1).jpg" alt="farmer" width="500px" />
+        </div>
+        <div>
+          <label>Full Name:</label><br />
+          <input
+            type="text"
+            id="full_name"
+            pattern="[a-zA-Z]+\s[a-zA-Z]+"
+            autocomplete="off"
+            title="Give space between Firstname and Lastname"
+            required
+          /><br />
+          <label>Mail id:</label><br />
+          <input
+            type="email"
+            id="email"
+            autocomplete="hgfgtyfygh"
+            required
+          /><br />
+          <label>Phone no:</label><br />
+          <input
+            type="tel"
+            id="phone_number"
+            pattern="[0-9]{10}"
+            autocomplete="hgfgtyfygh"
+            maxlength="10"
+            required
+          /><br />
+          <label>Password:</label><br />
+          <input
+            id="password"
+            type="password"
+            pattern="^(?!\s)(?!.*\s)[^\s]{6,}$"
+            autocomplete="hg"
+            title="- Don't leave spaces between the password
+            - Atleast 6 characters
+            - Use capital and small aiphabets"
+            required
+          /><i class="bi bi-eye-slash" id="togglePassword"></i>
+          <br />
+          <label for="address">Address</label> <br />
+          <textarea
+            required
+            pattern="[a-zA-Z]"
+            name="address"
+            id="address"
+            cols="45"
+            rows="5"
+          ></textarea>
+          <br />
+          <label>Confirm Password:</label><br />
+          <input
+            type="password"
+            id="conform_password"
+            pattern="^(?!\s)(?!.*\s)[^\s]{6,}$"
+            autocomplete="hg"
+            required
+          /><i class="bi bi-eye-slash" id="toggleConformPassword"></i>
+          <br />
+​
+          <button class="sub" type="submit" value="submit" onclick="sign()">
+            sign up
+          </button>
+        </div>
+      </form>
+​
+      <footer>
+        <div>
+          <button class="log" type="submit" onclick="log()">Login</button>
+​
+          <small><p>If you already sign in! Please Login..</p></small>
+        </div>
+      </footer>
+      <a href="./../index.html"></a>
+    </div>
+​
+    <script src="./../asssets/js/userSignup.js">
+     
+    </script>
+    
+  </body>
+</html>
+
+
+
+
+

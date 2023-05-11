@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
+* {
+  font-family: "Nunito", sans-serif;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+body {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+
+.head,
+form {
+  padding: 4em 10%;
+}
+.header-0 {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  font-size: 13px;
+  padding-left: 10px;
+  z-index: 9;
+}
+
+.header-content {
+  display: inline-block;
+  margin: 5px 10px 5px 0;
+}
+
+.header-content i {
+  margin-right: 10px;
+}
+
+/* ---heading 1 start--- */
+header {
+  top: 28px;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  box-shadow: 1px 1px 15px #aeaeae45;
+}
+.header-1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #6a64f1;
+}
+/* ---heading 1 end--- */
+
+/* ---Search bar start--- */
+.search {
+  position: relative;
+}
+
+.search_input {
+  width: 150px;
+  padding: 10px 0px 10px 40px;
+  border-radius: 10px;
+  border: solid 1px #333;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
+  outline: none;
+  opacity: 0.8;
+}
+
+.search i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translate(0, -50%);
+}
+
+.search_input:focus {
+  opacity: 1;
+  width: 250px;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
+}
+
+/* ---heading 2 Start--- */
+.header-2 {
+  display: flex;
+  font-weight: 800;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  box-shadow: 0 3px 10px #a29cf034;
+  background-color: #fff;
+  position: relative;
+}
+/* ---span active--- */
+.active {
+  background-color: #6a64f1;
+  padding: 7px 30px;
+  font-size: 15px;
+  color: #fff;
+  border-radius: 5px;
+}
+.header-2 .navbar a {
+  padding: 7px 30px;
+  font-size: 15px;
+  color: #000000;
+  border-radius: 5px;
+}
+
+.header-2 .navbar a:hover {
+  color: #fff;
+  background-color: #6a64f1;
+}
+/* heading 2 icon */
+.header-2 .icons a {
+  font-size: 20px;
+  color: var(--black);
+  padding-left: 1rem;
+}
+
+.header-2 .icons a:hover {
+  color: #6a64f1;
+}
+/* heading 2 End */
+
+/* ---nav bar start--- */
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 991px) {
+  header .header-1,
+  .header-2 {
+    padding: 10px;
+  }
+  .header-2 .navbar a,
+  .active {
+    font-size: 13px;
+    padding: 10px 10px;
+  }
+}
+
+@media (max-width: 450px) {
+  .header-1 {
+    flex-flow: column;
+  }
+  .header-1 .search-box-container {
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
+.head {
+  background-color: #6a64f1;
+  color: white;
+  box-shadow: 0 02px 4px #5b5b5b;
+}
+h1 {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 50px;
+  margin-top: 15%;
+}
+p {
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+}
+/*  */
+
+.inside-form-1 {
+  margin-bottom: 20px;
+}
+
+.form-div-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  margin: 10% 0 0 0;
+}
+
+.form-div-2 {
+  margin: 0 auto;
+  max-width: 550px;
+  width: 100%;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 02px 4px #6b64f174;
+  border-radius: 10px;
+}
+.form-label {
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  color: #07074d;
+  margin-bottom: 12px;
+}
+.form-label-2 {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 24px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  background: white;
+  font-weight: 500;
+  font-size: 16px;
+  color: #6b7280;
+  outline: none;
+  resize: none;
+}
+.form-input:focus {
+  border-color: #6a64f1;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.form-btn {
+  text-align: center;
+  font-size: 16px;
+  border-radius: 6px;
+  padding: 14px 32px;
+  border: none;
+  font-weight: 600;
+  background-color: #6a64f1;
+  color: white;
+  width: 100%;
+  cursor: pointer;
+}
+.form-btn:hover {
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.form3 {
+  margin-left: -12px;
+  margin-right: -12px;
+}
+.form4 {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.flex {
+  display: flex;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.form1 {
+  width: 100%;
+}
+@media (min-width: 540px) {
+  .form2 {
+    width: 50%;
+  }
+}

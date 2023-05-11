@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./../asssets/css/logi.css" />
+    <link rel="stylesheet" href="./../asssets/css/userLogi.css" />
     <link
       rel="stylesheet"
       href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
@@ -20,9 +20,6 @@
       <div class="logo">
         <img src="./../asssets/images/liceRia1.png" width="280px" alt="logo" />
       </div>
-      <!-- <div class="card-header">
-      <div class="text-header">Login here</div>
-    </div> -->
       <div class="card-body">
         <form id="log_form">
           <div class="form-group">
@@ -58,7 +55,6 @@
             if (password === users["userPassword"]) {
               alert("Your account logged in successfully...!");
               localStorage.setItem("oneUser", JSON.stringify(email));
-              // window.location.href = "./pages/Customer/Customer.html"
               return findData;
             }
             alert("Password is incorrect Please check");
@@ -71,19 +67,10 @@
           console.log(select_user);
           return findData;
         } else {
-          window.location.href = "./home1.html";
+          window.location.href = "./../index.html";
         }
       });
-
-      // class Login {
-      //   constructor(form, fields){
-
-      //   }
-      // }
-
-      // const form = document.querySelector(".log_form");
-      // if(log_form)
     </script>
-    <a href="./home1.html"></a>
+    <a href="./../index.html"></a>
   </body>
 </html>

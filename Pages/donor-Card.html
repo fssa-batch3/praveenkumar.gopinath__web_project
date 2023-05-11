@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./../asssets/css/donor-Card.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="header-0">
+      <div class="header-content">
+        <i class="fa fa-angle-double-left"><a href="./donor_reg_list.html">GO Back</a></i>
+      </div>
+    </div>
+
+    <div class="donor_card"></div>
+    <script>
+      let card_details = JSON.parse(window.localStorage.getItem("donors"));
+      let donoremail = JSON.parse(window.localStorage.getItem("donor_email"));
+      console.log(donoremail);
+      let select_user = card_details.find((e) => e["email"] == donoremail);
+
+      console.log(select_user);
+      let single_card = document.querySelector("div.donor_card");
+      let userid = document.createElement("tr");
+      userid.innerHTML = "Userid : " + select_user["userid"];
+      single_card.append(userid);
+
+      let name = document.createElement("tr");
+      name.innerHTML = "Name : " + select_user["fullname"];
+      single_card.append(name);
+
+      let date_of_birth = document.createElement("tr");
+      date_of_birth.innerHTML = " D.O.B : " + select_user["dataofbirth"];
+      single_card.append(date_of_birth);
+
+      let age = document.createElement("tr");
+      age.innerHTML = "Age : " + select_user["age"];
+      single_card.append(age);
+
+      let gender = document.createElement("tr");
+      gender.innerHTML = "Gender: " + select_user["gender"];
+      single_card.append(gender);
+
+      let emergency_contact_number = document.createElement("tr");
+      emergency_contact_number.innerHTML = "Organ(s): " + select_user["organs"];
+      single_card.append(emergency_contact_number);
+
+      let donorcard = [];
+    </script>
+    <button onclick="window.print()">Print this page</button>
+  </body>
+</html>

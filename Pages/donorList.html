@@ -107,10 +107,6 @@
     </table>
     <script>
       let Card = JSON.parse(localStorage.getItem("donors"));
-      // let btn = document.createElement("button");
-      // btn.innerText = "Place & Back";
-      // btn.setAttribute("id", "submit");
-      // document.querySelector("table").append(btn);
       let table_card = document.createElement("table");
       let th_tr1 = document.createElement("tr");
       table_card.append(th_tr1);
@@ -179,7 +175,7 @@
           if (msg !== true) {
             return;
           } else {
-            Card.splice(findIndex, 2);
+            Card.splice(findIndex, 1);
             localStorage.setItem("donors", JSON.stringify(Card));
             document.getElementById("btn");
             location.reload(tblCustomers);

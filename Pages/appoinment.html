@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./../asssets/css/appoinment.css" />
+    <title>Donor form</title>
+  </head>
+  <body>
+    <div class="header-0 padding">
+      <div class="header-content">
+        <i class="fas fa-phone-alt"></i><span>+91 9884 689 632 |</span>
+      </div>
+      <div class="header-content">
+        <i class="fas fa-map-marker-alt"></i
+        ><span>13/7 C G colony kasimedu royapuram chennai-600013 |</span>
+      </div>
+      <div class="header-content">
+        <i class="far fa-envelope"></i><span>savinglives@gmail.com</span>
+      </div>
+    </div>
+    <header>
+      <div class="header-1">
+        <a href="" class="logo"
+          ><img src="./../asssets/images/Logo.png" alt="" width="250px"
+        /></a>
+        <div class="search">
+          <input
+            type="text"
+            placeholder="Search"
+            name="text"
+            class="search_input"
+          />
+          <i class="fa fa-search" style="font-size: 20px"></i>
+        </div>
+      </div>
+      <div class="header-2">
+        <nav class="navbar">
+          <a href="./../index.html">Home</a>
+          <a href="./donor_reg_list.html">Donor</a>
+          <a href="./seeker.registation list.html">Seeker</a>
+          <span class="active">Appoinment</span>
+          <a href="./common.donor.list.html">common donor</a>
+          <a href="./common.seeker.list.html">common seeker</a>
+          <a href="./donor.card.html">Card</a>
+        </nav>
+        <div class="icons">
+          <a href="./Pages/login.html">Login</a>
+          <a href="./Pages/signup_page.html">Signup</a>
+          <a href="#" class="fas fa-user-circle"></a>
+        </div>
+      </div>
+    </header>
+  <div class="head">
+      <h1><i class="fas fa-ribbon"></i> Doctor Appoinment Request Form</h1>
+      <p>
+        Fill the form below and we will get back soon to you for more updates and plan your appointment.
+      </p>
+    </div>
+
+    <div class="form-div-1">
+      <div class="form-div-2">
+        <form id="appointment">
+          <div class="inside-form-1">
+            <label for="name" class="form-label"> Full Name </label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Full Name"
+              class="form-input"
+              required="/"
+            />
+          </div>
+          <div class="inside-form-1">
+            <label for="phone" class="form-label"> Phone Number </label>
+            <input
+              type="text"
+              name="phone"
+              id="phonenumber"
+              placeholder="Enter your phone number"
+              class="form-input"
+              required="/"
+            />
+          </div>
+          <div class="inside-form-1">
+            <label for="email" class="form-label"> Email Address </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email"
+              class="form-input"
+              required="/"
+            />
+          </div>
+          <div class="flex flex-wrap form3">
+            <div class="form1 form2 form4">
+              <div class="inside-form-1">
+                <label for="date" class="form-label"> Date </label>
+                <input type="date" name="date" id="date" class="form-input" required="/"/>
+              </div>
+            </div>
+            <div class="form1 form2 form4">
+              <div class="inside-form-1">
+                <label for="time" class="form-label"> Time </label>
+                <input type="time" name="time" id="time" class="form-input" required />
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <input type="submit" value="Book Appointment" class="form-btn">
+              
+          </input>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+        const start = Date.now();
+      const appointmentRegisterationForm = document.getElementById("appointment");
+      appointmentRegisterationForm.addEventListener("submit", function (event) {
+        let appoint = [];
+
+        if (localStorage.getItem("appoint") != null) {
+            appoint = JSON.parse(localStorage.getItem("appoint"));
+        }
+        
+        event.preventDefault();
+        const appoin_name = document.getElementById("name").value;
+        const appoin_phonenumber = document.getElementById("phonenumber").value;
+        const appoin_email = document.getElementById("email").value;
+        const appoin_date = document.getElementById("date").value;
+        const appoin_time = document.getElementById("time").value;
+        let appointment_user_id = Date.now();
+
+        let validation_error = false;
+        let user_data = {
+            appointment_user_id,
+            appoin_name,
+            appoin_phonenumber,
+            appoin_email,
+            appoin_date,
+            appoin_time
+        };
+        if (!validation_error) {
+            appoint.push(user_data);
+            localStorage.setItem("appoint", JSON.stringify(appoint));
+            console.log(appoint);
+            alert(" Hi Patient, we're looking forward to seeing you for your appointment with Doctor on Date at Time. Please let us know if you need to reschedule or if you have any questions about your upcoming visit. Thank you!");
+            window.location.href = "./setappoin.html";
+            document.getElementById("appointment").reset();
+        }
+
+      });
+    </script>
+ </script>
+  </body>
+</html>

@@ -252,10 +252,8 @@ th {
 #tblCustomers {
   display: inline-block;
   position: absolute;
-border-radius: 10px;
   margin-left: 20%;
   margin-top: 7%;
-  border-radius: 30px;
 }
 table {
   border-collapse: collapse;
